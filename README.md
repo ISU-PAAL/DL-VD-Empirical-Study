@@ -4,7 +4,22 @@ This repository contains the logs and scripts we used to perform the empirical s
 See details in [the paper](./paper.pdf).
 See original data package release at https://doi.org/10.6084/m9.figshare.20791240.
 
-# Citation
+# Usage on Github
+
+Github limits the size of uploaded files, so we ask you to download the files from our data package.
+
+```bash
+# Clone code
+git clone https://github.com/ISU-PAAL/DL-VD-Empirical-Study.git EmpiricalStudy && cd EmpiricalStudy
+# Download zip
+wget https://figshare.com/ndownloader/files/39183863 -O data-package.zip
+# Unzip files to the directory data-package/
+unzip data-package.zip && rm data-package.zip
+# Copy data-package/ to repository root
+rsync -raP --files-from=<(cd data-package/ && find . -name '*.csv' -o -name '*.log' -o -name '*.out') data-package/ ./ && rm -rf data-package
+```
+
+## Citation
 
 If you used our code in your research, please consider citing our paper:
 
