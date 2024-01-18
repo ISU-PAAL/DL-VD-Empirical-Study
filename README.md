@@ -4,7 +4,7 @@ This repository contains the logs and scripts we used to perform the empirical s
 See details in [the paper](./paper.pdf).
 See original data package release at https://doi.org/10.6084/m9.figshare.20791240.
 
-# Usage on Github
+## Usage on Github
 
 Github limits the size of uploaded files, so we ask you to download the files from our data package.
 
