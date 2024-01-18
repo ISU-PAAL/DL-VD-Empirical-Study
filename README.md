@@ -2,6 +2,12 @@
 
 See original data package release at https://doi.org/10.6084/m9.figshare.20791240.
 
+# Citation
+
+If you used our code in your research, please consider citing our paper:
+
+> Benjamin Steenhoek, Md Mahbubur Rahman, Richard Jiles, and Wei Le. 2023. An Empirical Study of Deep Learning Models for Vulnerability Detection. In Proceedings of the 45th International Conference on Software Engineering (ICSE 2023). Association for Computing Machinery, New York, NY, USA. https://doi.org/10.1109/ICSE48619.2023.00188
+
 ## Organization
 
 Below is an annotated map of the package's organization.
