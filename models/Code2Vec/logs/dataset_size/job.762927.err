@@ -1,0 +1,41 @@
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+2022-08-19 11:44:41.022647: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2022-08-19 11:44:41.592506: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1532] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 10417 MB memory:  -> device: 0, name: NVIDIA GeForce GTX 1080 Ti, pci bus id: 0000:1b:00.0, compute capability: 6.1
+2022-08-19 11:44:42.591699: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:354] MLIR V1 optimization pass is not enabled
+2022-08-19 11:44:55.316475: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2022-08-19 11:44:55.888214: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1532] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 10417 MB memory:  -> device: 0, name: NVIDIA GeForce GTX 1080 Ti, pci bus id: 0000:1b:00.0, compute capability: 6.1
+2022-08-19 11:44:56.666684: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:354] MLIR V1 optimization pass is not enabled
+Traceback (most recent call last):
+  File "<ANONYMOUS>/<ANONYMOUS>/dx2021/code2vec/code2vec.py", line 36, in <module>
+    eval_results = model.evaluate()
+  File "<ANONYMOUS>/<ANONYMOUS>/dx2021/code2vec/tensorflow_model.py", line 132, in evaluate
+    self._load_inner_model(self.sess)
+  File "<ANONYMOUS>/<ANONYMOUS>/dx2021/code2vec/tensorflow_model.py", line 387, in _load_inner_model
+    self.saver.restore(sess, self.config.MODEL_LOAD_PATH)
+  File "<ANONYMOUS>/<ANONYMOUS>/code2vec_venv2/lib/python3.9/site-packages/tensorflow/python/training/saver.py", line 1409, in restore
+    raise ValueError("The passed save_path is not a valid checkpoint: " +
+ValueError: The passed save_path is not a valid checkpoint: models/balanced_0.9/saved_model_iter16
+2022-08-19 11:45:02.434611: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2022-08-19 11:45:03.004004: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1532] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 10417 MB memory:  -> device: 0, name: NVIDIA GeForce GTX 1080 Ti, pci bus id: 0000:1b:00.0, compute capability: 6.1
+2022-08-19 11:45:03.778858: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:354] MLIR V1 optimization pass is not enabled
+Traceback (most recent call last):
+  File "<ANONYMOUS>/<ANONYMOUS>/dx2021/code2vec/code2vec.py", line 36, in <module>
+    eval_results = model.evaluate()
+  File "<ANONYMOUS>/<ANONYMOUS>/dx2021/code2vec/tensorflow_model.py", line 132, in evaluate
+    self._load_inner_model(self.sess)
+  File "<ANONYMOUS>/<ANONYMOUS>/dx2021/code2vec/tensorflow_model.py", line 387, in _load_inner_model
+    self.saver.restore(sess, self.config.MODEL_LOAD_PATH)
+  File "<ANONYMOUS>/<ANONYMOUS>/code2vec_venv2/lib/python3.9/site-packages/tensorflow/python/training/saver.py", line 1409, in restore
+    raise ValueError("The passed save_path is not a valid checkpoint: " +
+ValueError: The passed save_path is not a valid checkpoint: models/balanced_0.9/saved_model_iter16.release

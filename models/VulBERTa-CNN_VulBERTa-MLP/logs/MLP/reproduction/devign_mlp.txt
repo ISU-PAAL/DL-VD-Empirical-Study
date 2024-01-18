@@ -1,0 +1,26 @@
++ python Evaluation_VulBERTa-MLP.py --seed_input=666 --data_folder=devign --save_folder=devign_mlp --train_test=train --batch=8 --epochs=2 --dataset=combined
++ python Evaluation_VulBERTa-MLP.py --seed_input=666 --data_folder=devign --save_folder=devign_mlp --train_test=train --batch=8 --epochs=2 --dataset=combined
+/home/<ANONYMOUS>/anaconda3/envs/myenv/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/<ANONYMOUS>/anaconda3/envs/myenv/lib/python3.8/site-packages/sklearn/metrics/_classification.py:846: RuntimeWarning: invalid value encountered in double_scalars
+  mcc = cov_ytyp / np.sqrt(cov_ytyt * cov_ypyp)
+cuda
+['ahide', 'checkpoint-14570']
+models/devign_mlp/checkpoint-14570
+124836866
+Confusion matrix: 
+ [[1477    0]
+ [1255    0]]
+
+TP: 0
+FP: 0
+TN: 1477
+FN: 1255
+
+Accuracy: 0.5406295754026355
+Precision: 0.0
+F-measure: 0.0
+Recall: 0.0
+Precision-Recall AUC: 0.46838742991787286
+AUC: 0.5142490296093891
+MCC: 0.0

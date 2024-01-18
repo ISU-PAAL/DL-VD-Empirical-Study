@@ -1,0 +1,2 @@
+usage: run_rq_a2.py [-h] --dataset DATASET --test TEST
+run_rq_a2.py: error: argument --test: expected one argument

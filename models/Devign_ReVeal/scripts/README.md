@@ -1,0 +1,1 @@
+The entry point for training is any of the scripts `train_<model>_<dataset>.sh`.

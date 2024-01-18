@@ -1,0 +1,37 @@
+
+Module: tensorflow-gpu/1.2.1/u16-cuda8.0-libcudnn5.1-py36
+Being built from source code using python3.6 for all gpu nodes in pronto/condo/condofree/nova.
+CPU support: AVX and AVX2, not support AVX512F.
+compute capability (cc) support: 3.5
+tensorflow-gpu/1.2.1 itself does not support cc > 5.2
+
+# to run a python3 script
+$ module load  tensorflow-gpu/1.2.1/u16-cuda8.0-libcudnn5.1-py36
+$ tf-gpu python36 python3_script.py
+
+# to develop python36 applications in this env
+$ tf-gpu-env
+
+
+
+The following have been reloaded with a version change:
+  1) bzip2/1.0.6-qrd3gzl => bzip2/1.0.8-fslu4ek
+  2) gdbm/1.14.1-7zby6of => gdbm/1.18.1-f3fpsq3
+  3) ncurses/6.0-3ncf3bb => ncurses/6.2-n5qqcgu
+  4) openssl/1.0.2n-c7yx5vj => openssl/1.1.1k-eb2lcth
+  5) readline/7.0-jushdjv => readline/8.0-q67xey7
+
+2022-07-03 06:25:25.835539: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX512F instructions, but these are available on your machine and could speed up CPU computations.
+Using TensorFlow backend.
+/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:458: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:459: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:460: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:461: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:462: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/dtypes.py:465: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])

@@ -1,0 +1,40 @@
+--------------------------------------------------------------------------------------------------------------
+Example ids:  6543 project:  FFmpeg commit id:  fdbc544d29176ba69d67dd879df4696f0a19052e Number of lines:  26 Ground Truth:  1
+Original lines: 
+Predicted Correctly by :  ['linevul', 'codebert', 'PLBART', 'devign', 'regvd', 'vulberta_cnn', 'vulberta_mlp']
+0 static int asf_read_ext_content(AVFormatContext *s, const GUIDParseTable *g)                            {'linevul': 2, 'codebert': 0, 'PLBART': 0, 'devign': 3, 'regvd': 1, 'vulberta_cnn': 12, 'vulberta_mlp': 14}
+2 {                                                                                                       {'linevul': 25, 'codebert': 18, 'PLBART': 12, 'devign': -1, 'regvd': 23, 'vulberta_cnn': 14, 'vulberta_mlp': 18}
+4     ASFContext *asf  = s->priv_data;                                                                    {'linevul': 14, 'codebert': 3, 'PLBART': 5, 'devign': 17, 'regvd': 9, 'vulberta_cnn': 13, 'vulberta_mlp': 24}
+6     AVIOContext *pb  = s->pb;                                                                           {'linevul': 18, 'codebert': 6, 'PLBART': 7, 'devign': 5, 'regvd': 14, 'vulberta_cnn': 20, 'vulberta_mlp': 16}
+8     uint64_t size    = avio_rl64(pb);                                                                   {'linevul': 9, 'codebert': 1, 'PLBART': 1, 'devign': 12, 'regvd': 4, 'vulberta_cnn': 5, 'vulberta_mlp': 12}
+10     uint16_t nb_desc = avio_rl16(pb);                                                                  {'linevul': 8, 'codebert': 2, 'PLBART': 2, 'devign': 11, 'regvd': 3, 'vulberta_cnn': 6, 'vulberta_mlp': 7}
+12     int i, ret;                                                                                        {'linevul': 21, 'codebert': 16, 'PLBART': 11, 'devign': 18, 'regvd': 20, 'vulberta_cnn': 1, 'vulberta_mlp': 25}
+16     for (i = 0; i < nb_desc; i++) {                                                                    {'linevul': 12, 'codebert': 5, 'PLBART': 3, 'devign': 0, 'regvd': 10, 'vulberta_cnn': 11, 'vulberta_mlp': 19}
+18         uint16_t name_len, type, val_len;                                                              {'linevul': 5, 'codebert': 17, 'PLBART': 4, 'devign': 20, 'regvd': 12, 'vulberta_cnn': 21, 'vulberta_mlp': 9}
+20         uint8_t *name = NULL;                                                                          {'linevul': 16, 'codebert': 10, 'PLBART': 9, 'devign': 16, 'regvd': 13, 'vulberta_cnn': 0, 'vulberta_mlp': 20}
+24         name_len = avio_rl16(pb);                                                                      {'linevul': 11, 'codebert': 4, 'PLBART': 8, 'devign': 7, 'regvd': 5, 'vulberta_cnn': 23, 'vulberta_mlp': 0}
+26         if (!name_len)                                                                                 {'linevul': 19, 'codebert': 14, 'PLBART': 10, 'devign': 1, 'regvd': 16, 'vulberta_cnn': 8, 'vulberta_mlp': 3}
+28             return AVERROR_INVALIDDATA;                                                                {'linevul': 4, 'codebert': 8, 'PLBART': 6, 'devign': 8, 'regvd': 17, 'vulberta_cnn': 7, 'vulberta_mlp': 23}
+30         name = av_malloc(name_len);                                                                    {'linevul': 13, 'codebert': 9, 'PLBART': -1, 'devign': 10, 'regvd': 11, 'vulberta_cnn': 2, 'vulberta_mlp': 4}
+32         if (!name)                                                                                     {'linevul': 20, 'codebert': 15, 'PLBART': -1, 'devign': 4, 'regvd': 19, 'vulberta_cnn': 4, 'vulberta_mlp': 17}
+34             return AVERROR(ENOMEM);                                                                    {'linevul': 7, 'codebert': 11, 'PLBART': -1, 'devign': 9, 'regvd': 15, 'vulberta_cnn': 9, 'vulberta_mlp': 15}
+36         avio_get_str16le(pb, name_len, name,                                                           {'linevul': 3, 'codebert': 7, 'PLBART': -1, 'devign': -1, 'regvd': 7, 'vulberta_cnn': 16, 'vulberta_mlp': 13}
+38                          name_len);                                                                    {'linevul': 1, 'codebert': 19, 'PLBART': -1, 'devign': -1, 'regvd': 18, 'vulberta_cnn': 17, 'vulberta_mlp': 6}
+40         type    = avio_rl16(pb);                                                                       {'linevul': 6, 'codebert': 12, 'PLBART': -1, 'devign': 15, 'regvd': 8, 'vulberta_cnn': 18, 'vulberta_mlp': 1}
+42         val_len = avio_rl16(pb);                                                                       {'linevul': 10, 'codebert': 13, 'PLBART': -1, 'devign': 14, 'regvd': 6, 'vulberta_cnn': 15, 'vulberta_mlp': 5}
+46         if ((ret = process_metadata(s, name, name_len, val_len, type, &s->metadata)) < 0)              {'linevul': 0, 'codebert': -1, 'PLBART': -1, 'devign': 2, 'regvd': 0, 'vulberta_cnn': 24, 'vulberta_mlp': 2}
+48             return ret;                                                                                {'linevul': 17, 'codebert': -1, 'PLBART': -1, 'devign': 19, 'regvd': 22, 'vulberta_cnn': 3, 'vulberta_mlp': 10}
+50     }                                                                                                  {'linevul': 23, 'codebert': -1, 'PLBART': -1, 'devign': -1, 'regvd': 25, 'vulberta_cnn': 10, 'vulberta_mlp': 8}
+54     align_position(pb, asf->offset, size);                                                             {'linevul': 15, 'codebert': -1, 'PLBART': -1, 'devign': 13, 'regvd': 2, 'vulberta_cnn': 22, 'vulberta_mlp': 22}
+56     return 0;                                                                                          {'linevul': 22, 'codebert': -1, 'PLBART': -1, 'devign': 6, 'regvd': 21, 'vulberta_cnn': 19, 'vulberta_mlp': 21}
+58 }                                                                                                      {'linevul': 24, 'codebert': -1, 'PLBART': -1, 'devign': -1, 'regvd': 24, 'vulberta_cnn': 25, 'vulberta_mlp': 11}
+-----------------------
+Lines highlighted by at least 4 models among the correctly predicted models: 
+0 static int asf_read_ext_content(AVFormatContext *s, const GUIDParseTable *g)
+8     uint64_t size    = avio_rl64(pb);
+10     uint16_t nb_desc = avio_rl16(pb);
+24         name_len = avio_rl16(pb);
+28             return AVERROR_INVALIDDATA;
+46         if ((ret = process_metadata(s, name, name_len, val_len, type, &s->metadata)) < 0)
+--------------------------------------------------------------------------------------------------------------
+1

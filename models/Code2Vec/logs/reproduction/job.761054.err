@@ -1,0 +1,59 @@
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+java.lang.StringIndexOutOfBoundsException: String index out of range: -1
+	at java.lang.String.checkBounds(String.java:381)
+	at java.lang.String.<init>(String.java:462)
+	at org.antlr.v4.runtime.CodePointCharStream$CodePoint8BitCharStream.getText(CodePointCharStream.java:160)
+	at io.shiftleft.fuzzyc2cpg.parser.ModuleFunctionParserInterface.getCompoundStmtAsString(ModuleFunctionParserInterface.java:51)
+	at io.shiftleft.fuzzyc2cpg.parser.ModuleFunctionParserInterface.parseFunctionContents(ModuleFunctionParserInterface.java:24)
+	at io.shiftleft.fuzzyc2cpg.passes.astcreation.CModuleParserTreeListener.enterFunction_def(CModuleParserTreeListener.java:72)
+	at io.shiftleft.fuzzyc2cpg.ModuleParser$Function_defContext.enterRule(ModuleParser.java:533)
+	at org.antlr.v4.runtime.tree.ParseTreeWalker.enterRule(ParseTreeWalker.java:42)
+	at org.antlr.v4.runtime.tree.ParseTreeWalker.walk(ParseTreeWalker.java:25)
+	at org.antlr.v4.runtime.tree.ParseTreeWalker.walk(ParseTreeWalker.java:28)
+	at io.shiftleft.fuzzyc2cpg.passes.astcreation.AntlrParserDriver.walkTree(AntlrParserDriver.java:177)
+	at io.shiftleft.fuzzyc2cpg.passes.astcreation.AntlrParserDriver.parseAndWalkFile(AntlrParserDriver.java:78)
+	at io.shiftleft.fuzzyc2cpg.passes.AstCreationPass.tryToParse(AstCreationPass.scala:53)
+	at io.shiftleft.fuzzyc2cpg.passes.AstCreationPass.runOnPart(AstCreationPass.scala:37)
+	at io.shiftleft.fuzzyc2cpg.passes.AstCreationPass.runOnPart(AstCreationPass.scala:14)
+	at io.shiftleft.passes.ParallelCpgPass.$anonfun$enqueueInParallel$2(ParallelCpgPass.scala:58)
+	at io.shiftleft.passes.ParallelCpgPass.$anonfun$enqueueInParallel$2$adapted(ParallelCpgPass.scala:53)
+	at io.shiftleft.passes.ParallelIteratorExecutor.$anonfun$map$2(ParallelIteratorExecutor.scala:11)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:671)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:430)
+	at scala.concurrent.BatchingExecutor$AbstractBatch.runN(BatchingExecutor.scala:134)
+	at scala.concurrent.BatchingExecutor$AsyncBatch.apply(BatchingExecutor.scala:163)
+	at scala.concurrent.BatchingExecutor$AsyncBatch.apply(BatchingExecutor.scala:146)
+	at scala.concurrent.BlockContext$.usingBlockContext(BlockContext.scala:107)
+	at scala.concurrent.BatchingExecutor$AsyncBatch.run(BatchingExecutor.scala:154)
+	at java.util.concurrent.ForkJoinTask$RunnableExecuteAction.exec(ForkJoinTask.java:1402)
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289)
+	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056)
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692)
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:175)
+Exception in thread "main" java.lang.OutOfMemoryError: unable to create new native thread
+	at java.lang.Thread.start0(Native Method)
+	at java.lang.Thread.start(Thread.java:719)
+	at io.shiftleft.passes.ParallelCpgPass.withWriter(ParallelCpgPass.scala:38)
+	at io.shiftleft.passes.ParallelCpgPass.createAndApply(ParallelCpgPass.scala:21)
+	at io.shiftleft.fuzzyc2cpg.FuzzyC2Cpg.runAndOutput(FuzzyC2Cpg.scala:82)
+	at astminer.parse.cpp.FuzzyCppParser.parseFile(FuzzyCppParser.kt:99)
+	at astminer.parse.cpp.FuzzyCppParser.parseInputStream(FuzzyCppParser.kt:78)
+	at astminer.examples.Code2VecCMethodsKt$code2vecCMethods$1.invoke(Code2VecCMethods.kt:28)
+	at astminer.examples.Code2VecCMethodsKt$code2vecCMethods$1.invoke(Code2VecCMethods.kt)
+	at kotlin.io.TextStreamsKt.forEachLine(ReadWrite.kt:155)
+	at kotlin.io.FilesKt__FileReadWriteKt.forEachLine(FileReadWrite.kt:190)
+	at kotlin.io.FilesKt__FileReadWriteKt.forEachLine$default(FileReadWrite.kt:188)
+	at astminer.examples.Code2VecCMethodsKt.code2vecCMethods(Code2VecCMethods.kt:26)
+	at astminer.MainKt.main(Main.kt:7)
+2022-08-15 22:47:20.425799: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2022-08-15 22:47:23.563524: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1532] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 10417 MB memory:  -> device: 0, name: NVIDIA GeForce GTX 1080 Ti, pci bus id: 0000:1c:00.0, compute capability: 6.1
+2022-08-15 22:47:26.389075: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:354] MLIR V1 optimization pass is not enabled

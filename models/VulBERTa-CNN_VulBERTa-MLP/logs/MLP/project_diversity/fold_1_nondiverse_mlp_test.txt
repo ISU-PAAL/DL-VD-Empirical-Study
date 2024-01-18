@@ -1,0 +1,50 @@
++ python Evaluation_VulBERTa-MLP.py --seed_input=666 --data_folder=fold_1_holdout --save_folder=nondiverse_mlp --train_test=train --batch=8 --epochs=2 --dataset=combined
+/home/<ANONYMOUS>/anaconda3/envs/myenv/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/<ANONYMOUS>/anaconda3/envs/myenv/lib/python3.8/site-packages/sklearn/metrics/_classification.py:846: RuntimeWarning: invalid value encountered in double_scalars
+  mcc = cov_ytyp / np.sqrt(cov_ytyt * cov_ypyp)
+cuda
+['checkpoint-22391', 'checkpoint-44782']
+models/nondiverse_mlp/checkpoint-44782
+124836866
+Confusion matrix: 
+ [[9246    0]
+ [ 768    0]]
+
+TP: 0
+FP: 0
+TN: 9246
+FN: 768
+
+Accuracy: 0.9233073696824445
+Precision: 0.0
+F-measure: 0.0
+Recall: 0.0
+Precision-Recall AUC: 0.16588012804865077
+AUC: 0.6942508077817435
+MCC: 0.0
++ python Evaluation_VulBERTa-MLP.py --seed_input=666 --data_folder=fold_1_holdout --save_folder=nondiverse_mlp --train_test=train --batch=8 --epochs=2 --dataset=combined
+/home/<ANONYMOUS>/anaconda3/envs/myenv/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/<ANONYMOUS>/anaconda3/envs/myenv/lib/python3.8/site-packages/sklearn/metrics/_classification.py:846: RuntimeWarning: invalid value encountered in double_scalars
+  mcc = cov_ytyp / np.sqrt(cov_ytyt * cov_ypyp)
+cuda
+['acheckpoint-44782', 'checkpoint-22391']
+models/nondiverse_mlp/checkpoint-22391
+124836866
+Confusion matrix: 
+ [[9246    0]
+ [ 768    0]]
+
+TP: 0
+FP: 0
+TN: 9246
+FN: 768
+
+Accuracy: 0.9233073696824445
+Precision: 0.0
+F-measure: 0.0
+Recall: 0.0
+Precision-Recall AUC: 0.15917171910684727
+AUC: 0.742569633152174
+MCC: 0.0

@@ -1,0 +1,300 @@
++ val=
++ python Finetuning+evaluation_VulBERTa-CNN_diverse.py --seed_input=10102 --data_folder= --train_test=train --batch=3 --epochs=10 --dataset=combined --generate_json=False
+Device:  cuda
+MultiGPU:  False
+data/finetune/combined/diverse/train.jsonl
+Traceback (most recent call last):
+  File "Finetuning+evaluation_VulBERTa-CNN_diverse.py", line 287, in <module>
+    m1 = pd.read_json(file_loc, lines=True)
+  File "/home/<ANONYMOUS>/anaconda3/envs/myenv/lib/python3.8/site-packages/pandas/util/_decorators.py", line 207, in wrapper
+    return func(*args, **kwargs)
+  File "/home/<ANONYMOUS>/anaconda3/envs/myenv/lib/python3.8/site-packages/pandas/util/_decorators.py", line 311, in wrapper
+    return func(*args, **kwargs)
+  File "/home/<ANONYMOUS>/anaconda3/envs/myenv/lib/python3.8/site-packages/pandas/io/json/_json.py", line 614, in read_json
+    return json_reader.read()
+  File "/home/<ANONYMOUS>/anaconda3/envs/myenv/lib/python3.8/site-packages/pandas/io/json/_json.py", line 746, in read
+    obj = self._get_object_parser(self._combine_lines(data_lines))
+  File "/home/<ANONYMOUS>/anaconda3/envs/myenv/lib/python3.8/site-packages/pandas/io/json/_json.py", line 770, in _get_object_parser
+    obj = FrameParser(json, **kwargs).parse()
+  File "/home/<ANONYMOUS>/anaconda3/envs/myenv/lib/python3.8/site-packages/pandas/io/json/_json.py", line 885, in parse
+    self._parse_no_numpy()
+  File "/home/<ANONYMOUS>/anaconda3/envs/myenv/lib/python3.8/site-packages/pandas/io/json/_json.py", line 1140, in _parse_no_numpy
+    loads(json, precise_float=self.precise_float), dtype=None
+ValueError: Expected object or value
++ val=fold_0_
++ python Finetuning+evaluation_VulBERTa-CNN_diverse.py --seed_input=10102 --data_folder=fold_0_ --train_test=train --batch=3 --epochs=10 --dataset=combined --generate_json=False
+Some weights of RobertaModel were not initialized from the model checkpoint at models/pre_trained/ and are newly initialized: ['roberta.pooler.dense.weight', 'roberta.pooler.dense.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Device:  cuda
+MultiGPU:  False
+data/finetune/combined/fold_0_diverse/train.jsonl
+data/finetune/combined/fold_0_diverse/valid.jsonl
+data/finetune/combined/fold_0_diverse/test.jsonl
+data/finetune/combined/fold_0_holdout/test.jsonl
+
+myCNN(
+  (embed): Embedding(50000, 768, padding_idx=1)
+  (conv1): Conv1d(768, 200, kernel_size=(3,), stride=(1,))
+  (conv2): Conv1d(768, 200, kernel_size=(4,), stride=(1,))
+  (conv3): Conv1d(768, 200, kernel_size=(5,), stride=(1,))
+  (dropout): Dropout(p=0.5, inplace=False)
+  (fc1): Linear(in_features=600, out_features=256, bias=True)
+  (fc2): Linear(in_features=256, out_features=128, bias=True)
+  (fc3): Linear(in_features=128, out_features=2, bias=True)
+)
+Num of trainable param:  2030810
+Training started.....
+Epoch 1 - Training acc: 0.7500 -Training loss: 0.6830 - Val acc: 0.3333 - Val loss: 0.7141 - Time: 0.0484s 
+Epoch 2 - Training acc: 0.7500 -Training loss: 0.6624 - Val acc: 0.3333 - Val loss: 0.7238 - Time: 0.0459s 
+Epoch 3 - Training acc: 0.7500 -Training loss: 0.6490 - Val acc: 0.3333 - Val loss: 0.7331 - Time: 0.0460s 
+Epoch 4 - Training acc: 0.7500 -Training loss: 0.6326 - Val acc: 0.3333 - Val loss: 0.7463 - Time: 0.0472s 
+Epoch 5 - Training acc: 0.7500 -Training loss: 0.6095 - Val acc: 0.3333 - Val loss: 0.7685 - Time: 0.0462s 
+Epoch 6 - Training acc: 0.7500 -Training loss: 0.5851 - Val acc: 0.3333 - Val loss: 0.8012 - Time: 0.0470s 
+Epoch 7 - Training acc: 0.7500 -Training loss: 0.5355 - Val acc: 0.3333 - Val loss: 0.8458 - Time: 0.0460s 
+Epoch 8 - Training acc: 0.7500 -Training loss: 0.4961 - Val acc: 0.3333 - Val loss: 0.9107 - Time: 0.0472s 
+Epoch 9 - Training acc: 0.7500 -Training loss: 0.4360 - Val acc: 0.3333 - Val loss: 0.9932 - Time: 0.0486s 
+Epoch 10 - Training acc: 0.7500 -Training loss: 0.4089 - Val acc: 0.3333 - Val loss: 1.0452 - Time: 0.0466s 
+Training completed!
+Testing started.......
+models/VB-CNN_combinedfold_0__10102/model_ep_10.tar
+Confusion matrix: 
+ [[0 6]
+ [0 4]]
+
+TP: 4
+FP: 6
+TN: 0
+FN: 0
+
+Accuracy: 0.4
+Precision: 0.4
+F-measure: 0.5714285714285715
+Recall: 1.0
+Precision-Recall AUC: 0.8166666666666667
+AUC: 0.8333333333333334
+MCC: 0.0
+Confusion matrix: 
+ [[0 6]
+ [0 4]]
+
+TP: 4
+FP: 6
+TN: 0
+FN: 0
+
+Accuracy: 0.4
+Precision: 0.4
+F-measure: 0.5714285714285715
+Recall: 1.0
+Precision-Recall AUC: 0.8166666666666667
+AUC: 0.8333333333333334
+MCC: 0.0
++ val=fold_0_
++ python Finetuning+evaluation_VulBERTa-CNN_diverse.py --seed_input=10102 --data_folder=fold_0_ --train_test=train --batch=3 --epochs=10 --dataset=combined --generate_json=False
+Some weights of RobertaModel were not initialized from the model checkpoint at models/pre_trained/ and are newly initialized: ['roberta.pooler.dense.weight', 'roberta.pooler.dense.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Device:  cuda
+MultiGPU:  False
+data/finetune/combined/fold_0_diverse/train.jsonl
+data/finetune/combined/fold_0_diverse/valid.jsonl
+data/finetune/combined/fold_0_diverse/test.jsonl
+data/finetune/combined/fold_0_holdout/test.jsonl
+
+myCNN(
+  (embed): Embedding(50000, 768, padding_idx=1)
+  (conv1): Conv1d(768, 200, kernel_size=(3,), stride=(1,))
+  (conv2): Conv1d(768, 200, kernel_size=(4,), stride=(1,))
+  (conv3): Conv1d(768, 200, kernel_size=(5,), stride=(1,))
+  (dropout): Dropout(p=0.5, inplace=False)
+  (fc1): Linear(in_features=600, out_features=256, bias=True)
+  (fc2): Linear(in_features=256, out_features=128, bias=True)
+  (fc3): Linear(in_features=128, out_features=2, bias=True)
+)
+Num of trainable param:  2030810
+Training started.....
+Epoch 1 - Training acc: 0.7500 -Training loss: 0.6830 - Val acc: 0.3333 - Val loss: 0.7141 - Time: 0.0463s 
+Epoch 2 - Training acc: 0.7500 -Training loss: 0.6624 - Val acc: 0.3333 - Val loss: 0.7238 - Time: 0.0443s 
+Epoch 3 - Training acc: 0.7500 -Training loss: 0.6490 - Val acc: 0.3333 - Val loss: 0.7331 - Time: 0.0444s 
+Epoch 4 - Training acc: 0.7500 -Training loss: 0.6326 - Val acc: 0.3333 - Val loss: 0.7463 - Time: 0.0451s 
+Epoch 5 - Training acc: 0.7500 -Training loss: 0.6095 - Val acc: 0.3333 - Val loss: 0.7685 - Time: 0.0444s 
+Epoch 6 - Training acc: 0.7500 -Training loss: 0.5851 - Val acc: 0.3333 - Val loss: 0.8012 - Time: 0.0443s 
+Epoch 7 - Training acc: 0.7500 -Training loss: 0.5355 - Val acc: 0.3333 - Val loss: 0.8458 - Time: 0.0444s 
+Epoch 8 - Training acc: 0.7500 -Training loss: 0.4961 - Val acc: 0.3333 - Val loss: 0.9107 - Time: 0.0445s 
+Epoch 9 - Training acc: 0.7500 -Training loss: 0.4360 - Val acc: 0.3333 - Val loss: 0.9932 - Time: 0.0443s 
+Epoch 10 - Training acc: 0.7500 -Training loss: 0.4089 - Val acc: 0.3333 - Val loss: 1.0452 - Time: 0.0459s 
+Training completed!
+Testing started.......
+models/VB-CNN_combinedfold_0__10102/model_ep_10.tar
+Confusion matrix: 
+ [[0 6]
+ [0 4]]
+
+TP: 4
+FP: 6
+TN: 0
+FN: 0
+
+Accuracy: 0.4
+Precision: 0.4
+F-measure: 0.5714285714285715
+Recall: 1.0
+Precision-Recall AUC: 0.8166666666666667
+AUC: 0.8333333333333334
+MCC: 0.0
+Confusion matrix: 
+ [[0 6]
+ [0 4]]
+
+TP: 4
+FP: 6
+TN: 0
+FN: 0
+
+Accuracy: 0.4
+Precision: 0.4
+F-measure: 0.5714285714285715
+Recall: 1.0
+Precision-Recall AUC: 0.8166666666666667
+AUC: 0.8333333333333334
+MCC: 0.0
++ val=fold_0_
++ python Finetuning+evaluation_VulBERTa-CNN_diverse.py --seed_input=10102 --data_folder=fold_0_ --train_test=train --batch=3 --epochs=10 --dataset=combined --generate_json=False
+Device:  cuda
+MultiGPU:  False
+data/finetune/combined/fold_0_diverse/train.jsonl
+data/finetune/combined/fold_0_diverse/valid.jsonl
+data/finetune/combined/fold_0_diverse/test.jsonl
+data/finetune/combined/fold_0_holdout/test.jsonl
+Traceback (most recent call last):
+  File "Finetuning+evaluation_VulBERTa-CNN_diverse.py", line 498, in <module>
+    m3.func = m3.func.apply(cleaner)
+  File "/home/<ANONYMOUS>/anaconda3/envs/myenv/lib/python3.8/site-packages/pandas/core/generic.py", line 5487, in __getattr__
+    return object.__getattribute__(self, name)
+AttributeError: 'DataFrame' object has no attribute 'func'
++ val=fold_0_
++ python Finetuning+evaluation_VulBERTa-CNN_diverse.py --seed_input=10102 --data_folder=fold_0_ --train_test=train --batch=3 --epochs=10 --dataset=combined --generate_json=False
+Device:  cuda
+MultiGPU:  False
+data/finetune/combined/fold_0_diverse/train.jsonl
+data/finetune/combined/fold_0_diverse/valid.jsonl
+Traceback (most recent call last):
+  File "Finetuning+evaluation_VulBERTa-CNN_diverse.py", line 492, in <module>
+    m3.func = m3.func.apply(cleaner)
+NameError: name 'm3' is not defined
++ val=fold_0_
++ python Finetuning+evaluation_VulBERTa-CNN_diverse.py --seed_input=10102 --data_folder=fold_0_ --train_test=train --batch=3 --epochs=10 --dataset=combined --generate_json=False
+Device:  cuda
+MultiGPU:  False
+data/finetune/combined/fold_0_diverse/train.jsonl
+data/finetune/combined/fold_0_diverse/valid.jsonl
+Traceback (most recent call last):
+  File "Finetuning+evaluation_VulBERTa-CNN_diverse.py", line 556, in <module>
+    test_data = TabularDataset_From_List(test_encodings,'dict',fields = fields)
+NameError: name 'test_encodings' is not defined
++ val=fold_0_
++ python Finetuning+evaluation_VulBERTa-CNN_diverse.py --seed_input=10102 --data_folder=fold_0_ --train_test=train --batch=3 --epochs=10 --dataset=combined --generate_json=False
+Device:  cuda
+MultiGPU:  False
+data/finetune/combined/fold_0_diverse/train.jsonl
+data/finetune/combined/fold_0_diverse/valid.jsonl
+
+Traceback (most recent call last):
+  File "Finetuning+evaluation_VulBERTa-CNN_diverse.py", line 631, in <module>
+    (train_data, val_data, test_data, holdout_data),
+NameError: name 'test_data' is not defined
++ val=fold_0_
++ python Finetuning+evaluation_VulBERTa-CNN_diverse.py --seed_input=10102 --data_folder=fold_0_ --train_test=train --batch=3 --epochs=10 --dataset=combined --generate_json=False
+Some weights of RobertaModel were not initialized from the model checkpoint at models/pre_trained/ and are newly initialized: ['roberta.pooler.dense.weight', 'roberta.pooler.dense.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Device:  cuda
+MultiGPU:  False
+data/finetune/combined/fold_0_diverse/train.jsonl
+data/finetune/combined/fold_0_diverse/valid.jsonl
+
+myCNN(
+  (embed): Embedding(50000, 768, padding_idx=1)
+  (conv1): Conv1d(768, 200, kernel_size=(3,), stride=(1,))
+  (conv2): Conv1d(768, 200, kernel_size=(4,), stride=(1,))
+  (conv3): Conv1d(768, 200, kernel_size=(5,), stride=(1,))
+  (dropout): Dropout(p=0.5, inplace=False)
+  (fc1): Linear(in_features=600, out_features=256, bias=True)
+  (fc2): Linear(in_features=256, out_features=128, bias=True)
+  (fc3): Linear(in_features=128, out_features=2, bias=True)
+)
+Num of trainable param:  2030810
+Training started.....
+Epoch 1 - Training acc: 0.7500 -Training loss: 0.6830 - Val acc: 0.3333 - Val loss: 0.7141 - Time: 0.0485s 
+Epoch 2 - Training acc: 0.7500 -Training loss: 0.6624 - Val acc: 0.3333 - Val loss: 0.7238 - Time: 0.0468s 
+Epoch 3 - Training acc: 0.7500 -Training loss: 0.6490 - Val acc: 0.3333 - Val loss: 0.7331 - Time: 0.0467s 
+Epoch 4 - Training acc: 0.7500 -Training loss: 0.6326 - Val acc: 0.3333 - Val loss: 0.7463 - Time: 0.0467s 
+Epoch 5 - Training acc: 0.7500 -Training loss: 0.6095 - Val acc: 0.3333 - Val loss: 0.7685 - Time: 0.0467s 
+Epoch 6 - Training acc: 0.7500 -Training loss: 0.5851 - Val acc: 0.3333 - Val loss: 0.8012 - Time: 0.0481s 
+Epoch 7 - Training acc: 0.7500 -Training loss: 0.5355 - Val acc: 0.3333 - Val loss: 0.8458 - Time: 0.0467s 
+Epoch 8 - Training acc: 0.7500 -Training loss: 0.4961 - Val acc: 0.3333 - Val loss: 0.9107 - Time: 0.0470s 
+Epoch 9 - Training acc: 0.7500 -Training loss: 0.4360 - Val acc: 0.3333 - Val loss: 0.9932 - Time: 0.0470s 
+Epoch 10 - Training acc: 0.7500 -Training loss: 0.4089 - Val acc: 0.3333 - Val loss: 1.0452 - Time: 0.0466s 
+Training completed!
++ val=fold_0_
++ python Finetuning+evaluation_VulBERTa-CNN_diverse.py --seed_input=10102 --data_folder=fold_0_ --train_test=train --batch=3 --epochs=10 --dataset=combined --generate_json=False
+Some weights of RobertaModel were not initialized from the model checkpoint at models/pre_trained/ and are newly initialized: ['roberta.pooler.dense.weight', 'roberta.pooler.dense.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Device:  cuda
+MultiGPU:  False
+data/finetune/combined/fold_0_diverse/train.jsonl
+data/finetune/combined/fold_0_diverse/valid.jsonl
+
+myCNN(
+  (embed): Embedding(50000, 768, padding_idx=1)
+  (conv1): Conv1d(768, 200, kernel_size=(3,), stride=(1,))
+  (conv2): Conv1d(768, 200, kernel_size=(4,), stride=(1,))
+  (conv3): Conv1d(768, 200, kernel_size=(5,), stride=(1,))
+  (dropout): Dropout(p=0.5, inplace=False)
+  (fc1): Linear(in_features=600, out_features=256, bias=True)
+  (fc2): Linear(in_features=256, out_features=128, bias=True)
+  (fc3): Linear(in_features=128, out_features=2, bias=True)
+)
+Num of trainable param:  2030810
+Training started.....
+Epoch 1 - Training acc: 0.7500 -Training loss: 0.6830 - Val acc: 0.3333 - Val loss: 0.7141 - Time: 0.0483s 
+Epoch 2 - Training acc: 0.7500 -Training loss: 0.6624 - Val acc: 0.3333 - Val loss: 0.7238 - Time: 0.0466s 
+Epoch 3 - Training acc: 0.7500 -Training loss: 0.6490 - Val acc: 0.3333 - Val loss: 0.7331 - Time: 0.0465s 
+Epoch 4 - Training acc: 0.7500 -Training loss: 0.6326 - Val acc: 0.3333 - Val loss: 0.7463 - Time: 0.0465s 
+Epoch 5 - Training acc: 0.7500 -Training loss: 0.6095 - Val acc: 0.3333 - Val loss: 0.7685 - Time: 0.0466s 
+Epoch 6 - Training acc: 0.7500 -Training loss: 0.5851 - Val acc: 0.3333 - Val loss: 0.8012 - Time: 0.0474s 
+Epoch 7 - Training acc: 0.7500 -Training loss: 0.5355 - Val acc: 0.3333 - Val loss: 0.8458 - Time: 0.0465s 
+Epoch 8 - Training acc: 0.7500 -Training loss: 0.4961 - Val acc: 0.3333 - Val loss: 0.9107 - Time: 0.0466s 
+Epoch 9 - Training acc: 0.7500 -Training loss: 0.4360 - Val acc: 0.3333 - Val loss: 0.9932 - Time: 0.0468s 
+Epoch 10 - Training acc: 0.7500 -Training loss: 0.4089 - Val acc: 0.3333 - Val loss: 1.0452 - Time: 0.0467s 
+Training completed!
++ val=fold_0_
++ python Finetuning+evaluation_VulBERTa-CNN_diverse.py --seed_input=10102 --data_folder=fold_0_ --train_test=train --batch=16 --epochs=10 --dataset=combined --generate_json=False
+Some weights of RobertaModel were not initialized from the model checkpoint at models/pre_trained/ and are newly initialized: ['roberta.pooler.dense.weight', 'roberta.pooler.dense.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Device:  cuda
+MultiGPU:  False
+data/finetune/combined/fold_0_diverse/train.jsonl
+data/finetune/combined/fold_0_diverse/valid.jsonl
+
+myCNN(
+  (embed): Embedding(50000, 768, padding_idx=1)
+  (conv1): Conv1d(768, 200, kernel_size=(3,), stride=(1,))
+  (conv2): Conv1d(768, 200, kernel_size=(4,), stride=(1,))
+  (conv3): Conv1d(768, 200, kernel_size=(5,), stride=(1,))
+  (dropout): Dropout(p=0.5, inplace=False)
+  (fc1): Linear(in_features=600, out_features=256, bias=True)
+  (fc2): Linear(in_features=256, out_features=128, bias=True)
+  (fc3): Linear(in_features=128, out_features=2, bias=True)
+)
+Num of trainable param:  2030810
+Training started.....
+Epoch 1 - Training acc: 0.9981 -Training loss: 0.0152 - Val acc: 0.0657 - Val loss: 28.8270 - Time: 115.2007s 
+Epoch 2 - Training acc: 0.9924 -Training loss: 0.0685 - Val acc: 0.0657 - Val loss: 18.2889 - Time: 116.3336s 
+Epoch 3 - Training acc: 0.9896 -Training loss: 0.0840 - Val acc: 0.0657 - Val loss: 25.6977 - Time: 116.0059s 
+Epoch 4 - Training acc: 0.9884 -Training loss: 0.1016 - Val acc: 0.0657 - Val loss: 18.7255 - Time: 114.6773s 
+Epoch 5 - Training acc: 0.9896 -Training loss: 0.1097 - Val acc: 0.0657 - Val loss: 16.1208 - Time: 114.2643s 
+Epoch 6 - Training acc: 0.9880 -Training loss: 0.1019 - Val acc: 0.0657 - Val loss: 25.5741 - Time: 114.0462s 
+Epoch 7 - Training acc: 0.9887 -Training loss: 0.1227 - Val acc: 0.0657 - Val loss: 26.4116 - Time: 114.0312s 
+Epoch 8 - Training acc: 0.9894 -Training loss: 0.1077 - Val acc: 0.0657 - Val loss: 16.4330 - Time: 114.0071s 
+Epoch 9 - Training acc: 0.9880 -Training loss: 0.1135 - Val acc: 0.0657 - Val loss: 18.5705 - Time: 114.0152s 
+Epoch 10 - Training acc: 0.9883 -Training loss: 0.1185 - Val acc: 0.0657 - Val loss: 13.0211 - Time: 114.5264s 
+Training completed!

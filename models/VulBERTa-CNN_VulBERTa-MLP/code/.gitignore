@@ -1,0 +1,10 @@
+tokenizer
+save_logs*
+models
+models*
+logs_*
+data
+.idea
+.ipynb_checkpoints
+mlruns
+__pycache__

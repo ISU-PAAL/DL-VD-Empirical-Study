@@ -1,0 +1,166 @@
+
+(base) C:\Users\<ANONYMOUS>\Documents\CodeXGLUE-main\Code-Code\Defect-detection\code>REM python run.py ^ 
+
+(base) C:\Users\<ANONYMOUS>\Documents\CodeXGLUE-main\Code-Code\Defect-detection\code>REM --output_folder_name=bugtype_mixed ^ 
+
+(base) C:\Users\<ANONYMOUS>\Documents\CodeXGLUE-main\Code-Code\Defect-detection\code>REM --output_dir=./saved_models ^ 
+
+(base) C:\Users\<ANONYMOUS>\Documents\CodeXGLUE-main\Code-Code\Defect-detection\code>REM --model_type=roberta ^ 
+
+(base) C:\Users\<ANONYMOUS>\Documents\CodeXGLUE-main\Code-Code\Defect-detection\code>REM --tokenizer_name=microsoft/codebert-base ^ 
+
+(base) C:\Users\<ANONYMOUS>\Documents\CodeXGLUE-main\Code-Code\Defect-detection\code>REM --model_name_or_path=microsoft/codebert-base ^ 
+
+(base) C:\Users\<ANONYMOUS>\Documents\CodeXGLUE-main\Code-Code\Defect-detection\code>REM --do_train ^ 
+
+(base) C:\Users\<ANONYMOUS>\Documents\CodeXGLUE-main\Code-Code\Defect-detection\code>REM --train_data_file=../dataset/bugtype_mixed/train.jsonl ^ 
+
+(base) C:\Users\<ANONYMOUS>\Documents\CodeXGLUE-main\Code-Code\Defect-detection\code>REM --eval_data_file=../dataset/bugtype_mixed/valid.jsonl ^ 
+
+(base) C:\Users\<ANONYMOUS>\Documents\CodeXGLUE-main\Code-Code\Defect-detection\code>REM --test_data_file=../dataset/bugtype_mixed/test.jsonl ^ 
+
+(base) C:\Users\<ANONYMOUS>\Documents\CodeXGLUE-main\Code-Code\Defect-detection\code>REM --epoch 5 ^ 
+
+(base) C:\Users\<ANONYMOUS>\Documents\CodeXGLUE-main\Code-Code\Defect-detection\code>REM --block_size 400 ^ 
+
+(base) C:\Users\<ANONYMOUS>\Documents\CodeXGLUE-main\Code-Code\Defect-detection\code>REM --train_batch_size 32 ^ 
+
+(base) C:\Users\<ANONYMOUS>\Documents\CodeXGLUE-main\Code-Code\Defect-detection\code>REM --eval_batch_size 64 ^ 
+
+(base) C:\Users\<ANONYMOUS>\Documents\CodeXGLUE-main\Code-Code\Defect-detection\code>REM --learning_rate 2e-5 ^ 
+
+(base) C:\Users\<ANONYMOUS>\Documents\CodeXGLUE-main\Code-Code\Defect-detection\code>REM --max_grad_norm 1.0 ^ 
+
+(base) C:\Users\<ANONYMOUS>\Documents\CodeXGLUE-main\Code-Code\Defect-detection\code>REM --evaluate_during_training ^ 
+
+(base) C:\Users\<ANONYMOUS>\Documents\CodeXGLUE-main\Code-Code\Defect-detection\code>REM --seed 12 
+
+(base) C:\Users\<ANONYMOUS>\Documents\CodeXGLUE-main\Code-Code\Defect-detection\code>python run.py 	--output_folder_name=bugtype_mixed 	--output_dir=./saved_models 	--model_type=roberta 	--tokenizer_name=microsoft/codebert-base 	--model_name_or_path=microsoft/codebert-base 	--do_eval 	--do_test 	--train_data_file=../dataset/bugtype_mixed/train.jsonl 	--eval_data_file=../dataset/bugtype_mixed/valid.jsonl 	--test_data_file=../dataset/bugtype_buffer_overflow/test.jsonl 	--epoch 5 	--block_size 400 	--train_batch_size 32 	--eval_batch_size 64 	--learning_rate 2e-5 	--max_grad_norm 1.0 	--evaluate_during_training 	--seed 12 
+08/25/2022 10:48:25 - WARNING - __main__ -   Process rank: -1, device: cuda, n_gpu: 1, distributed training: False, 16-bits training: False
+Some weights of the model checkpoint at microsoft/codebert-base were not used when initializing RobertaForSequenceClassification: ['pooler.dense.weight', 'pooler.dense.bias']
+- This IS expected if you are initializing RobertaForSequenceClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaForSequenceClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaForSequenceClassification were not initialized from the model checkpoint at microsoft/codebert-base and are newly initialized: ['classifier.dense.weight', 'classifier.dense.bias', 'classifier.out_proj.bias', 'classifier.out_proj.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+08/25/2022 10:48:27 - INFO - __main__ -   Training/evaluation parameters Namespace(train_data_file='../dataset/bugtype_mixed/train.jsonl', output_folder_name='bugtype_mixed', output_dir='./saved_models', eval_data_file='../dataset/bugtype_mixed/valid.jsonl', test_data_file='../dataset/bugtype_buffer_overflow/test.jsonl', model_type='roberta', model_name_or_path='microsoft/codebert-base', mlm=False, mlm_probability=0.15, config_name='', tokenizer_name='microsoft/codebert-base', cache_dir='', block_size=400, do_train=False, do_eval=True, do_test=True, evaluate_during_training=True, do_lower_case=False, train_batch_size=32, eval_batch_size=64, gradient_accumulation_steps=1, learning_rate=2e-05, weight_decay=0.0, adam_epsilon=1e-08, max_grad_norm=1.0, num_train_epochs=1.0, max_steps=-1, warmup_steps=0, logging_steps=50, save_steps=50, save_total_limit=None, eval_all_checkpoints=False, no_cuda=False, overwrite_output_dir=False, overwrite_cache=False, seed=12, epoch=5, fp16=False, fp16_opt_level='O1', local_rank=-1, server_ip='', server_port='', n_gpu=1, device=device(type='cuda'), per_gpu_train_batch_size=32, per_gpu_eval_batch_size=64, start_epoch=0, start_step=0)
+08/25/2022 10:48:45 - INFO - __main__ -   ***** Running evaluation *****
+08/25/2022 10:48:45 - INFO - __main__ -     Num examples = 14440
+08/25/2022 10:48:45 - INFO - __main__ -     Batch size = 64
+08/25/2022 10:50:16 - INFO - __main__ -   ***** Eval results *****
+08/25/2022 10:50:16 - INFO - __main__ -     eval_acc = 0.9447
+08/25/2022 10:50:16 - INFO - __main__ -     eval_loss = 0.2034
+08/25/2022 10:50:21 - INFO - __main__ -   ***** Running Test *****
+08/25/2022 10:50:21 - INFO - __main__ -     Num examples = 3729
+08/25/2022 10:50:21 - INFO - __main__ -     Batch size = 64
+checkpoint-best-accbugtype_mixed/model.bin
+checkpoint-best-accbugtype_mixed/model.bin
+  0%|          | 0/59 [00:00<?, ?it/s]  2%|1         | 1/59 [00:00<00:35,  1.64it/s]  3%|3         | 2/59 [00:00<00:26,  2.18it/s]  5%|5         | 3/59 [00:01<00:23,  2.42it/s]  7%|6         | 4/59 [00:01<00:21,  2.55it/s]  8%|8         | 5/59 [00:02<00:20,  2.64it/s] 10%|#         | 6/59 [00:02<00:19,  2.69it/s] 12%|#1        | 7/59 [00:02<00:19,  2.72it/s] 14%|#3        | 8/59 [00:03<00:18,  2.74it/s] 15%|#5        | 9/59 [00:03<00:18,  2.75it/s] 17%|#6        | 10/59 [00:03<00:17,  2.76it/s] 19%|#8        | 11/59 [00:04<00:17,  2.77it/s] 20%|##        | 12/59 [00:04<00:16,  2.78it/s] 22%|##2       | 13/59 [00:04<00:16,  2.78it/s] 24%|##3       | 14/59 [00:05<00:16,  2.77it/s] 25%|##5       | 15/59 [00:05<00:15,  2.78it/s] 27%|##7       | 16/59 [00:05<00:15,  2.78it/s] 29%|##8       | 17/59 [00:06<00:15,  2.78it/s] 31%|###       | 18/59 [00:06<00:14,  2.78it/s] 32%|###2      | 19/59 [00:07<00:14,  2.78it/s] 34%|###3      | 20/59 [00:07<00:14,  2.78it/s] 36%|###5      | 21/59 [00:07<00:13,  2.78it/s] 37%|###7      | 22/59 [00:08<00:13,  2.77it/s] 39%|###8      | 23/59 [00:08<00:12,  2.77it/s] 41%|####      | 24/59 [00:08<00:12,  2.78it/s] 42%|####2     | 25/59 [00:09<00:12,  2.77it/s] 44%|####4     | 26/59 [00:09<00:11,  2.78it/s] 46%|####5     | 27/59 [00:09<00:11,  2.79it/s] 47%|####7     | 28/59 [00:10<00:11,  2.78it/s] 49%|####9     | 29/59 [00:10<00:10,  2.79it/s] 51%|#####     | 30/59 [00:11<00:10,  2.78it/s] 53%|#####2    | 31/59 [00:11<00:10,  2.77it/s] 54%|#####4    | 32/59 [00:11<00:09,  2.77it/s] 56%|#####5    | 33/59 [00:12<00:09,  2.77it/s] 58%|#####7    | 34/59 [00:12<00:09,  2.78it/s] 59%|#####9    | 35/59 [00:12<00:08,  2.78it/s] 61%|######1   | 36/59 [00:13<00:08,  2.78it/s] 63%|######2   | 37/59 [00:13<00:07,  2.80it/s] 64%|######4   | 38/59 [00:13<00:07,  2.80it/s] 66%|######6   | 39/59 [00:14<00:07,  2.80it/s] 68%|######7   | 40/59 [00:14<00:06,  2.81it/s] 69%|######9   | 41/59 [00:14<00:06,  2.81it/s] 71%|#######1  | 42/59 [00:15<00:06,  2.81it/s] 73%|#######2  | 43/59 [00:15<00:05,  2.81it/s] 75%|#######4  | 44/59 [00:16<00:05,  2.81it/s] 76%|#######6  | 45/59 [00:16<00:04,  2.81it/s] 78%|#######7  | 46/59 [00:16<00:04,  2.81it/s] 80%|#######9  | 47/59 [00:17<00:04,  2.81it/s] 81%|########1 | 48/59 [00:17<00:03,  2.80it/s] 83%|########3 | 49/59 [00:17<00:03,  2.80it/s] 85%|########4 | 50/59 [00:18<00:03,  2.79it/s] 86%|########6 | 51/59 [00:18<00:02,  2.79it/s] 88%|########8 | 52/59 [00:18<00:02,  2.78it/s] 90%|########9 | 53/59 [00:19<00:02,  2.77it/s] 92%|#########1| 54/59 [00:19<00:01,  2.78it/s] 93%|#########3| 55/59 [00:19<00:01,  2.76it/s] 95%|#########4| 56/59 [00:20<00:01,  2.75it/s] 97%|#########6| 57/59 [00:20<00:00,  2.75it/s] 98%|#########8| 58/59 [00:21<00:00,  2.75it/s]100%|##########| 59/59 [00:21<00:00,  2.79it/s]
+
+Accuracy: 0.9345669080182355
+Precision: 0.6578947368421053
+F-measure: 0.3807106598984772
+Recall: 0.26785714285714285
+
+(base) C:\Users\<ANONYMOUS>\Documents\CodeXGLUE-main\Code-Code\Defect-detection\code>python run.py 	--output_folder_name=bugtype_mixed 	--output_dir=./saved_models 	--model_type=roberta 	--tokenizer_name=microsoft/codebert-base 	--model_name_or_path=microsoft/codebert-base 	--do_eval 	--do_test 	--train_data_file=../dataset/bugtype_mixed/train.jsonl 	--eval_data_file=../dataset/bugtype_mixed/valid.jsonl 	--test_data_file=../dataset/bugtype_input_validation/test.jsonl 	--epoch 5 	--block_size 400 	--train_batch_size 32 	--eval_batch_size 64 	--learning_rate 2e-5 	--max_grad_norm 1.0 	--evaluate_during_training 	--seed 12 
+08/25/2022 10:50:45 - WARNING - __main__ -   Process rank: -1, device: cuda, n_gpu: 1, distributed training: False, 16-bits training: False
+Some weights of the model checkpoint at microsoft/codebert-base were not used when initializing RobertaForSequenceClassification: ['pooler.dense.weight', 'pooler.dense.bias']
+- This IS expected if you are initializing RobertaForSequenceClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaForSequenceClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaForSequenceClassification were not initialized from the model checkpoint at microsoft/codebert-base and are newly initialized: ['classifier.out_proj.weight', 'classifier.dense.bias', 'classifier.dense.weight', 'classifier.out_proj.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+08/25/2022 10:50:47 - INFO - __main__ -   Training/evaluation parameters Namespace(train_data_file='../dataset/bugtype_mixed/train.jsonl', output_folder_name='bugtype_mixed', output_dir='./saved_models', eval_data_file='../dataset/bugtype_mixed/valid.jsonl', test_data_file='../dataset/bugtype_input_validation/test.jsonl', model_type='roberta', model_name_or_path='microsoft/codebert-base', mlm=False, mlm_probability=0.15, config_name='', tokenizer_name='microsoft/codebert-base', cache_dir='', block_size=400, do_train=False, do_eval=True, do_test=True, evaluate_during_training=True, do_lower_case=False, train_batch_size=32, eval_batch_size=64, gradient_accumulation_steps=1, learning_rate=2e-05, weight_decay=0.0, adam_epsilon=1e-08, max_grad_norm=1.0, num_train_epochs=1.0, max_steps=-1, warmup_steps=0, logging_steps=50, save_steps=50, save_total_limit=None, eval_all_checkpoints=False, no_cuda=False, overwrite_output_dir=False, overwrite_cache=False, seed=12, epoch=5, fp16=False, fp16_opt_level='O1', local_rank=-1, server_ip='', server_port='', n_gpu=1, device=device(type='cuda'), per_gpu_train_batch_size=32, per_gpu_eval_batch_size=64, start_epoch=0, start_step=0)
+08/25/2022 10:51:04 - INFO - __main__ -   ***** Running evaluation *****
+08/25/2022 10:51:04 - INFO - __main__ -     Num examples = 14440
+08/25/2022 10:51:04 - INFO - __main__ -     Batch size = 64
+08/25/2022 10:52:37 - INFO - __main__ -   ***** Eval results *****
+08/25/2022 10:52:37 - INFO - __main__ -     eval_acc = 0.9447
+08/25/2022 10:52:37 - INFO - __main__ -     eval_loss = 0.2034
+08/25/2022 10:52:41 - INFO - __main__ -   ***** Running Test *****
+08/25/2022 10:52:41 - INFO - __main__ -     Num examples = 2551
+08/25/2022 10:52:41 - INFO - __main__ -     Batch size = 64
+checkpoint-best-accbugtype_mixed/model.bin
+checkpoint-best-accbugtype_mixed/model.bin
+  0%|          | 0/40 [00:00<?, ?it/s]  2%|2         | 1/40 [00:00<00:22,  1.75it/s]  5%|5         | 2/40 [00:00<00:16,  2.24it/s]  8%|7         | 3/40 [00:01<00:15,  2.44it/s] 10%|#         | 4/40 [00:01<00:14,  2.56it/s] 12%|#2        | 5/40 [00:02<00:13,  2.63it/s] 15%|#5        | 6/40 [00:02<00:12,  2.68it/s] 18%|#7        | 7/40 [00:02<00:12,  2.70it/s] 20%|##        | 8/40 [00:03<00:11,  2.72it/s] 22%|##2       | 9/40 [00:03<00:11,  2.74it/s] 25%|##5       | 10/40 [00:03<00:10,  2.74it/s] 28%|##7       | 11/40 [00:04<00:10,  2.74it/s] 30%|###       | 12/40 [00:04<00:10,  2.74it/s] 32%|###2      | 13/40 [00:04<00:09,  2.75it/s] 35%|###5      | 14/40 [00:05<00:09,  2.75it/s] 38%|###7      | 15/40 [00:05<00:09,  2.74it/s] 40%|####      | 16/40 [00:06<00:08,  2.75it/s] 42%|####2     | 17/40 [00:06<00:08,  2.75it/s] 45%|####5     | 18/40 [00:06<00:08,  2.74it/s] 48%|####7     | 19/40 [00:07<00:07,  2.75it/s] 50%|#####     | 20/40 [00:07<00:07,  2.75it/s] 52%|#####2    | 21/40 [00:07<00:06,  2.76it/s] 55%|#####5    | 22/40 [00:08<00:06,  2.76it/s] 57%|#####7    | 23/40 [00:08<00:06,  2.77it/s] 60%|######    | 24/40 [00:08<00:05,  2.78it/s] 62%|######2   | 25/40 [00:09<00:05,  2.78it/s] 65%|######5   | 26/40 [00:09<00:05,  2.78it/s] 68%|######7   | 27/40 [00:09<00:04,  2.78it/s] 70%|#######   | 28/40 [00:10<00:04,  2.78it/s] 72%|#######2  | 29/40 [00:10<00:03,  2.78it/s] 75%|#######5  | 30/40 [00:11<00:03,  2.78it/s] 78%|#######7  | 31/40 [00:11<00:03,  2.78it/s] 80%|########  | 32/40 [00:11<00:02,  2.77it/s] 82%|########2 | 33/40 [00:12<00:02,  2.77it/s] 85%|########5 | 34/40 [00:12<00:02,  2.77it/s] 88%|########7 | 35/40 [00:12<00:01,  2.77it/s] 90%|######### | 36/40 [00:13<00:01,  2.78it/s] 92%|#########2| 37/40 [00:13<00:01,  2.78it/s] 95%|#########5| 38/40 [00:13<00:00,  2.76it/s] 98%|#########7| 39/40 [00:14<00:00,  2.75it/s]100%|##########| 40/40 [00:14<00:00,  2.86it/s]100%|##########| 40/40 [00:14<00:00,  2.73it/s]
+
+Accuracy: 0.9494315954527637
+Precision: 0.5588235294117647
+F-measure: 0.3707317073170732
+Recall: 0.2773722627737226
+
+(base) C:\Users\<ANONYMOUS>\Documents\CodeXGLUE-main\Code-Code\Defect-detection\code>python run.py 	--output_folder_name=bugtype_mixed 	--output_dir=./saved_models 	--model_type=roberta 	--tokenizer_name=microsoft/codebert-base 	--model_name_or_path=microsoft/codebert-base 	--do_eval 	--do_test 	--train_data_file=../dataset/bugtype_mixed/train.jsonl 	--eval_data_file=../dataset/bugtype_mixed/valid.jsonl 	--test_data_file=../dataset/bugtype_privilege_escalation_authorization/test.jsonl 	--epoch 5 	--block_size 400 	--train_batch_size 32 	--eval_batch_size 64 	--learning_rate 2e-5 	--max_grad_norm 1.0 	--evaluate_during_training 	--seed 12 
+08/25/2022 10:52:58 - WARNING - __main__ -   Process rank: -1, device: cuda, n_gpu: 1, distributed training: False, 16-bits training: False
+Some weights of the model checkpoint at microsoft/codebert-base were not used when initializing RobertaForSequenceClassification: ['pooler.dense.bias', 'pooler.dense.weight']
+- This IS expected if you are initializing RobertaForSequenceClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaForSequenceClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaForSequenceClassification were not initialized from the model checkpoint at microsoft/codebert-base and are newly initialized: ['classifier.dense.weight', 'classifier.out_proj.bias', 'classifier.out_proj.weight', 'classifier.dense.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+08/25/2022 10:53:00 - INFO - __main__ -   Training/evaluation parameters Namespace(train_data_file='../dataset/bugtype_mixed/train.jsonl', output_folder_name='bugtype_mixed', output_dir='./saved_models', eval_data_file='../dataset/bugtype_mixed/valid.jsonl', test_data_file='../dataset/bugtype_privilege_escalation_authorization/test.jsonl', model_type='roberta', model_name_or_path='microsoft/codebert-base', mlm=False, mlm_probability=0.15, config_name='', tokenizer_name='microsoft/codebert-base', cache_dir='', block_size=400, do_train=False, do_eval=True, do_test=True, evaluate_during_training=True, do_lower_case=False, train_batch_size=32, eval_batch_size=64, gradient_accumulation_steps=1, learning_rate=2e-05, weight_decay=0.0, adam_epsilon=1e-08, max_grad_norm=1.0, num_train_epochs=1.0, max_steps=-1, warmup_steps=0, logging_steps=50, save_steps=50, save_total_limit=None, eval_all_checkpoints=False, no_cuda=False, overwrite_output_dir=False, overwrite_cache=False, seed=12, epoch=5, fp16=False, fp16_opt_level='O1', local_rank=-1, server_ip='', server_port='', n_gpu=1, device=device(type='cuda'), per_gpu_train_batch_size=32, per_gpu_eval_batch_size=64, start_epoch=0, start_step=0)
+08/25/2022 10:53:17 - INFO - __main__ -   ***** Running evaluation *****
+08/25/2022 10:53:17 - INFO - __main__ -     Num examples = 14440
+08/25/2022 10:53:17 - INFO - __main__ -     Batch size = 64
+08/25/2022 10:54:50 - INFO - __main__ -   ***** Eval results *****
+08/25/2022 10:54:50 - INFO - __main__ -     eval_acc = 0.9447
+08/25/2022 10:54:50 - INFO - __main__ -     eval_loss = 0.2034
+08/25/2022 10:54:53 - INFO - __main__ -   ***** Running Test *****
+08/25/2022 10:54:53 - INFO - __main__ -     Num examples = 3274
+08/25/2022 10:54:53 - INFO - __main__ -     Batch size = 64
+checkpoint-best-accbugtype_mixed/model.bin
+checkpoint-best-accbugtype_mixed/model.bin
+  0%|          | 0/52 [00:00<?, ?it/s]  2%|1         | 1/52 [00:00<00:29,  1.73it/s]  4%|3         | 2/52 [00:00<00:22,  2.21it/s]  6%|5         | 3/52 [00:01<00:20,  2.43it/s]  8%|7         | 4/52 [00:01<00:18,  2.55it/s] 10%|9         | 5/52 [00:02<00:17,  2.61it/s] 12%|#1        | 6/52 [00:02<00:17,  2.66it/s] 13%|#3        | 7/52 [00:02<00:16,  2.68it/s] 15%|#5        | 8/52 [00:03<00:16,  2.71it/s] 17%|#7        | 9/52 [00:03<00:15,  2.73it/s] 19%|#9        | 10/52 [00:03<00:15,  2.73it/s] 21%|##1       | 11/52 [00:04<00:14,  2.74it/s] 23%|##3       | 12/52 [00:04<00:14,  2.74it/s] 25%|##5       | 13/52 [00:04<00:14,  2.74it/s] 27%|##6       | 14/52 [00:05<00:13,  2.74it/s] 29%|##8       | 15/52 [00:05<00:13,  2.74it/s] 31%|###       | 16/52 [00:06<00:13,  2.74it/s] 33%|###2      | 17/52 [00:06<00:12,  2.76it/s] 35%|###4      | 18/52 [00:06<00:12,  2.75it/s] 37%|###6      | 19/52 [00:07<00:12,  2.75it/s] 38%|###8      | 20/52 [00:07<00:11,  2.76it/s] 40%|####      | 21/52 [00:07<00:11,  2.75it/s] 42%|####2     | 22/52 [00:08<00:10,  2.75it/s] 44%|####4     | 23/52 [00:08<00:10,  2.75it/s] 46%|####6     | 24/52 [00:08<00:10,  2.74it/s] 48%|####8     | 25/52 [00:09<00:09,  2.75it/s] 50%|#####     | 26/52 [00:09<00:09,  2.74it/s] 52%|#####1    | 27/52 [00:10<00:09,  2.75it/s] 54%|#####3    | 28/52 [00:10<00:08,  2.75it/s] 56%|#####5    | 29/52 [00:10<00:08,  2.76it/s] 58%|#####7    | 30/52 [00:11<00:07,  2.76it/s] 60%|#####9    | 31/52 [00:11<00:07,  2.77it/s] 62%|######1   | 32/52 [00:11<00:07,  2.77it/s] 63%|######3   | 33/52 [00:12<00:06,  2.77it/s] 65%|######5   | 34/52 [00:12<00:06,  2.77it/s] 67%|######7   | 35/52 [00:12<00:06,  2.77it/s] 69%|######9   | 36/52 [00:13<00:05,  2.77it/s] 71%|#######1  | 37/52 [00:13<00:05,  2.77it/s] 73%|#######3  | 38/52 [00:14<00:05,  2.77it/s] 75%|#######5  | 39/52 [00:14<00:04,  2.77it/s] 77%|#######6  | 40/52 [00:14<00:04,  2.77it/s] 79%|#######8  | 41/52 [00:15<00:03,  2.77it/s] 81%|########  | 42/52 [00:15<00:03,  2.78it/s] 83%|########2 | 43/52 [00:15<00:03,  2.77it/s] 85%|########4 | 44/52 [00:16<00:02,  2.77it/s] 87%|########6 | 45/52 [00:16<00:02,  2.77it/s] 88%|########8 | 46/52 [00:16<00:02,  2.76it/s] 90%|######### | 47/52 [00:17<00:01,  2.75it/s] 92%|#########2| 48/52 [00:17<00:01,  2.75it/s] 94%|#########4| 49/52 [00:17<00:01,  2.74it/s] 96%|#########6| 50/52 [00:18<00:00,  2.73it/s] 98%|#########8| 51/52 [00:18<00:00,  2.74it/s]100%|##########| 52/52 [00:18<00:00,  2.77it/s]
+
+Accuracy: 0.9554062309102016
+Precision: 0.6458333333333334
+F-measure: 0.29807692307692313
+Recall: 0.19375
+
+(base) C:\Users\<ANONYMOUS>\Documents\CodeXGLUE-main\Code-Code\Defect-detection\code>python run.py 	--output_folder_name=bugtype_mixed 	--output_dir=./saved_models 	--model_type=roberta 	--tokenizer_name=microsoft/codebert-base 	--model_name_or_path=microsoft/codebert-base 	--do_eval 	--do_test 	--train_data_file=../dataset/bugtype_mixed/train.jsonl 	--eval_data_file=../dataset/bugtype_mixed/valid.jsonl 	--test_data_file=../dataset/bugtype_resource_allocation_free/test.jsonl 	--epoch 5 	--block_size 400 	--train_batch_size 32 	--eval_batch_size 64 	--learning_rate 2e-5 	--max_grad_norm 1.0 	--evaluate_during_training 	--seed 12 
+08/25/2022 10:55:15 - WARNING - __main__ -   Process rank: -1, device: cuda, n_gpu: 1, distributed training: False, 16-bits training: False
+Some weights of the model checkpoint at microsoft/codebert-base were not used when initializing RobertaForSequenceClassification: ['pooler.dense.weight', 'pooler.dense.bias']
+- This IS expected if you are initializing RobertaForSequenceClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaForSequenceClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaForSequenceClassification were not initialized from the model checkpoint at microsoft/codebert-base and are newly initialized: ['classifier.dense.bias', 'classifier.out_proj.weight', 'classifier.dense.weight', 'classifier.out_proj.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+08/25/2022 10:55:17 - INFO - __main__ -   Training/evaluation parameters Namespace(train_data_file='../dataset/bugtype_mixed/train.jsonl', output_folder_name='bugtype_mixed', output_dir='./saved_models', eval_data_file='../dataset/bugtype_mixed/valid.jsonl', test_data_file='../dataset/bugtype_resource_allocation_free/test.jsonl', model_type='roberta', model_name_or_path='microsoft/codebert-base', mlm=False, mlm_probability=0.15, config_name='', tokenizer_name='microsoft/codebert-base', cache_dir='', block_size=400, do_train=False, do_eval=True, do_test=True, evaluate_during_training=True, do_lower_case=False, train_batch_size=32, eval_batch_size=64, gradient_accumulation_steps=1, learning_rate=2e-05, weight_decay=0.0, adam_epsilon=1e-08, max_grad_norm=1.0, num_train_epochs=1.0, max_steps=-1, warmup_steps=0, logging_steps=50, save_steps=50, save_total_limit=None, eval_all_checkpoints=False, no_cuda=False, overwrite_output_dir=False, overwrite_cache=False, seed=12, epoch=5, fp16=False, fp16_opt_level='O1', local_rank=-1, server_ip='', server_port='', n_gpu=1, device=device(type='cuda'), per_gpu_train_batch_size=32, per_gpu_eval_batch_size=64, start_epoch=0, start_step=0)
+08/25/2022 10:55:34 - INFO - __main__ -   ***** Running evaluation *****
+08/25/2022 10:55:34 - INFO - __main__ -     Num examples = 14440
+08/25/2022 10:55:34 - INFO - __main__ -     Batch size = 64
+08/25/2022 10:57:08 - INFO - __main__ -   ***** Eval results *****
+08/25/2022 10:57:08 - INFO - __main__ -     eval_acc = 0.9447
+08/25/2022 10:57:08 - INFO - __main__ -     eval_loss = 0.2034
+08/25/2022 10:57:12 - INFO - __main__ -   ***** Running Test *****
+08/25/2022 10:57:12 - INFO - __main__ -     Num examples = 3374
+08/25/2022 10:57:12 - INFO - __main__ -     Batch size = 64
+checkpoint-best-accbugtype_mixed/model.bin
+checkpoint-best-accbugtype_mixed/model.bin
+  0%|          | 0/53 [00:00<?, ?it/s]  2%|1         | 1/53 [00:00<00:31,  1.63it/s]  4%|3         | 2/53 [00:00<00:23,  2.15it/s]  6%|5         | 3/53 [00:01<00:20,  2.39it/s]  8%|7         | 4/53 [00:01<00:19,  2.51it/s]  9%|9         | 5/53 [00:02<00:18,  2.60it/s] 11%|#1        | 6/53 [00:02<00:17,  2.66it/s] 13%|#3        | 7/53 [00:02<00:17,  2.68it/s] 15%|#5        | 8/53 [00:03<00:16,  2.71it/s] 17%|#6        | 9/53 [00:03<00:16,  2.73it/s] 19%|#8        | 10/53 [00:03<00:15,  2.73it/s] 21%|##        | 11/53 [00:04<00:15,  2.74it/s] 23%|##2       | 12/53 [00:04<00:15,  2.73it/s] 25%|##4       | 13/53 [00:04<00:14,  2.74it/s] 26%|##6       | 14/53 [00:05<00:14,  2.75it/s] 28%|##8       | 15/53 [00:05<00:13,  2.74it/s] 30%|###       | 16/53 [00:06<00:13,  2.75it/s] 32%|###2      | 17/53 [00:06<00:13,  2.75it/s] 34%|###3      | 18/53 [00:06<00:12,  2.74it/s] 36%|###5      | 19/53 [00:07<00:12,  2.75it/s] 38%|###7      | 20/53 [00:07<00:12,  2.75it/s] 40%|###9      | 21/53 [00:07<00:11,  2.75it/s] 42%|####1     | 22/53 [00:08<00:11,  2.75it/s] 43%|####3     | 23/53 [00:08<00:10,  2.74it/s] 45%|####5     | 24/53 [00:08<00:10,  2.75it/s] 47%|####7     | 25/53 [00:09<00:10,  2.75it/s] 49%|####9     | 26/53 [00:09<00:09,  2.74it/s] 51%|#####     | 27/53 [00:10<00:09,  2.74it/s] 53%|#####2    | 28/53 [00:10<00:09,  2.74it/s] 55%|#####4    | 29/53 [00:10<00:08,  2.74it/s] 57%|#####6    | 30/53 [00:11<00:08,  2.75it/s] 58%|#####8    | 31/53 [00:11<00:07,  2.75it/s] 60%|######    | 32/53 [00:11<00:07,  2.75it/s] 62%|######2   | 33/53 [00:12<00:07,  2.76it/s] 64%|######4   | 34/53 [00:12<00:06,  2.76it/s] 66%|######6   | 35/53 [00:12<00:06,  2.77it/s] 68%|######7   | 36/53 [00:13<00:06,  2.77it/s] 70%|######9   | 37/53 [00:13<00:05,  2.77it/s] 72%|#######1  | 38/53 [00:14<00:05,  2.77it/s] 74%|#######3  | 39/53 [00:14<00:05,  2.77it/s] 75%|#######5  | 40/53 [00:14<00:04,  2.77it/s] 77%|#######7  | 41/53 [00:15<00:04,  2.77it/s] 79%|#######9  | 42/53 [00:15<00:03,  2.77it/s] 81%|########1 | 43/53 [00:15<00:03,  2.77it/s] 83%|########3 | 44/53 [00:16<00:03,  2.77it/s] 85%|########4 | 45/53 [00:16<00:02,  2.77it/s] 87%|########6 | 46/53 [00:16<00:02,  2.77it/s] 89%|########8 | 47/53 [00:17<00:02,  2.77it/s] 91%|######### | 48/53 [00:17<00:01,  2.76it/s] 92%|#########2| 49/53 [00:18<00:01,  2.76it/s] 94%|#########4| 50/53 [00:18<00:01,  2.76it/s] 96%|#########6| 51/53 [00:18<00:00,  2.74it/s] 98%|#########8| 52/53 [00:19<00:00,  2.73it/s]100%|##########| 53/53 [00:19<00:00,  2.99it/s]100%|##########| 53/53 [00:19<00:00,  2.73it/s]
+
+Accuracy: 0.949021932424422
+Precision: 0.5625
+F-measure: 0.17307692307692307
+Recall: 0.10227272727272728
+
+(base) C:\Users\<ANONYMOUS>\Documents\CodeXGLUE-main\Code-Code\Defect-detection\code>python run.py 	--output_folder_name=bugtype_mixed 	--output_dir=./saved_models 	--model_type=roberta 	--tokenizer_name=microsoft/codebert-base 	--model_name_or_path=microsoft/codebert-base 	--do_eval 	--do_test 	--train_data_file=../dataset/bugtype_mixed/train.jsonl 	--eval_data_file=../dataset/bugtype_mixed/valid.jsonl 	--test_data_file=../dataset/bugtype_value_propagation_errors/test.jsonl 	--epoch 5 	--block_size 400 	--train_batch_size 32 	--eval_batch_size 64 	--learning_rate 2e-5 	--max_grad_norm 1.0 	--evaluate_during_training 	--seed 12 
+08/25/2022 10:57:34 - WARNING - __main__ -   Process rank: -1, device: cuda, n_gpu: 1, distributed training: False, 16-bits training: False
+Some weights of the model checkpoint at microsoft/codebert-base were not used when initializing RobertaForSequenceClassification: ['pooler.dense.weight', 'pooler.dense.bias']
+- This IS expected if you are initializing RobertaForSequenceClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaForSequenceClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaForSequenceClassification were not initialized from the model checkpoint at microsoft/codebert-base and are newly initialized: ['classifier.dense.bias', 'classifier.dense.weight', 'classifier.out_proj.bias', 'classifier.out_proj.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+08/25/2022 10:57:36 - INFO - __main__ -   Training/evaluation parameters Namespace(train_data_file='../dataset/bugtype_mixed/train.jsonl', output_folder_name='bugtype_mixed', output_dir='./saved_models', eval_data_file='../dataset/bugtype_mixed/valid.jsonl', test_data_file='../dataset/bugtype_value_propagation_errors/test.jsonl', model_type='roberta', model_name_or_path='microsoft/codebert-base', mlm=False, mlm_probability=0.15, config_name='', tokenizer_name='microsoft/codebert-base', cache_dir='', block_size=400, do_train=False, do_eval=True, do_test=True, evaluate_during_training=True, do_lower_case=False, train_batch_size=32, eval_batch_size=64, gradient_accumulation_steps=1, learning_rate=2e-05, weight_decay=0.0, adam_epsilon=1e-08, max_grad_norm=1.0, num_train_epochs=1.0, max_steps=-1, warmup_steps=0, logging_steps=50, save_steps=50, save_total_limit=None, eval_all_checkpoints=False, no_cuda=False, overwrite_output_dir=False, overwrite_cache=False, seed=12, epoch=5, fp16=False, fp16_opt_level='O1', local_rank=-1, server_ip='', server_port='', n_gpu=1, device=device(type='cuda'), per_gpu_train_batch_size=32, per_gpu_eval_batch_size=64, start_epoch=0, start_step=0)
+08/25/2022 10:57:53 - INFO - __main__ -   ***** Running evaluation *****
+08/25/2022 10:57:53 - INFO - __main__ -     Num examples = 14440
+08/25/2022 10:57:53 - INFO - __main__ -     Batch size = 64
+08/25/2022 10:59:26 - INFO - __main__ -   ***** Eval results *****
+08/25/2022 10:59:26 - INFO - __main__ -     eval_acc = 0.9447
+08/25/2022 10:59:26 - INFO - __main__ -     eval_loss = 0.2034
+08/25/2022 10:59:28 - INFO - __main__ -   ***** Running Test *****
+08/25/2022 10:59:28 - INFO - __main__ -     Num examples = 1512
+08/25/2022 10:59:28 - INFO - __main__ -     Batch size = 64
+checkpoint-best-accbugtype_mixed/model.bin
+checkpoint-best-accbugtype_mixed/model.bin
+  0%|          | 0/24 [00:00<?, ?it/s]  4%|4         | 1/24 [00:00<00:12,  1.87it/s]  8%|8         | 2/24 [00:00<00:09,  2.32it/s] 12%|#2        | 3/24 [00:01<00:08,  2.49it/s] 17%|#6        | 4/24 [00:01<00:07,  2.58it/s] 21%|##        | 5/24 [00:01<00:07,  2.65it/s] 25%|##5       | 6/24 [00:02<00:06,  2.67it/s] 29%|##9       | 7/24 [00:02<00:06,  2.70it/s] 33%|###3      | 8/24 [00:03<00:05,  2.71it/s] 38%|###7      | 9/24 [00:03<00:05,  2.72it/s] 42%|####1     | 10/24 [00:03<00:05,  2.72it/s] 46%|####5     | 11/24 [00:04<00:04,  2.73it/s] 50%|#####     | 12/24 [00:04<00:04,  2.73it/s] 54%|#####4    | 13/24 [00:04<00:04,  2.74it/s] 58%|#####8    | 14/24 [00:05<00:03,  2.73it/s] 62%|######2   | 15/24 [00:05<00:03,  2.74it/s] 67%|######6   | 16/24 [00:06<00:02,  2.73it/s] 71%|#######   | 17/24 [00:06<00:02,  2.73it/s] 75%|#######5  | 18/24 [00:06<00:02,  2.74it/s] 79%|#######9  | 19/24 [00:07<00:01,  2.74it/s] 83%|########3 | 20/24 [00:07<00:01,  2.75it/s] 88%|########7 | 21/24 [00:07<00:01,  2.75it/s] 92%|#########1| 22/24 [00:08<00:00,  2.75it/s] 96%|#########5| 23/24 [00:08<00:00,  2.74it/s]100%|##########| 24/24 [00:08<00:00,  3.08it/s]100%|##########| 24/24 [00:08<00:00,  2.73it/s]
+
+Accuracy: 0.9490740740740741
+Precision: 0.7142857142857143
+F-measure: 0.3937007874015748
+Recall: 0.2717391304347826

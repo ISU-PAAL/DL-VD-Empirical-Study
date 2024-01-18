@@ -1,0 +1,31 @@
+name: Devign37
+channels:
+  - defaults
+  - dglteam
+  - pytorch
+  - conda-forge
+dependencies:
+  - python=3.7
+  - tqdm
+  - scikit-learn
+  - numpy
+  - torchvision
+  - pytorch
+  - torchaudio
+  - dgl
+  - pandas
+  - cudatoolkit=11.3
+  - gensim
+  - imbalanced-learn
+  - matplotlib
+  - pygraphviz
+  - seaborn
+  - nltk
+  - graphviz
+  - scipy
+  - psutil
+  - dgl-cuda11.3
+  - jsonlines
+  - ipython
+  - pytest
+  - snakeviz

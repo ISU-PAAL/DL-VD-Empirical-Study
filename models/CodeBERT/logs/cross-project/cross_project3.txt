@@ -1,0 +1,441 @@
+
+(base) C:\Users\<ANONYMOUS>\Documents\CodeXGLUE-main\Code-Code\Defect-detection\code>//python run.py --output_folder_name=msr --output_dir=./saved_models --model_type=roberta --tokenizer_name=microsoft/codebert-base --model_name_or_path=microsoft/codebert-base --do_train --train_data_file=../dataset/msr/train.jsonl --eval_data_file=../dataset/msr/valid.jsonl --test_data_file=../dataset/msr/test.jsonl --epoch 5 --block_size 400 --train_batch_size 32 --eval_batch_size 64 --learning_rate 2e-5 --max_grad_norm 1.0 --evaluate_during_training --seed 123456 
+The filename, directory name, or volume label syntax is incorrect.
+
+(base) C:\Users\<ANONYMOUS>\Documents\CodeXGLUE-main\Code-Code\Defect-detection\code>//python run.py --output_folder_name=msr --output_dir=./saved_models --model_type=roberta --tokenizer_name=microsoft/codebert-base --model_name_or_path=microsoft/codebert-base --do_eval --do_test --train_data_file=../dataset/msr/train.jsonl --eval_data_file=../dataset/msr/valid.jsonl --test_data_file=../dataset/msr/test.jsonl --epoch 5 --block_size 400 --train_batch_size 32 --eval_batch_size 64 --learning_rate 2e-5 --max_grad_norm 1.0 --evaluate_during_training --seed 123456 
+The filename, directory name, or volume label syntax is incorrect.
+
+(base) C:\Users\<ANONYMOUS>\Documents\CodeXGLUE-main\Code-Code\Defect-detection\code>//python run.py --output_folder_name=fold_0_dataset --output_dir=./saved_models --model_type=roberta --tokenizer_name=microsoft/codebert-base --model_name_or_path=microsoft/codebert-base --do_train --train_data_file=../dataset/fold_0_dataset/train.jsonl --eval_data_file=../dataset/fold_0_dataset/valid.jsonl --test_data_file=../dataset/fold_0_dataset/test.jsonl --epoch 5 --block_size 400 --train_batch_size 32 --eval_batch_size 64 --learning_rate 2e-5 --max_grad_norm 1.0 --evaluate_during_training --seed 123456 
+The filename, directory name, or volume label syntax is incorrect.
+
+(base) C:\Users\<ANONYMOUS>\Documents\CodeXGLUE-main\Code-Code\Defect-detection\code>python run.py --output_folder_name=fold_0_dataset --output_dir=./saved_models --model_type=roberta --tokenizer_name=microsoft/codebert-base --model_name_or_path=microsoft/codebert-base --do_eval --do_test --train_data_file=../dataset/fold_0_dataset/train.jsonl --eval_data_file=../dataset/fold_0_dataset/valid.jsonl --test_data_file=../dataset/fold_0_dataset/test.jsonl --epoch 5 --block_size 400 --train_batch_size 32 --eval_batch_size 64 --learning_rate 2e-5 --max_grad_norm 1.0 --evaluate_during_training --seed 123456 
+08/20/2022 18:16:42 - WARNING - __main__ -   Process rank: -1, device: cuda, n_gpu: 1, distributed training: False, 16-bits training: False
+Some weights of the model checkpoint at microsoft/codebert-base were not used when initializing RobertaForSequenceClassification: ['pooler.dense.bias', 'pooler.dense.weight']
+- This IS expected if you are initializing RobertaForSequenceClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaForSequenceClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaForSequenceClassification were not initialized from the model checkpoint at microsoft/codebert-base and are newly initialized: ['classifier.dense.bias', 'classifier.out_proj.weight', 'classifier.out_proj.bias', 'classifier.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+08/20/2022 18:16:44 - INFO - __main__ -   Training/evaluation parameters Namespace(train_data_file='../dataset/fold_0_dataset/train.jsonl', output_folder_name='fold_0_dataset', output_dir='./saved_models', eval_data_file='../dataset/fold_0_dataset/valid.jsonl', test_data_file='../dataset/fold_0_dataset/test.jsonl', model_type='roberta', model_name_or_path='microsoft/codebert-base', mlm=False, mlm_probability=0.15, config_name='', tokenizer_name='microsoft/codebert-base', cache_dir='', block_size=400, do_train=False, do_eval=True, do_test=True, evaluate_during_training=True, do_lower_case=False, train_batch_size=32, eval_batch_size=64, gradient_accumulation_steps=1, learning_rate=2e-05, weight_decay=0.0, adam_epsilon=1e-08, max_grad_norm=1.0, num_train_epochs=1.0, max_steps=-1, warmup_steps=0, logging_steps=50, save_steps=50, save_total_limit=None, eval_all_checkpoints=False, no_cuda=False, overwrite_output_dir=False, overwrite_cache=False, seed=123456, epoch=5, fp16=False, fp16_opt_level='O1', local_rank=-1, server_ip='', server_port='', n_gpu=1, device=device(type='cuda'), per_gpu_train_batch_size=32, per_gpu_eval_batch_size=64, start_epoch=0, start_step=0)
+Traceback (most recent call last):
+  File "C:\Users\<ANONYMOUS>\Documents\CodeXGLUE-main\Code-Code\Defect-detection\code\run.py", line 585, in <module>
+    main()
+  File "C:\Users\<ANONYMOUS>\Documents\CodeXGLUE-main\Code-Code\Defect-detection\code\run.py", line 567, in main
+    model.load_state_dict(torch.load(output_dir))      
+  File "C:\Users\<ANONYMOUS>\Anaconda3\lib\site-packages\torch\serialization.py", line 699, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "C:\Users\<ANONYMOUS>\Anaconda3\lib\site-packages\torch\serialization.py", line 230, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "C:\Users\<ANONYMOUS>\Anaconda3\lib\site-packages\torch\serialization.py", line 211, in __init__
+    super(_open_file, self).__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: './saved_models\\checkpoint-best-acc/model.bin'
+
+(base) C:\Users\<ANONYMOUS>\Documents\CodeXGLUE-main\Code-Code\Defect-detection\code>python run.py --output_folder_name=fold_0_dataset --output_dir=./saved_models --model_type=roberta --tokenizer_name=microsoft/codebert-base --model_name_or_path=microsoft/codebert-base --do_eval --do_test --train_data_file=../dataset/fold_0_dataset/train.jsonl --eval_data_file=../dataset/fold_0_dataset/valid.jsonl --test_data_file=../dataset/fold_0_holdout/test.jsonl --epoch 5 --block_size 400 --train_batch_size 32 --eval_batch_size 64 --learning_rate 2e-5 --max_grad_norm 1.0 --evaluate_during_training --seed 123456 
+08/20/2022 18:16:46 - WARNING - __main__ -   Process rank: -1, device: cuda, n_gpu: 1, distributed training: False, 16-bits training: False
+Some weights of the model checkpoint at microsoft/codebert-base were not used when initializing RobertaForSequenceClassification: ['pooler.dense.weight', 'pooler.dense.bias']
+- This IS expected if you are initializing RobertaForSequenceClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaForSequenceClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaForSequenceClassification were not initialized from the model checkpoint at microsoft/codebert-base and are newly initialized: ['classifier.out_proj.weight', 'classifier.dense.bias', 'classifier.out_proj.bias', 'classifier.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+08/20/2022 18:16:48 - INFO - __main__ -   Training/evaluation parameters Namespace(train_data_file='../dataset/fold_0_dataset/train.jsonl', output_folder_name='fold_0_dataset', output_dir='./saved_models', eval_data_file='../dataset/fold_0_dataset/valid.jsonl', test_data_file='../dataset/fold_0_holdout/test.jsonl', model_type='roberta', model_name_or_path='microsoft/codebert-base', mlm=False, mlm_probability=0.15, config_name='', tokenizer_name='microsoft/codebert-base', cache_dir='', block_size=400, do_train=False, do_eval=True, do_test=True, evaluate_during_training=True, do_lower_case=False, train_batch_size=32, eval_batch_size=64, gradient_accumulation_steps=1, learning_rate=2e-05, weight_decay=0.0, adam_epsilon=1e-08, max_grad_norm=1.0, num_train_epochs=1.0, max_steps=-1, warmup_steps=0, logging_steps=50, save_steps=50, save_total_limit=None, eval_all_checkpoints=False, no_cuda=False, overwrite_output_dir=False, overwrite_cache=False, seed=123456, epoch=5, fp16=False, fp16_opt_level='O1', local_rank=-1, server_ip='', server_port='', n_gpu=1, device=device(type='cuda'), per_gpu_train_batch_size=32, per_gpu_eval_batch_size=64, start_epoch=0, start_step=0)
+Traceback (most recent call last):
+  File "C:\Users\<ANONYMOUS>\Documents\CodeXGLUE-main\Code-Code\Defect-detection\code\run.py", line 585, in <module>
+    main()
+  File "C:\Users\<ANONYMOUS>\Documents\CodeXGLUE-main\Code-Code\Defect-detection\code\run.py", line 567, in main
+    model.load_state_dict(torch.load(output_dir))      
+  File "C:\Users\<ANONYMOUS>\Anaconda3\lib\site-packages\torch\serialization.py", line 699, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "C:\Users\<ANONYMOUS>\Anaconda3\lib\site-packages\torch\serialization.py", line 230, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "C:\Users\<ANONYMOUS>\Anaconda3\lib\site-packages\torch\serialization.py", line 211, in __init__
+    super(_open_file, self).__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: './saved_models\\checkpoint-best-acc/model.bin'
+
+(base) C:\Users\<ANONYMOUS>\Documents\CodeXGLUE-main\Code-Code\Defect-detection\code>//python run.py --output_folder_name=fold_1_dataset --output_dir=./saved_models --model_type=roberta --tokenizer_name=microsoft/codebert-base --model_name_or_path=microsoft/codebert-base --do_train --train_data_file=../dataset/fold_1_dataset/train.jsonl --eval_data_file=../dataset/fold_1_dataset/valid.jsonl --test_data_file=../dataset/fold_1_dataset/test.jsonl --epoch 5 --block_size 400 --train_batch_size 32 --eval_batch_size 64 --learning_rate 2e-5 --max_grad_norm 1.0 --evaluate_during_training --seed 123456 
+The filename, directory name, or volume label syntax is incorrect.
+
+(base) C:\Users\<ANONYMOUS>\Documents\CodeXGLUE-main\Code-Code\Defect-detection\code>python run.py --output_folder_name=fold_1_dataset --output_dir=./saved_models --model_type=roberta --tokenizer_name=microsoft/codebert-base --model_name_or_path=microsoft/codebert-base --do_eval --do_test --train_data_file=../dataset/fold_1_dataset/train.jsonl --eval_data_file=../dataset/fold_1_dataset/valid.jsonl --test_data_file=../dataset/fold_1_dataset/test.jsonl --epoch 5 --block_size 400 --train_batch_size 32 --eval_batch_size 64 --learning_rate 2e-5 --max_grad_norm 1.0 --evaluate_during_training --seed 123456 
+08/20/2022 18:16:50 - WARNING - __main__ -   Process rank: -1, device: cuda, n_gpu: 1, distributed training: False, 16-bits training: False
+Some weights of the model checkpoint at microsoft/codebert-base were not used when initializing RobertaForSequenceClassification: ['pooler.dense.weight', 'pooler.dense.bias']
+- This IS expected if you are initializing RobertaForSequenceClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaForSequenceClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaForSequenceClassification were not initialized from the model checkpoint at microsoft/codebert-base and are newly initialized: ['classifier.dense.bias', 'classifier.out_proj.weight', 'classifier.dense.weight', 'classifier.out_proj.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+08/20/2022 18:16:53 - INFO - __main__ -   Training/evaluation parameters Namespace(train_data_file='../dataset/fold_1_dataset/train.jsonl', output_folder_name='fold_1_dataset', output_dir='./saved_models', eval_data_file='../dataset/fold_1_dataset/valid.jsonl', test_data_file='../dataset/fold_1_dataset/test.jsonl', model_type='roberta', model_name_or_path='microsoft/codebert-base', mlm=False, mlm_probability=0.15, config_name='', tokenizer_name='microsoft/codebert-base', cache_dir='', block_size=400, do_train=False, do_eval=True, do_test=True, evaluate_during_training=True, do_lower_case=False, train_batch_size=32, eval_batch_size=64, gradient_accumulation_steps=1, learning_rate=2e-05, weight_decay=0.0, adam_epsilon=1e-08, max_grad_norm=1.0, num_train_epochs=1.0, max_steps=-1, warmup_steps=0, logging_steps=50, save_steps=50, save_total_limit=None, eval_all_checkpoints=False, no_cuda=False, overwrite_output_dir=False, overwrite_cache=False, seed=123456, epoch=5, fp16=False, fp16_opt_level='O1', local_rank=-1, server_ip='', server_port='', n_gpu=1, device=device(type='cuda'), per_gpu_train_batch_size=32, per_gpu_eval_batch_size=64, start_epoch=0, start_step=0)
+Traceback (most recent call last):
+  File "C:\Users\<ANONYMOUS>\Documents\CodeXGLUE-main\Code-Code\Defect-detection\code\run.py", line 585, in <module>
+    main()
+  File "C:\Users\<ANONYMOUS>\Documents\CodeXGLUE-main\Code-Code\Defect-detection\code\run.py", line 567, in main
+    model.load_state_dict(torch.load(output_dir))      
+  File "C:\Users\<ANONYMOUS>\Anaconda3\lib\site-packages\torch\serialization.py", line 699, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "C:\Users\<ANONYMOUS>\Anaconda3\lib\site-packages\torch\serialization.py", line 230, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "C:\Users\<ANONYMOUS>\Anaconda3\lib\site-packages\torch\serialization.py", line 211, in __init__
+    super(_open_file, self).__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: './saved_models\\checkpoint-best-acc/model.bin'
+
+(base) C:\Users\<ANONYMOUS>\Documents\CodeXGLUE-main\Code-Code\Defect-detection\code>python run.py --output_folder_name=fold_1_dataset --output_dir=./saved_models --model_type=roberta --tokenizer_name=microsoft/codebert-base --model_name_or_path=microsoft/codebert-base --do_eval --do_test --train_data_file=../dataset/fold_1_dataset/train.jsonl --eval_data_file=../dataset/fold_1_dataset/valid.jsonl --test_data_file=../dataset/fold_1_holdout/test.jsonl --epoch 5 --block_size 400 --train_batch_size 32 --eval_batch_size 64 --learning_rate 2e-5 --max_grad_norm 1.0 --evaluate_during_training --seed 123456 
+08/20/2022 18:16:55 - WARNING - __main__ -   Process rank: -1, device: cuda, n_gpu: 1, distributed training: False, 16-bits training: False
+Some weights of the model checkpoint at microsoft/codebert-base were not used when initializing RobertaForSequenceClassification: ['pooler.dense.weight', 'pooler.dense.bias']
+- This IS expected if you are initializing RobertaForSequenceClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaForSequenceClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaForSequenceClassification were not initialized from the model checkpoint at microsoft/codebert-base and are newly initialized: ['classifier.out_proj.bias', 'classifier.out_proj.weight', 'classifier.dense.weight', 'classifier.dense.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+08/20/2022 18:16:57 - INFO - __main__ -   Training/evaluation parameters Namespace(train_data_file='../dataset/fold_1_dataset/train.jsonl', output_folder_name='fold_1_dataset', output_dir='./saved_models', eval_data_file='../dataset/fold_1_dataset/valid.jsonl', test_data_file='../dataset/fold_1_holdout/test.jsonl', model_type='roberta', model_name_or_path='microsoft/codebert-base', mlm=False, mlm_probability=0.15, config_name='', tokenizer_name='microsoft/codebert-base', cache_dir='', block_size=400, do_train=False, do_eval=True, do_test=True, evaluate_during_training=True, do_lower_case=False, train_batch_size=32, eval_batch_size=64, gradient_accumulation_steps=1, learning_rate=2e-05, weight_decay=0.0, adam_epsilon=1e-08, max_grad_norm=1.0, num_train_epochs=1.0, max_steps=-1, warmup_steps=0, logging_steps=50, save_steps=50, save_total_limit=None, eval_all_checkpoints=False, no_cuda=False, overwrite_output_dir=False, overwrite_cache=False, seed=123456, epoch=5, fp16=False, fp16_opt_level='O1', local_rank=-1, server_ip='', server_port='', n_gpu=1, device=device(type='cuda'), per_gpu_train_batch_size=32, per_gpu_eval_batch_size=64, start_epoch=0, start_step=0)
+Traceback (most recent call last):
+  File "C:\Users\<ANONYMOUS>\Documents\CodeXGLUE-main\Code-Code\Defect-detection\code\run.py", line 585, in <module>
+    main()
+  File "C:\Users\<ANONYMOUS>\Documents\CodeXGLUE-main\Code-Code\Defect-detection\code\run.py", line 567, in main
+    model.load_state_dict(torch.load(output_dir))      
+  File "C:\Users\<ANONYMOUS>\Anaconda3\lib\site-packages\torch\serialization.py", line 699, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "C:\Users\<ANONYMOUS>\Anaconda3\lib\site-packages\torch\serialization.py", line 230, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "C:\Users\<ANONYMOUS>\Anaconda3\lib\site-packages\torch\serialization.py", line 211, in __init__
+    super(_open_file, self).__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: './saved_models\\checkpoint-best-acc/model.bin'
+
+(base) C:\Users\<ANONYMOUS>\Documents\CodeXGLUE-main\Code-Code\Defect-detection\code>//python run.py --output_folder_name=fold_2_dataset --output_dir=./saved_models --model_type=roberta --tokenizer_name=microsoft/codebert-base --model_name_or_path=microsoft/codebert-base --do_train --train_data_file=../dataset/fold_2_dataset/train.jsonl --eval_data_file=../dataset/fold_2_dataset/valid.jsonl --test_data_file=../dataset/fold_2_dataset/test.jsonl --epoch 5 --block_size 400 --train_batch_size 32 --eval_batch_size 64 --learning_rate 2e-5 --max_grad_norm 1.0 --evaluate_during_training --seed 123456 
+The filename, directory name, or volume label syntax is incorrect.
+
+(base) C:\Users\<ANONYMOUS>\Documents\CodeXGLUE-main\Code-Code\Defect-detection\code>python run.py --output_folder_name=fold_2_dataset --output_dir=./saved_models --model_type=roberta --tokenizer_name=microsoft/codebert-base --model_name_or_path=microsoft/codebert-base --do_eval --do_test --train_data_file=../dataset/fold_2_dataset/train.jsonl --eval_data_file=../dataset/fold_2_dataset/valid.jsonl --test_data_file=../dataset/fold_2_dataset/test.jsonl --epoch 5 --block_size 400 --train_batch_size 32 --eval_batch_size 64 --learning_rate 2e-5 --max_grad_norm 1.0 --evaluate_during_training --seed 123456 
+08/20/2022 18:16:59 - WARNING - __main__ -   Process rank: -1, device: cuda, n_gpu: 1, distributed training: False, 16-bits training: False
+Some weights of the model checkpoint at microsoft/codebert-base were not used when initializing RobertaForSequenceClassification: ['pooler.dense.bias', 'pooler.dense.weight']
+- This IS expected if you are initializing RobertaForSequenceClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaForSequenceClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaForSequenceClassification were not initialized from the model checkpoint at microsoft/codebert-base and are newly initialized: ['classifier.dense.bias', 'classifier.out_proj.weight', 'classifier.dense.weight', 'classifier.out_proj.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+08/20/2022 18:17:01 - INFO - __main__ -   Training/evaluation parameters Namespace(train_data_file='../dataset/fold_2_dataset/train.jsonl', output_folder_name='fold_2_dataset', output_dir='./saved_models', eval_data_file='../dataset/fold_2_dataset/valid.jsonl', test_data_file='../dataset/fold_2_dataset/test.jsonl', model_type='roberta', model_name_or_path='microsoft/codebert-base', mlm=False, mlm_probability=0.15, config_name='', tokenizer_name='microsoft/codebert-base', cache_dir='', block_size=400, do_train=False, do_eval=True, do_test=True, evaluate_during_training=True, do_lower_case=False, train_batch_size=32, eval_batch_size=64, gradient_accumulation_steps=1, learning_rate=2e-05, weight_decay=0.0, adam_epsilon=1e-08, max_grad_norm=1.0, num_train_epochs=1.0, max_steps=-1, warmup_steps=0, logging_steps=50, save_steps=50, save_total_limit=None, eval_all_checkpoints=False, no_cuda=False, overwrite_output_dir=False, overwrite_cache=False, seed=123456, epoch=5, fp16=False, fp16_opt_level='O1', local_rank=-1, server_ip='', server_port='', n_gpu=1, device=device(type='cuda'), per_gpu_train_batch_size=32, per_gpu_eval_batch_size=64, start_epoch=0, start_step=0)
+Traceback (most recent call last):
+  File "C:\Users\<ANONYMOUS>\Documents\CodeXGLUE-main\Code-Code\Defect-detection\code\run.py", line 585, in <module>
+    main()
+  File "C:\Users\<ANONYMOUS>\Documents\CodeXGLUE-main\Code-Code\Defect-detection\code\run.py", line 567, in main
+    model.load_state_dict(torch.load(output_dir))      
+  File "C:\Users\<ANONYMOUS>\Anaconda3\lib\site-packages\torch\serialization.py", line 699, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "C:\Users\<ANONYMOUS>\Anaconda3\lib\site-packages\torch\serialization.py", line 230, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "C:\Users\<ANONYMOUS>\Anaconda3\lib\site-packages\torch\serialization.py", line 211, in __init__
+    super(_open_file, self).__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: './saved_models\\checkpoint-best-acc/model.bin'
+
+(base) C:\Users\<ANONYMOUS>\Documents\CodeXGLUE-main\Code-Code\Defect-detection\code>python run.py --output_folder_name=fold_2_dataset --output_dir=./saved_models --model_type=roberta --tokenizer_name=microsoft/codebert-base --model_name_or_path=microsoft/codebert-base --do_eval --do_test --train_data_file=../dataset/fold_2_dataset/train.jsonl --eval_data_file=../dataset/fold_2_dataset/valid.jsonl --test_data_file=../dataset/fold_2_holdout/test.jsonl --epoch 5 --block_size 400 --train_batch_size 32 --eval_batch_size 64 --learning_rate 2e-5 --max_grad_norm 1.0 --evaluate_during_training --seed 123456 
+08/20/2022 18:17:03 - WARNING - __main__ -   Process rank: -1, device: cuda, n_gpu: 1, distributed training: False, 16-bits training: False
+Some weights of the model checkpoint at microsoft/codebert-base were not used when initializing RobertaForSequenceClassification: ['pooler.dense.bias', 'pooler.dense.weight']
+- This IS expected if you are initializing RobertaForSequenceClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaForSequenceClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaForSequenceClassification were not initialized from the model checkpoint at microsoft/codebert-base and are newly initialized: ['classifier.out_proj.bias', 'classifier.out_proj.weight', 'classifier.dense.bias', 'classifier.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+08/20/2022 18:17:05 - INFO - __main__ -   Training/evaluation parameters Namespace(train_data_file='../dataset/fold_2_dataset/train.jsonl', output_folder_name='fold_2_dataset', output_dir='./saved_models', eval_data_file='../dataset/fold_2_dataset/valid.jsonl', test_data_file='../dataset/fold_2_holdout/test.jsonl', model_type='roberta', model_name_or_path='microsoft/codebert-base', mlm=False, mlm_probability=0.15, config_name='', tokenizer_name='microsoft/codebert-base', cache_dir='', block_size=400, do_train=False, do_eval=True, do_test=True, evaluate_during_training=True, do_lower_case=False, train_batch_size=32, eval_batch_size=64, gradient_accumulation_steps=1, learning_rate=2e-05, weight_decay=0.0, adam_epsilon=1e-08, max_grad_norm=1.0, num_train_epochs=1.0, max_steps=-1, warmup_steps=0, logging_steps=50, save_steps=50, save_total_limit=None, eval_all_checkpoints=False, no_cuda=False, overwrite_output_dir=False, overwrite_cache=False, seed=123456, epoch=5, fp16=False, fp16_opt_level='O1', local_rank=-1, server_ip='', server_port='', n_gpu=1, device=device(type='cuda'), per_gpu_train_batch_size=32, per_gpu_eval_batch_size=64, start_epoch=0, start_step=0)
+Traceback (most recent call last):
+  File "C:\Users\<ANONYMOUS>\Documents\CodeXGLUE-main\Code-Code\Defect-detection\code\run.py", line 585, in <module>
+    main()
+  File "C:\Users\<ANONYMOUS>\Documents\CodeXGLUE-main\Code-Code\Defect-detection\code\run.py", line 567, in main
+    model.load_state_dict(torch.load(output_dir))      
+  File "C:\Users\<ANONYMOUS>\Anaconda3\lib\site-packages\torch\serialization.py", line 699, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "C:\Users\<ANONYMOUS>\Anaconda3\lib\site-packages\torch\serialization.py", line 230, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "C:\Users\<ANONYMOUS>\Anaconda3\lib\site-packages\torch\serialization.py", line 211, in __init__
+    super(_open_file, self).__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: './saved_models\\checkpoint-best-acc/model.bin'
+
+(base) C:\Users\<ANONYMOUS>\Documents\CodeXGLUE-main\Code-Code\Defect-detection\code>//python run.py --output_folder_name=fold_3_dataset --output_dir=./saved_models --model_type=roberta --tokenizer_name=microsoft/codebert-base --model_name_or_path=microsoft/codebert-base --do_train --train_data_file=../dataset/fold_3_dataset/train.jsonl --eval_data_file=../dataset/fold_3_dataset/valid.jsonl --test_data_file=../dataset/fold_3_dataset/test.jsonl --epoch 5 --block_size 400 --train_batch_size 32 --eval_batch_size 64 --learning_rate 2e-5 --max_grad_norm 1.0 --evaluate_during_training --seed 123456 
+The filename, directory name, or volume label syntax is incorrect.
+
+(base) C:\Users\<ANONYMOUS>\Documents\CodeXGLUE-main\Code-Code\Defect-detection\code>python run.py --output_folder_name=fold_3_dataset --output_dir=./saved_models --model_type=roberta --tokenizer_name=microsoft/codebert-base --model_name_or_path=microsoft/codebert-base --do_eval --do_test --train_data_file=../dataset/fold_3_dataset/train.jsonl --eval_data_file=../dataset/fold_3_dataset/valid.jsonl --test_data_file=../dataset/fold_3_dataset/test.jsonl --epoch 5 --block_size 400 --train_batch_size 32 --eval_batch_size 64 --learning_rate 2e-5 --max_grad_norm 1.0 --evaluate_during_training --seed 123456 
+08/20/2022 18:17:07 - WARNING - __main__ -   Process rank: -1, device: cuda, n_gpu: 1, distributed training: False, 16-bits training: False
+Some weights of the model checkpoint at microsoft/codebert-base were not used when initializing RobertaForSequenceClassification: ['pooler.dense.bias', 'pooler.dense.weight']
+- This IS expected if you are initializing RobertaForSequenceClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaForSequenceClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaForSequenceClassification were not initialized from the model checkpoint at microsoft/codebert-base and are newly initialized: ['classifier.dense.bias', 'classifier.dense.weight', 'classifier.out_proj.bias', 'classifier.out_proj.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+08/20/2022 18:17:09 - INFO - __main__ -   Training/evaluation parameters Namespace(train_data_file='../dataset/fold_3_dataset/train.jsonl', output_folder_name='fold_3_dataset', output_dir='./saved_models', eval_data_file='../dataset/fold_3_dataset/valid.jsonl', test_data_file='../dataset/fold_3_dataset/test.jsonl', model_type='roberta', model_name_or_path='microsoft/codebert-base', mlm=False, mlm_probability=0.15, config_name='', tokenizer_name='microsoft/codebert-base', cache_dir='', block_size=400, do_train=False, do_eval=True, do_test=True, evaluate_during_training=True, do_lower_case=False, train_batch_size=32, eval_batch_size=64, gradient_accumulation_steps=1, learning_rate=2e-05, weight_decay=0.0, adam_epsilon=1e-08, max_grad_norm=1.0, num_train_epochs=1.0, max_steps=-1, warmup_steps=0, logging_steps=50, save_steps=50, save_total_limit=None, eval_all_checkpoints=False, no_cuda=False, overwrite_output_dir=False, overwrite_cache=False, seed=123456, epoch=5, fp16=False, fp16_opt_level='O1', local_rank=-1, server_ip='', server_port='', n_gpu=1, device=device(type='cuda'), per_gpu_train_batch_size=32, per_gpu_eval_batch_size=64, start_epoch=0, start_step=0)
+Traceback (most recent call last):
+  File "C:\Users\<ANONYMOUS>\Documents\CodeXGLUE-main\Code-Code\Defect-detection\code\run.py", line 585, in <module>
+    main()
+  File "C:\Users\<ANONYMOUS>\Documents\CodeXGLUE-main\Code-Code\Defect-detection\code\run.py", line 567, in main
+    model.load_state_dict(torch.load(output_dir))      
+  File "C:\Users\<ANONYMOUS>\Anaconda3\lib\site-packages\torch\serialization.py", line 699, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "C:\Users\<ANONYMOUS>\Anaconda3\lib\site-packages\torch\serialization.py", line 230, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "C:\Users\<ANONYMOUS>\Anaconda3\lib\site-packages\torch\serialization.py", line 211, in __init__
+    super(_open_file, self).__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: './saved_models\\checkpoint-best-acc/model.bin'
+
+(base) C:\Users\<ANONYMOUS>\Documents\CodeXGLUE-main\Code-Code\Defect-detection\code>python run.py --output_folder_name=fold_3_dataset --output_dir=./saved_models --model_type=roberta --tokenizer_name=microsoft/codebert-base --model_name_or_path=microsoft/codebert-base --do_eval --do_test --train_data_file=../dataset/fold_3_dataset/train.jsonl --eval_data_file=../dataset/fold_3_dataset/valid.jsonl --test_data_file=../dataset/fold_3_holdout/test.jsonl --epoch 5 --block_size 400 --train_batch_size 32 --eval_batch_size 64 --learning_rate 2e-5 --max_grad_norm 1.0 --evaluate_during_training --seed 123456 
+08/20/2022 18:17:12 - WARNING - __main__ -   Process rank: -1, device: cuda, n_gpu: 1, distributed training: False, 16-bits training: False
+Some weights of the model checkpoint at microsoft/codebert-base were not used when initializing RobertaForSequenceClassification: ['pooler.dense.bias', 'pooler.dense.weight']
+- This IS expected if you are initializing RobertaForSequenceClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaForSequenceClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaForSequenceClassification were not initialized from the model checkpoint at microsoft/codebert-base and are newly initialized: ['classifier.out_proj.bias', 'classifier.out_proj.weight', 'classifier.dense.weight', 'classifier.dense.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+08/20/2022 18:17:14 - INFO - __main__ -   Training/evaluation parameters Namespace(train_data_file='../dataset/fold_3_dataset/train.jsonl', output_folder_name='fold_3_dataset', output_dir='./saved_models', eval_data_file='../dataset/fold_3_dataset/valid.jsonl', test_data_file='../dataset/fold_3_holdout/test.jsonl', model_type='roberta', model_name_or_path='microsoft/codebert-base', mlm=False, mlm_probability=0.15, config_name='', tokenizer_name='microsoft/codebert-base', cache_dir='', block_size=400, do_train=False, do_eval=True, do_test=True, evaluate_during_training=True, do_lower_case=False, train_batch_size=32, eval_batch_size=64, gradient_accumulation_steps=1, learning_rate=2e-05, weight_decay=0.0, adam_epsilon=1e-08, max_grad_norm=1.0, num_train_epochs=1.0, max_steps=-1, warmup_steps=0, logging_steps=50, save_steps=50, save_total_limit=None, eval_all_checkpoints=False, no_cuda=False, overwrite_output_dir=False, overwrite_cache=False, seed=123456, epoch=5, fp16=False, fp16_opt_level='O1', local_rank=-1, server_ip='', server_port='', n_gpu=1, device=device(type='cuda'), per_gpu_train_batch_size=32, per_gpu_eval_batch_size=64, start_epoch=0, start_step=0)
+Traceback (most recent call last):
+  File "C:\Users\<ANONYMOUS>\Documents\CodeXGLUE-main\Code-Code\Defect-detection\code\run.py", line 585, in <module>
+    main()
+  File "C:\Users\<ANONYMOUS>\Documents\CodeXGLUE-main\Code-Code\Defect-detection\code\run.py", line 567, in main
+    model.load_state_dict(torch.load(output_dir))      
+  File "C:\Users\<ANONYMOUS>\Anaconda3\lib\site-packages\torch\serialization.py", line 699, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "C:\Users\<ANONYMOUS>\Anaconda3\lib\site-packages\torch\serialization.py", line 230, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "C:\Users\<ANONYMOUS>\Anaconda3\lib\site-packages\torch\serialization.py", line 211, in __init__
+    super(_open_file, self).__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: './saved_models\\checkpoint-best-acc/model.bin'
+
+(base) C:\Users\<ANONYMOUS>\Documents\CodeXGLUE-main\Code-Code\Defect-detection\code>//python run.py --output_folder_name=fold_4_dataset --output_dir=./saved_models --model_type=roberta --tokenizer_name=microsoft/codebert-base --model_name_or_path=microsoft/codebert-base --do_train --train_data_file=../dataset/fold_4_dataset/train.jsonl --eval_data_file=../dataset/fold_4_dataset/valid.jsonl --test_data_file=../dataset/fold_4_dataset/test.jsonl --epoch 5 --block_size 400 --train_batch_size 32 --eval_batch_size 64 --learning_rate 2e-5 --max_grad_norm 1.0 --evaluate_during_training --seed 123456 
+The filename, directory name, or volume label syntax is incorrect.
+
+(base) C:\Users\<ANONYMOUS>\Documents\CodeXGLUE-main\Code-Code\Defect-detection\code>python run.py --output_folder_name=fold_4_dataset --output_dir=./saved_models --model_type=roberta --tokenizer_name=microsoft/codebert-base --model_name_or_path=microsoft/codebert-base --do_eval --do_test --train_data_file=../dataset/fold_4_dataset/train.jsonl --eval_data_file=../dataset/fold_4_dataset/valid.jsonl --test_data_file=../dataset/fold_4_dataset/test.jsonl --epoch 5 --block_size 400 --train_batch_size 32 --eval_batch_size 64 --learning_rate 2e-5 --max_grad_norm 1.0 --evaluate_during_training --seed 123456 
+08/20/2022 18:17:16 - WARNING - __main__ -   Process rank: -1, device: cuda, n_gpu: 1, distributed training: False, 16-bits training: False
+Some weights of the model checkpoint at microsoft/codebert-base were not used when initializing RobertaForSequenceClassification: ['pooler.dense.weight', 'pooler.dense.bias']
+- This IS expected if you are initializing RobertaForSequenceClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaForSequenceClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaForSequenceClassification were not initialized from the model checkpoint at microsoft/codebert-base and are newly initialized: ['classifier.out_proj.bias', 'classifier.out_proj.weight', 'classifier.dense.bias', 'classifier.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+08/20/2022 18:17:18 - INFO - __main__ -   Training/evaluation parameters Namespace(train_data_file='../dataset/fold_4_dataset/train.jsonl', output_folder_name='fold_4_dataset', output_dir='./saved_models', eval_data_file='../dataset/fold_4_dataset/valid.jsonl', test_data_file='../dataset/fold_4_dataset/test.jsonl', model_type='roberta', model_name_or_path='microsoft/codebert-base', mlm=False, mlm_probability=0.15, config_name='', tokenizer_name='microsoft/codebert-base', cache_dir='', block_size=400, do_train=False, do_eval=True, do_test=True, evaluate_during_training=True, do_lower_case=False, train_batch_size=32, eval_batch_size=64, gradient_accumulation_steps=1, learning_rate=2e-05, weight_decay=0.0, adam_epsilon=1e-08, max_grad_norm=1.0, num_train_epochs=1.0, max_steps=-1, warmup_steps=0, logging_steps=50, save_steps=50, save_total_limit=None, eval_all_checkpoints=False, no_cuda=False, overwrite_output_dir=False, overwrite_cache=False, seed=123456, epoch=5, fp16=False, fp16_opt_level='O1', local_rank=-1, server_ip='', server_port='', n_gpu=1, device=device(type='cuda'), per_gpu_train_batch_size=32, per_gpu_eval_batch_size=64, start_epoch=0, start_step=0)
+Traceback (most recent call last):
+  File "C:\Users\<ANONYMOUS>\Documents\CodeXGLUE-main\Code-Code\Defect-detection\code\run.py", line 585, in <module>
+    main()
+  File "C:\Users\<ANONYMOUS>\Documents\CodeXGLUE-main\Code-Code\Defect-detection\code\run.py", line 567, in main
+    model.load_state_dict(torch.load(output_dir))      
+  File "C:\Users\<ANONYMOUS>\Anaconda3\lib\site-packages\torch\serialization.py", line 699, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "C:\Users\<ANONYMOUS>\Anaconda3\lib\site-packages\torch\serialization.py", line 230, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "C:\Users\<ANONYMOUS>\Anaconda3\lib\site-packages\torch\serialization.py", line 211, in __init__
+    super(_open_file, self).__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: './saved_models\\checkpoint-best-acc/model.bin'
+
+(base) C:\Users\<ANONYMOUS>\Documents\CodeXGLUE-main\Code-Code\Defect-detection\code>python run.py --output_folder_name=fold_4_dataset --output_dir=./saved_models --model_type=roberta --tokenizer_name=microsoft/codebert-base --model_name_or_path=microsoft/codebert-base --do_eval --do_test --train_data_file=../dataset/fold_4_dataset/train.jsonl --eval_data_file=../dataset/fold_4_dataset/valid.jsonl --test_data_file=../dataset/fold_4_holdout/test.jsonl --epoch 5 --block_size 400 --train_batch_size 32 --eval_batch_size 64 --learning_rate 2e-5 --max_grad_norm 1.0 --evaluate_during_training --seed 123456 
+08/20/2022 18:17:20 - WARNING - __main__ -   Process rank: -1, device: cuda, n_gpu: 1, distributed training: False, 16-bits training: False
+Some weights of the model checkpoint at microsoft/codebert-base were not used when initializing RobertaForSequenceClassification: ['pooler.dense.bias', 'pooler.dense.weight']
+- This IS expected if you are initializing RobertaForSequenceClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaForSequenceClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaForSequenceClassification were not initialized from the model checkpoint at microsoft/codebert-base and are newly initialized: ['classifier.dense.weight', 'classifier.out_proj.bias', 'classifier.out_proj.weight', 'classifier.dense.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+08/20/2022 18:17:22 - INFO - __main__ -   Training/evaluation parameters Namespace(train_data_file='../dataset/fold_4_dataset/train.jsonl', output_folder_name='fold_4_dataset', output_dir='./saved_models', eval_data_file='../dataset/fold_4_dataset/valid.jsonl', test_data_file='../dataset/fold_4_holdout/test.jsonl', model_type='roberta', model_name_or_path='microsoft/codebert-base', mlm=False, mlm_probability=0.15, config_name='', tokenizer_name='microsoft/codebert-base', cache_dir='', block_size=400, do_train=False, do_eval=True, do_test=True, evaluate_during_training=True, do_lower_case=False, train_batch_size=32, eval_batch_size=64, gradient_accumulation_steps=1, learning_rate=2e-05, weight_decay=0.0, adam_epsilon=1e-08, max_grad_norm=1.0, num_train_epochs=1.0, max_steps=-1, warmup_steps=0, logging_steps=50, save_steps=50, save_total_limit=None, eval_all_checkpoints=False, no_cuda=False, overwrite_output_dir=False, overwrite_cache=False, seed=123456, epoch=5, fp16=False, fp16_opt_level='O1', local_rank=-1, server_ip='', server_port='', n_gpu=1, device=device(type='cuda'), per_gpu_train_batch_size=32, per_gpu_eval_batch_size=64, start_epoch=0, start_step=0)
+Traceback (most recent call last):
+  File "C:\Users\<ANONYMOUS>\Documents\CodeXGLUE-main\Code-Code\Defect-detection\code\run.py", line 585, in <module>
+    main()
+  File "C:\Users\<ANONYMOUS>\Documents\CodeXGLUE-main\Code-Code\Defect-detection\code\run.py", line 567, in main
+    model.load_state_dict(torch.load(output_dir))      
+  File "C:\Users\<ANONYMOUS>\Anaconda3\lib\site-packages\torch\serialization.py", line 699, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "C:\Users\<ANONYMOUS>\Anaconda3\lib\site-packages\torch\serialization.py", line 230, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "C:\Users\<ANONYMOUS>\Anaconda3\lib\site-packages\torch\serialization.py", line 211, in __init__
+    super(_open_file, self).__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: './saved_models\\checkpoint-best-acc/model.bin'
+
+(base) C:\Users\<ANONYMOUS>\Documents\CodeXGLUE-main\Code-Code\Defect-detection\code>python run.py --output_folder_name=fold_0_dataset --output_dir=./saved_models --model_type=roberta --tokenizer_name=microsoft/codebert-base --model_name_or_path=microsoft/codebert-base --do_eval --do_test --train_data_file=../dataset/fold_0_dataset/train.jsonl --eval_data_file=../dataset/fold_0_dataset/valid.jsonl --test_data_file=../dataset/fold_0_dataset/test.jsonl --epoch 5 --block_size 400 --train_batch_size 32 --eval_batch_size 64 --learning_rate 2e-5 --max_grad_norm 1.0 --evaluate_during_training --seed 123456 
+08/20/2022 18:18:02 - WARNING - __main__ -   Process rank: -1, device: cuda, n_gpu: 1, distributed training: False, 16-bits training: False
+Some weights of the model checkpoint at microsoft/codebert-base were not used when initializing RobertaForSequenceClassification: ['pooler.dense.weight', 'pooler.dense.bias']
+- This IS expected if you are initializing RobertaForSequenceClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaForSequenceClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaForSequenceClassification were not initialized from the model checkpoint at microsoft/codebert-base and are newly initialized: ['classifier.out_proj.weight', 'classifier.dense.weight', 'classifier.out_proj.bias', 'classifier.dense.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+08/20/2022 18:18:04 - INFO - __main__ -   Training/evaluation parameters Namespace(train_data_file='../dataset/fold_0_dataset/train.jsonl', output_folder_name='fold_0_dataset', output_dir='./saved_models', eval_data_file='../dataset/fold_0_dataset/valid.jsonl', test_data_file='../dataset/fold_0_dataset/test.jsonl', model_type='roberta', model_name_or_path='microsoft/codebert-base', mlm=False, mlm_probability=0.15, config_name='', tokenizer_name='microsoft/codebert-base', cache_dir='', block_size=400, do_train=False, do_eval=True, do_test=True, evaluate_during_training=True, do_lower_case=False, train_batch_size=32, eval_batch_size=64, gradient_accumulation_steps=1, learning_rate=2e-05, weight_decay=0.0, adam_epsilon=1e-08, max_grad_norm=1.0, num_train_epochs=1.0, max_steps=-1, warmup_steps=0, logging_steps=50, save_steps=50, save_total_limit=None, eval_all_checkpoints=False, no_cuda=False, overwrite_output_dir=False, overwrite_cache=False, seed=123456, epoch=5, fp16=False, fp16_opt_level='O1', local_rank=-1, server_ip='', server_port='', n_gpu=1, device=device(type='cuda'), per_gpu_train_batch_size=32, per_gpu_eval_batch_size=64, start_epoch=0, start_step=0)
+Traceback (most recent call last):
+  File "C:\Users\<ANONYMOUS>\Documents\CodeXGLUE-main\Code-Code\Defect-detection\code\run.py", line 585, in <module>
+    main()
+  File "C:\Users\<ANONYMOUS>\Documents\CodeXGLUE-main\Code-Code\Defect-detection\code\run.py", line 567, in main
+    model.load_state_dict(torch.load(output_dir))      
+  File "C:\Users\<ANONYMOUS>\Anaconda3\lib\site-packages\torch\serialization.py", line 699, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "C:\Users\<ANONYMOUS>\Anaconda3\lib\site-packages\torch\serialization.py", line 230, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "C:\Users\<ANONYMOUS>\Anaconda3\lib\site-packages\torch\serialization.py", line 211, in __init__
+    super(_open_file, self).__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: './saved_models\\checkpoint-best-acc/model.bin'
+
+(base) C:\Users\<ANONYMOUS>\Documents\CodeXGLUE-main\Code-Code\Defect-detection\code>python run.py --output_folder_name=fold_0_dataset --output_dir=./saved_models --model_type=roberta --tokenizer_name=microsoft/codebert-base --model_name_or_path=microsoft/codebert-base --do_eval --do_test --train_data_file=../dataset/fold_0_dataset/train.jsonl --eval_data_file=../dataset/fold_0_dataset/valid.jsonl --test_data_file=../dataset/fold_0_holdout/test.jsonl --epoch 5 --block_size 400 --train_batch_size 32 --eval_batch_size 64 --learning_rate 2e-5 --max_grad_norm 1.0 --evaluate_during_training --seed 123456 
+08/20/2022 18:18:06 - WARNING - __main__ -   Process rank: -1, device: cuda, n_gpu: 1, distributed training: False, 16-bits training: False
+Some weights of the model checkpoint at microsoft/codebert-base were not used when initializing RobertaForSequenceClassification: ['pooler.dense.weight', 'pooler.dense.bias']
+- This IS expected if you are initializing RobertaForSequenceClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaForSequenceClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaForSequenceClassification were not initialized from the model checkpoint at microsoft/codebert-base and are newly initialized: ['classifier.dense.weight', 'classifier.out_proj.bias', 'classifier.dense.bias', 'classifier.out_proj.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+08/20/2022 18:18:09 - INFO - __main__ -   Training/evaluation parameters Namespace(train_data_file='../dataset/fold_0_dataset/train.jsonl', output_folder_name='fold_0_dataset', output_dir='./saved_models', eval_data_file='../dataset/fold_0_dataset/valid.jsonl', test_data_file='../dataset/fold_0_holdout/test.jsonl', model_type='roberta', model_name_or_path='microsoft/codebert-base', mlm=False, mlm_probability=0.15, config_name='', tokenizer_name='microsoft/codebert-base', cache_dir='', block_size=400, do_train=False, do_eval=True, do_test=True, evaluate_during_training=True, do_lower_case=False, train_batch_size=32, eval_batch_size=64, gradient_accumulation_steps=1, learning_rate=2e-05, weight_decay=0.0, adam_epsilon=1e-08, max_grad_norm=1.0, num_train_epochs=1.0, max_steps=-1, warmup_steps=0, logging_steps=50, save_steps=50, save_total_limit=None, eval_all_checkpoints=False, no_cuda=False, overwrite_output_dir=False, overwrite_cache=False, seed=123456, epoch=5, fp16=False, fp16_opt_level='O1', local_rank=-1, server_ip='', server_port='', n_gpu=1, device=device(type='cuda'), per_gpu_train_batch_size=32, per_gpu_eval_batch_size=64, start_epoch=0, start_step=0)
+Traceback (most recent call last):
+  File "C:\Users\<ANONYMOUS>\Documents\CodeXGLUE-main\Code-Code\Defect-detection\code\run.py", line 585, in <module>
+    main()
+  File "C:\Users\<ANONYMOUS>\Documents\CodeXGLUE-main\Code-Code\Defect-detection\code\run.py", line 567, in main
+    model.load_state_dict(torch.load(output_dir))      
+  File "C:\Users\<ANONYMOUS>\Anaconda3\lib\site-packages\torch\serialization.py", line 699, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "C:\Users\<ANONYMOUS>\Anaconda3\lib\site-packages\torch\serialization.py", line 230, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "C:\Users\<ANONYMOUS>\Anaconda3\lib\site-packages\torch\serialization.py", line 211, in __init__
+    super(_open_file, self).__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: './saved_models\\checkpoint-best-acc/model.bin'
+
+(base) C:\Users\<ANONYMOUS>\Documents\CodeXGLUE-main\Code-Code\Defect-detection\code>python run.py --output_folder_name=fold_1_dataset --output_dir=./saved_models --model_type=roberta --tokenizer_name=microsoft/codebert-base --model_name_or_path=microsoft/codebert-base --do_eval --do_test --train_data_file=../dataset/fold_1_dataset/train.jsonl --eval_data_file=../dataset/fold_1_dataset/valid.jsonl --test_data_file=../dataset/fold_1_dataset/test.jsonl --epoch 5 --block_size 400 --train_batch_size 32 --eval_batch_size 64 --learning_rate 2e-5 --max_grad_norm 1.0 --evaluate_during_training --seed 123456 
+08/20/2022 18:18:11 - WARNING - __main__ -   Process rank: -1, device: cuda, n_gpu: 1, distributed training: False, 16-bits training: False
+Some weights of the model checkpoint at microsoft/codebert-base were not used when initializing RobertaForSequenceClassification: ['pooler.dense.weight', 'pooler.dense.bias']
+- This IS expected if you are initializing RobertaForSequenceClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaForSequenceClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaForSequenceClassification were not initialized from the model checkpoint at microsoft/codebert-base and are newly initialized: ['classifier.dense.bias', 'classifier.out_proj.bias', 'classifier.dense.weight', 'classifier.out_proj.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+08/20/2022 18:18:13 - INFO - __main__ -   Training/evaluation parameters Namespace(train_data_file='../dataset/fold_1_dataset/train.jsonl', output_folder_name='fold_1_dataset', output_dir='./saved_models', eval_data_file='../dataset/fold_1_dataset/valid.jsonl', test_data_file='../dataset/fold_1_dataset/test.jsonl', model_type='roberta', model_name_or_path='microsoft/codebert-base', mlm=False, mlm_probability=0.15, config_name='', tokenizer_name='microsoft/codebert-base', cache_dir='', block_size=400, do_train=False, do_eval=True, do_test=True, evaluate_during_training=True, do_lower_case=False, train_batch_size=32, eval_batch_size=64, gradient_accumulation_steps=1, learning_rate=2e-05, weight_decay=0.0, adam_epsilon=1e-08, max_grad_norm=1.0, num_train_epochs=1.0, max_steps=-1, warmup_steps=0, logging_steps=50, save_steps=50, save_total_limit=None, eval_all_checkpoints=False, no_cuda=False, overwrite_output_dir=False, overwrite_cache=False, seed=123456, epoch=5, fp16=False, fp16_opt_level='O1', local_rank=-1, server_ip='', server_port='', n_gpu=1, device=device(type='cuda'), per_gpu_train_batch_size=32, per_gpu_eval_batch_size=64, start_epoch=0, start_step=0)
+Traceback (most recent call last):
+  File "C:\Users\<ANONYMOUS>\Documents\CodeXGLUE-main\Code-Code\Defect-detection\code\run.py", line 585, in <module>
+    main()
+  File "C:\Users\<ANONYMOUS>\Documents\CodeXGLUE-main\Code-Code\Defect-detection\code\run.py", line 567, in main
+    model.load_state_dict(torch.load(output_dir))      
+  File "C:\Users\<ANONYMOUS>\Anaconda3\lib\site-packages\torch\serialization.py", line 699, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "C:\Users\<ANONYMOUS>\Anaconda3\lib\site-packages\torch\serialization.py", line 230, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "C:\Users\<ANONYMOUS>\Anaconda3\lib\site-packages\torch\serialization.py", line 211, in __init__
+    super(_open_file, self).__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: './saved_models\\checkpoint-best-acc/model.bin'
+
+(base) C:\Users\<ANONYMOUS>\Documents\CodeXGLUE-main\Code-Code\Defect-detection\code>python run.py --output_folder_name=fold_1_dataset --output_dir=./saved_models --model_type=roberta --tokenizer_name=microsoft/codebert-base --model_name_or_path=microsoft/codebert-base --do_eval --do_test --train_data_file=../dataset/fold_1_dataset/train.jsonl --eval_data_file=../dataset/fold_1_dataset/valid.jsonl --test_data_file=../dataset/fold_1_holdout/test.jsonl --epoch 5 --block_size 400 --train_batch_size 32 --eval_batch_size 64 --learning_rate 2e-5 --max_grad_norm 1.0 --evaluate_during_training --seed 123456 
+08/20/2022 18:18:15 - WARNING - __main__ -   Process rank: -1, device: cuda, n_gpu: 1, distributed training: False, 16-bits training: False
+Some weights of the model checkpoint at microsoft/codebert-base were not used when initializing RobertaForSequenceClassification: ['pooler.dense.weight', 'pooler.dense.bias']
+- This IS expected if you are initializing RobertaForSequenceClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaForSequenceClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaForSequenceClassification were not initialized from the model checkpoint at microsoft/codebert-base and are newly initialized: ['classifier.out_proj.weight', 'classifier.dense.weight', 'classifier.out_proj.bias', 'classifier.dense.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+08/20/2022 18:18:17 - INFO - __main__ -   Training/evaluation parameters Namespace(train_data_file='../dataset/fold_1_dataset/train.jsonl', output_folder_name='fold_1_dataset', output_dir='./saved_models', eval_data_file='../dataset/fold_1_dataset/valid.jsonl', test_data_file='../dataset/fold_1_holdout/test.jsonl', model_type='roberta', model_name_or_path='microsoft/codebert-base', mlm=False, mlm_probability=0.15, config_name='', tokenizer_name='microsoft/codebert-base', cache_dir='', block_size=400, do_train=False, do_eval=True, do_test=True, evaluate_during_training=True, do_lower_case=False, train_batch_size=32, eval_batch_size=64, gradient_accumulation_steps=1, learning_rate=2e-05, weight_decay=0.0, adam_epsilon=1e-08, max_grad_norm=1.0, num_train_epochs=1.0, max_steps=-1, warmup_steps=0, logging_steps=50, save_steps=50, save_total_limit=None, eval_all_checkpoints=False, no_cuda=False, overwrite_output_dir=False, overwrite_cache=False, seed=123456, epoch=5, fp16=False, fp16_opt_level='O1', local_rank=-1, server_ip='', server_port='', n_gpu=1, device=device(type='cuda'), per_gpu_train_batch_size=32, per_gpu_eval_batch_size=64, start_epoch=0, start_step=0)
+Traceback (most recent call last):
+  File "C:\Users\<ANONYMOUS>\Documents\CodeXGLUE-main\Code-Code\Defect-detection\code\run.py", line 585, in <module>
+    main()
+  File "C:\Users\<ANONYMOUS>\Documents\CodeXGLUE-main\Code-Code\Defect-detection\code\run.py", line 567, in main
+    model.load_state_dict(torch.load(output_dir))      
+  File "C:\Users\<ANONYMOUS>\Anaconda3\lib\site-packages\torch\serialization.py", line 699, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "C:\Users\<ANONYMOUS>\Anaconda3\lib\site-packages\torch\serialization.py", line 230, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "C:\Users\<ANONYMOUS>\Anaconda3\lib\site-packages\torch\serialization.py", line 211, in __init__
+    super(_open_file, self).__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: './saved_models\\checkpoint-best-acc/model.bin'
+
+(base) C:\Users\<ANONYMOUS>\Documents\CodeXGLUE-main\Code-Code\Defect-detection\code>python run.py --output_folder_name=fold_2_dataset --output_dir=./saved_models --model_type=roberta --tokenizer_name=microsoft/codebert-base --model_name_or_path=microsoft/codebert-base --do_eval --do_test --train_data_file=../dataset/fold_2_dataset/train.jsonl --eval_data_file=../dataset/fold_2_dataset/valid.jsonl --test_data_file=../dataset/fold_2_dataset/test.jsonl --epoch 5 --block_size 400 --train_batch_size 32 --eval_batch_size 64 --learning_rate 2e-5 --max_grad_norm 1.0 --evaluate_during_training --seed 123456 
+08/20/2022 18:18:19 - WARNING - __main__ -   Process rank: -1, device: cuda, n_gpu: 1, distributed training: False, 16-bits training: False
+Some weights of the model checkpoint at microsoft/codebert-base were not used when initializing RobertaForSequenceClassification: ['pooler.dense.bias', 'pooler.dense.weight']
+- This IS expected if you are initializing RobertaForSequenceClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaForSequenceClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaForSequenceClassification were not initialized from the model checkpoint at microsoft/codebert-base and are newly initialized: ['classifier.out_proj.bias', 'classifier.dense.bias', 'classifier.dense.weight', 'classifier.out_proj.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+08/20/2022 18:18:21 - INFO - __main__ -   Training/evaluation parameters Namespace(train_data_file='../dataset/fold_2_dataset/train.jsonl', output_folder_name='fold_2_dataset', output_dir='./saved_models', eval_data_file='../dataset/fold_2_dataset/valid.jsonl', test_data_file='../dataset/fold_2_dataset/test.jsonl', model_type='roberta', model_name_or_path='microsoft/codebert-base', mlm=False, mlm_probability=0.15, config_name='', tokenizer_name='microsoft/codebert-base', cache_dir='', block_size=400, do_train=False, do_eval=True, do_test=True, evaluate_during_training=True, do_lower_case=False, train_batch_size=32, eval_batch_size=64, gradient_accumulation_steps=1, learning_rate=2e-05, weight_decay=0.0, adam_epsilon=1e-08, max_grad_norm=1.0, num_train_epochs=1.0, max_steps=-1, warmup_steps=0, logging_steps=50, save_steps=50, save_total_limit=None, eval_all_checkpoints=False, no_cuda=False, overwrite_output_dir=False, overwrite_cache=False, seed=123456, epoch=5, fp16=False, fp16_opt_level='O1', local_rank=-1, server_ip='', server_port='', n_gpu=1, device=device(type='cuda'), per_gpu_train_batch_size=32, per_gpu_eval_batch_size=64, start_epoch=0, start_step=0)
+Traceback (most recent call last):
+  File "C:\Users\<ANONYMOUS>\Documents\CodeXGLUE-main\Code-Code\Defect-detection\code\run.py", line 585, in <module>
+    main()
+  File "C:\Users\<ANONYMOUS>\Documents\CodeXGLUE-main\Code-Code\Defect-detection\code\run.py", line 567, in main
+    model.load_state_dict(torch.load(output_dir))      
+  File "C:\Users\<ANONYMOUS>\Anaconda3\lib\site-packages\torch\serialization.py", line 699, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "C:\Users\<ANONYMOUS>\Anaconda3\lib\site-packages\torch\serialization.py", line 230, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "C:\Users\<ANONYMOUS>\Anaconda3\lib\site-packages\torch\serialization.py", line 211, in __init__
+    super(_open_file, self).__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: './saved_models\\checkpoint-best-acc/model.bin'
+
+(base) C:\Users\<ANONYMOUS>\Documents\CodeXGLUE-main\Code-Code\Defect-detection\code>python run.py --output_folder_name=fold_2_dataset --output_dir=./saved_models --model_type=roberta --tokenizer_name=microsoft/codebert-base --model_name_or_path=microsoft/codebert-base --do_eval --do_test --train_data_file=../dataset/fold_2_dataset/train.jsonl --eval_data_file=../dataset/fold_2_dataset/valid.jsonl --test_data_file=../dataset/fold_2_holdout/test.jsonl --epoch 5 --block_size 400 --train_batch_size 32 --eval_batch_size 64 --learning_rate 2e-5 --max_grad_norm 1.0 --evaluate_during_training --seed 123456 
+08/20/2022 18:18:23 - WARNING - __main__ -   Process rank: -1, device: cuda, n_gpu: 1, distributed training: False, 16-bits training: False
+Some weights of the model checkpoint at microsoft/codebert-base were not used when initializing RobertaForSequenceClassification: ['pooler.dense.bias', 'pooler.dense.weight']
+- This IS expected if you are initializing RobertaForSequenceClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaForSequenceClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaForSequenceClassification were not initialized from the model checkpoint at microsoft/codebert-base and are newly initialized: ['classifier.dense.weight', 'classifier.out_proj.bias', 'classifier.dense.bias', 'classifier.out_proj.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+08/20/2022 18:18:26 - INFO - __main__ -   Training/evaluation parameters Namespace(train_data_file='../dataset/fold_2_dataset/train.jsonl', output_folder_name='fold_2_dataset', output_dir='./saved_models', eval_data_file='../dataset/fold_2_dataset/valid.jsonl', test_data_file='../dataset/fold_2_holdout/test.jsonl', model_type='roberta', model_name_or_path='microsoft/codebert-base', mlm=False, mlm_probability=0.15, config_name='', tokenizer_name='microsoft/codebert-base', cache_dir='', block_size=400, do_train=False, do_eval=True, do_test=True, evaluate_during_training=True, do_lower_case=False, train_batch_size=32, eval_batch_size=64, gradient_accumulation_steps=1, learning_rate=2e-05, weight_decay=0.0, adam_epsilon=1e-08, max_grad_norm=1.0, num_train_epochs=1.0, max_steps=-1, warmup_steps=0, logging_steps=50, save_steps=50, save_total_limit=None, eval_all_checkpoints=False, no_cuda=False, overwrite_output_dir=False, overwrite_cache=False, seed=123456, epoch=5, fp16=False, fp16_opt_level='O1', local_rank=-1, server_ip='', server_port='', n_gpu=1, device=device(type='cuda'), per_gpu_train_batch_size=32, per_gpu_eval_batch_size=64, start_epoch=0, start_step=0)
+Traceback (most recent call last):
+  File "C:\Users\<ANONYMOUS>\Documents\CodeXGLUE-main\Code-Code\Defect-detection\code\run.py", line 585, in <module>
+    main()
+  File "C:\Users\<ANONYMOUS>\Documents\CodeXGLUE-main\Code-Code\Defect-detection\code\run.py", line 567, in main
+    model.load_state_dict(torch.load(output_dir))      
+  File "C:\Users\<ANONYMOUS>\Anaconda3\lib\site-packages\torch\serialization.py", line 699, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "C:\Users\<ANONYMOUS>\Anaconda3\lib\site-packages\torch\serialization.py", line 230, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "C:\Users\<ANONYMOUS>\Anaconda3\lib\site-packages\torch\serialization.py", line 211, in __init__
+    super(_open_file, self).__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: './saved_models\\checkpoint-best-acc/model.bin'
+
+(base) C:\Users\<ANONYMOUS>\Documents\CodeXGLUE-main\Code-Code\Defect-detection\code>python run.py --output_folder_name=fold_3_dataset --output_dir=./saved_models --model_type=roberta --tokenizer_name=microsoft/codebert-base --model_name_or_path=microsoft/codebert-base --do_eval --do_test --train_data_file=../dataset/fold_3_dataset/train.jsonl --eval_data_file=../dataset/fold_3_dataset/valid.jsonl --test_data_file=../dataset/fold_3_dataset/test.jsonl --epoch 5 --block_size 400 --train_batch_size 32 --eval_batch_size 64 --learning_rate 2e-5 --max_grad_norm 1.0 --evaluate_during_training --seed 123456 
+08/20/2022 18:18:28 - WARNING - __main__ -   Process rank: -1, device: cuda, n_gpu: 1, distributed training: False, 16-bits training: False
+Some weights of the model checkpoint at microsoft/codebert-base were not used when initializing RobertaForSequenceClassification: ['pooler.dense.weight', 'pooler.dense.bias']
+- This IS expected if you are initializing RobertaForSequenceClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaForSequenceClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaForSequenceClassification were not initialized from the model checkpoint at microsoft/codebert-base and are newly initialized: ['classifier.dense.bias', 'classifier.out_proj.weight', 'classifier.out_proj.bias', 'classifier.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+08/20/2022 18:18:30 - INFO - __main__ -   Training/evaluation parameters Namespace(train_data_file='../dataset/fold_3_dataset/train.jsonl', output_folder_name='fold_3_dataset', output_dir='./saved_models', eval_data_file='../dataset/fold_3_dataset/valid.jsonl', test_data_file='../dataset/fold_3_dataset/test.jsonl', model_type='roberta', model_name_or_path='microsoft/codebert-base', mlm=False, mlm_probability=0.15, config_name='', tokenizer_name='microsoft/codebert-base', cache_dir='', block_size=400, do_train=False, do_eval=True, do_test=True, evaluate_during_training=True, do_lower_case=False, train_batch_size=32, eval_batch_size=64, gradient_accumulation_steps=1, learning_rate=2e-05, weight_decay=0.0, adam_epsilon=1e-08, max_grad_norm=1.0, num_train_epochs=1.0, max_steps=-1, warmup_steps=0, logging_steps=50, save_steps=50, save_total_limit=None, eval_all_checkpoints=False, no_cuda=False, overwrite_output_dir=False, overwrite_cache=False, seed=123456, epoch=5, fp16=False, fp16_opt_level='O1', local_rank=-1, server_ip='', server_port='', n_gpu=1, device=device(type='cuda'), per_gpu_train_batch_size=32, per_gpu_eval_batch_size=64, start_epoch=0, start_step=0)
+Traceback (most recent call last):
+  File "C:\Users\<ANONYMOUS>\Documents\CodeXGLUE-main\Code-Code\Defect-detection\code\run.py", line 585, in <module>
+    main()
+  File "C:\Users\<ANONYMOUS>\Documents\CodeXGLUE-main\Code-Code\Defect-detection\code\run.py", line 567, in main
+    model.load_state_dict(torch.load(output_dir))      
+  File "C:\Users\<ANONYMOUS>\Anaconda3\lib\site-packages\torch\serialization.py", line 699, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "C:\Users\<ANONYMOUS>\Anaconda3\lib\site-packages\torch\serialization.py", line 230, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "C:\Users\<ANONYMOUS>\Anaconda3\lib\site-packages\torch\serialization.py", line 211, in __init__
+    super(_open_file, self).__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: './saved_models\\checkpoint-best-acc/model.bin'
+
+(base) C:\Users\<ANONYMOUS>\Documents\CodeXGLUE-main\Code-Code\Defect-detection\code>python run.py --output_folder_name=fold_3_dataset --output_dir=./saved_models --model_type=roberta --tokenizer_name=microsoft/codebert-base --model_name_or_path=microsoft/codebert-base --do_eval --do_test --train_data_file=../dataset/fold_3_dataset/train.jsonl --eval_data_file=../dataset/fold_3_dataset/valid.jsonl --test_data_file=../dataset/fold_3_holdout/test.jsonl --epoch 5 --block_size 400 --train_batch_size 32 --eval_batch_size 64 --learning_rate 2e-5 --max_grad_norm 1.0 --evaluate_during_training --seed 123456 
+08/20/2022 18:18:32 - WARNING - __main__ -   Process rank: -1, device: cuda, n_gpu: 1, distributed training: False, 16-bits training: False
+Some weights of the model checkpoint at microsoft/codebert-base were not used when initializing RobertaForSequenceClassification: ['pooler.dense.weight', 'pooler.dense.bias']
+- This IS expected if you are initializing RobertaForSequenceClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaForSequenceClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaForSequenceClassification were not initialized from the model checkpoint at microsoft/codebert-base and are newly initialized: ['classifier.out_proj.bias', 'classifier.dense.weight', 'classifier.out_proj.weight', 'classifier.dense.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+08/20/2022 18:18:34 - INFO - __main__ -   Training/evaluation parameters Namespace(train_data_file='../dataset/fold_3_dataset/train.jsonl', output_folder_name='fold_3_dataset', output_dir='./saved_models', eval_data_file='../dataset/fold_3_dataset/valid.jsonl', test_data_file='../dataset/fold_3_holdout/test.jsonl', model_type='roberta', model_name_or_path='microsoft/codebert-base', mlm=False, mlm_probability=0.15, config_name='', tokenizer_name='microsoft/codebert-base', cache_dir='', block_size=400, do_train=False, do_eval=True, do_test=True, evaluate_during_training=True, do_lower_case=False, train_batch_size=32, eval_batch_size=64, gradient_accumulation_steps=1, learning_rate=2e-05, weight_decay=0.0, adam_epsilon=1e-08, max_grad_norm=1.0, num_train_epochs=1.0, max_steps=-1, warmup_steps=0, logging_steps=50, save_steps=50, save_total_limit=None, eval_all_checkpoints=False, no_cuda=False, overwrite_output_dir=False, overwrite_cache=False, seed=123456, epoch=5, fp16=False, fp16_opt_level='O1', local_rank=-1, server_ip='', server_port='', n_gpu=1, device=device(type='cuda'), per_gpu_train_batch_size=32, per_gpu_eval_batch_size=64, start_epoch=0, start_step=0)
+Traceback (most recent call last):
+  File "C:\Users\<ANONYMOUS>\Documents\CodeXGLUE-main\Code-Code\Defect-detection\code\run.py", line 585, in <module>
+    main()
+  File "C:\Users\<ANONYMOUS>\Documents\CodeXGLUE-main\Code-Code\Defect-detection\code\run.py", line 567, in main
+    model.load_state_dict(torch.load(output_dir))      
+  File "C:\Users\<ANONYMOUS>\Anaconda3\lib\site-packages\torch\serialization.py", line 699, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "C:\Users\<ANONYMOUS>\Anaconda3\lib\site-packages\torch\serialization.py", line 230, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "C:\Users\<ANONYMOUS>\Anaconda3\lib\site-packages\torch\serialization.py", line 211, in __init__
+    super(_open_file, self).__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: './saved_models\\checkpoint-best-acc/model.bin'
+
+(base) C:\Users\<ANONYMOUS>\Documents\CodeXGLUE-main\Code-Code\Defect-detection\code>python run.py --output_folder_name=fold_4_dataset --output_dir=./saved_models --model_type=roberta --tokenizer_name=microsoft/codebert-base --model_name_or_path=microsoft/codebert-base --do_eval --do_test --train_data_file=../dataset/fold_4_dataset/train.jsonl --eval_data_file=../dataset/fold_4_dataset/valid.jsonl --test_data_file=../dataset/fold_4_dataset/test.jsonl --epoch 5 --block_size 400 --train_batch_size 32 --eval_batch_size 64 --learning_rate 2e-5 --max_grad_norm 1.0 --evaluate_during_training --seed 123456 
+08/20/2022 18:18:36 - WARNING - __main__ -   Process rank: -1, device: cuda, n_gpu: 1, distributed training: False, 16-bits training: False
+Some weights of the model checkpoint at microsoft/codebert-base were not used when initializing RobertaForSequenceClassification: ['pooler.dense.weight', 'pooler.dense.bias']
+- This IS expected if you are initializing RobertaForSequenceClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaForSequenceClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaForSequenceClassification were not initialized from the model checkpoint at microsoft/codebert-base and are newly initialized: ['classifier.out_proj.weight', 'classifier.dense.weight', 'classifier.out_proj.bias', 'classifier.dense.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+08/20/2022 18:18:38 - INFO - __main__ -   Training/evaluation parameters Namespace(train_data_file='../dataset/fold_4_dataset/train.jsonl', output_folder_name='fold_4_dataset', output_dir='./saved_models', eval_data_file='../dataset/fold_4_dataset/valid.jsonl', test_data_file='../dataset/fold_4_dataset/test.jsonl', model_type='roberta', model_name_or_path='microsoft/codebert-base', mlm=False, mlm_probability=0.15, config_name='', tokenizer_name='microsoft/codebert-base', cache_dir='', block_size=400, do_train=False, do_eval=True, do_test=True, evaluate_during_training=True, do_lower_case=False, train_batch_size=32, eval_batch_size=64, gradient_accumulation_steps=1, learning_rate=2e-05, weight_decay=0.0, adam_epsilon=1e-08, max_grad_norm=1.0, num_train_epochs=1.0, max_steps=-1, warmup_steps=0, logging_steps=50, save_steps=50, save_total_limit=None, eval_all_checkpoints=False, no_cuda=False, overwrite_output_dir=False, overwrite_cache=False, seed=123456, epoch=5, fp16=False, fp16_opt_level='O1', local_rank=-1, server_ip='', server_port='', n_gpu=1, device=device(type='cuda'), per_gpu_train_batch_size=32, per_gpu_eval_batch_size=64, start_epoch=0, start_step=0)
+Traceback (most recent call last):
+  File "C:\Users\<ANONYMOUS>\Documents\CodeXGLUE-main\Code-Code\Defect-detection\code\run.py", line 585, in <module>
+    main()
+  File "C:\Users\<ANONYMOUS>\Documents\CodeXGLUE-main\Code-Code\Defect-detection\code\run.py", line 567, in main
+    model.load_state_dict(torch.load(output_dir))      
+  File "C:\Users\<ANONYMOUS>\Anaconda3\lib\site-packages\torch\serialization.py", line 699, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "C:\Users\<ANONYMOUS>\Anaconda3\lib\site-packages\torch\serialization.py", line 230, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "C:\Users\<ANONYMOUS>\Anaconda3\lib\site-packages\torch\serialization.py", line 211, in __init__
+    super(_open_file, self).__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: './saved_models\\checkpoint-best-acc/model.bin'
+
+(base) C:\Users\<ANONYMOUS>\Documents\CodeXGLUE-main\Code-Code\Defect-detection\code>python run.py --output_folder_name=fold_4_dataset --output_dir=./saved_models --model_type=roberta --tokenizer_name=microsoft/codebert-base --model_name_or_path=microsoft/codebert-base --do_eval --do_test --train_data_file=../dataset/fold_4_dataset/train.jsonl --eval_data_file=../dataset/fold_4_dataset/valid.jsonl --test_data_file=../dataset/fold_4_holdout/test.jsonl --epoch 5 --block_size 400 --train_batch_size 32 --eval_batch_size 64 --learning_rate 2e-5 --max_grad_norm 1.0 --evaluate_during_training --seed 123456 
+08/20/2022 18:18:40 - WARNING - __main__ -   Process rank: -1, device: cuda, n_gpu: 1, distributed training: False, 16-bits training: False
+Some weights of the model checkpoint at microsoft/codebert-base were not used when initializing RobertaForSequenceClassification: ['pooler.dense.weight', 'pooler.dense.bias']
+- This IS expected if you are initializing RobertaForSequenceClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaForSequenceClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaForSequenceClassification were not initialized from the model checkpoint at microsoft/codebert-base and are newly initialized: ['classifier.out_proj.weight', 'classifier.dense.bias', 'classifier.out_proj.bias', 'classifier.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+08/20/2022 18:18:43 - INFO - __main__ -   Training/evaluation parameters Namespace(train_data_file='../dataset/fold_4_dataset/train.jsonl', output_folder_name='fold_4_dataset', output_dir='./saved_models', eval_data_file='../dataset/fold_4_dataset/valid.jsonl', test_data_file='../dataset/fold_4_holdout/test.jsonl', model_type='roberta', model_name_or_path='microsoft/codebert-base', mlm=False, mlm_probability=0.15, config_name='', tokenizer_name='microsoft/codebert-base', cache_dir='', block_size=400, do_train=False, do_eval=True, do_test=True, evaluate_during_training=True, do_lower_case=False, train_batch_size=32, eval_batch_size=64, gradient_accumulation_steps=1, learning_rate=2e-05, weight_decay=0.0, adam_epsilon=1e-08, max_grad_norm=1.0, num_train_epochs=1.0, max_steps=-1, warmup_steps=0, logging_steps=50, save_steps=50, save_total_limit=None, eval_all_checkpoints=False, no_cuda=False, overwrite_output_dir=False, overwrite_cache=False, seed=123456, epoch=5, fp16=False, fp16_opt_level='O1', local_rank=-1, server_ip='', server_port='', n_gpu=1, device=device(type='cuda'), per_gpu_train_batch_size=32, per_gpu_eval_batch_size=64, start_epoch=0, start_step=0)
+Traceback (most recent call last):
+  File "C:\Users\<ANONYMOUS>\Documents\CodeXGLUE-main\Code-Code\Defect-detection\code\run.py", line 585, in <module>
+    main()
+  File "C:\Users\<ANONYMOUS>\Documents\CodeXGLUE-main\Code-Code\Defect-detection\code\run.py", line 567, in main
+    model.load_state_dict(torch.load(output_dir))      
+  File "C:\Users\<ANONYMOUS>\Anaconda3\lib\site-packages\torch\serialization.py", line 699, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "C:\Users\<ANONYMOUS>\Anaconda3\lib\site-packages\torch\serialization.py", line 230, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "C:\Users\<ANONYMOUS>\Anaconda3\lib\site-packages\torch\serialization.py", line 211, in __init__
+    super(_open_file, self).__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: './saved_models\\checkpoint-best-acc/model.bin'

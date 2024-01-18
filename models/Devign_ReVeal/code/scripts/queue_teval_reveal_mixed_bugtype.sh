@@ -1,0 +1,12 @@
+tsp bash hpc/teval_reveal_MSR2.sh bugtype_buffer_overflow 1 models/MSR/ggnn/vbugtype_mixed/1 models/devign/reveal/vbugtype_mixed/1 vbugtype_buffer_overflow 
+tsp bash hpc/teval_reveal_MSR2.sh bugtype_input_validation 1 models/MSR/ggnn/vbugtype_mixed/1 models/devign/reveal/vbugtype_mixed/1 vbugtype_input_validation
+tsp bash hpc/teval_reveal_MSR2.sh bugtype_mixed 1 models/MSR/ggnn/vbugtype_mixed/1 models/devign/reveal/vbugtype_mixed/1 vbugtype_mixed
+tsp bash hpc/teval_reveal_MSR2.sh bugtype_privilege_escalation_authorization 1 models/MSR/ggnn/vbugtype_mixed/1 models/devign/reveal/vbugtype_mixed/1 vbugtype_privilege_escalation_authorization 
+tsp bash hpc/teval_reveal_MSR2.sh bugtype_resource_allocation_free 1 models/MSR/ggnn/vbugtype_mixed/1 models/devign/reveal/vbugtype_mixed/1 vbugtype_resource_allocation_free     
+tsp bash hpc/teval_reveal_MSR2.sh bugtype_value_propagation_errors 1 models/MSR/ggnn/vbugtype_mixed/1 models/devign/reveal/vbugtype_mixed/1 vbugtype_value_propagation_errors 
+tsp bash hpc/teval_reveal_MSR2.sh bugtype_mixed 1 models/MSR/ggnn/vbugtype_buffer_overflow/1 models/devign/reveal/vbugtype_buffer_overflow/1 vbugtype_mixed       
+tsp bash hpc/teval_reveal_MSR2.sh bugtype_mixed 1 models/MSR/ggnn/vbugtype_input_validation/1 models/devign/reveal/vbugtype_input_validation/1 vbugtype_mixed 
+tsp bash hpc/teval_reveal_MSR2.sh bugtype_mixed 1 models/MSR/ggnn/vbugtype_mixed/1 models/devign/reveal/vbugtype_mixed/1 vbugtype_mixed
+tsp bash hpc/teval_reveal_MSR2.sh bugtype_mixed 1 models/MSR/ggnn/vbugtype_privilege_escalation_authorization/1 models/devign/reveal/vbugtype_privilege_escalation_authorization/1 vbugtype_mixed 
+tsp bash hpc/teval_reveal_MSR2.sh bugtype_mixed 1 models/MSR/ggnn/vbugtype_resource_allocation_free/1 models/devign/reveal/vbugtype_resource_allocation_free/1 vbugtype_mixed      
+tsp bash hpc/teval_reveal_MSR2.sh bugtype_mixed 1 models/MSR/ggnn/vbugtype_value_propagation_errors/1 models/devign/reveal/vbugtype_value_propagation_errors/1 vbugtype_mixed 

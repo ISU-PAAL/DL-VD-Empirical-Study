@@ -1,0 +1,4 @@
+{
+    "jupyter.notebookFileRoot": "${workspaceFolder}",
+    "python.formatting.provider": "black"
+}

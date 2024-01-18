@@ -1,0 +1,1127 @@
++ StringArray=('balanced_0.9' 'balanced_0.8' 'balanced_0.7' 'balanced_0.6' 'balanced_0.5' 'balanced_0.4' 'balanced_0.3' 'balanced_0.2' 'balanced_0.1' 'imbalanced_0.9' 'imbalanced_0.8' 'imbalanced_0.7' 'imbalanced_0.6' 'imbalanced_0.5' 'imbalanced_0.4' 'imbalanced_0.3' 'imbalanced_0.2' 'imbalanced_0.1')
++ declare -a StringArray
++ i=150
++ for val in ${StringArray[@]}
++ let i+=1
++ python Finetuning+evaluation_VulBERTa-CNN.py --seed_input=151 --data_folder=balanced_0.9 --train_test=train --batch=3 --epochs=10 --dataset=combined --generate_json=False
+Traceback (most recent call last):
+  File "/home/<ANONYMOUS>/VulBERTa/Finetuning+evaluation_VulBERTa-CNN.py", line 25, in <module>
+    import torchtext
+ModuleNotFoundError: No module named 'torchtext'
++ for val in ${StringArray[@]}
++ let i+=1
++ python Finetuning+evaluation_VulBERTa-CNN.py --seed_input=152 --data_folder=balanced_0.8 --train_test=train --batch=3 --epochs=10 --dataset=combined --generate_json=False
+Traceback (most recent call last):
+  File "/home/<ANONYMOUS>/VulBERTa/Finetuning+evaluation_VulBERTa-CNN.py", line 25, in <module>
+    import torchtext
+ModuleNotFoundError: No module named 'torchtext'
++ for val in ${StringArray[@]}
++ let i+=1
++ python Finetuning+evaluation_VulBERTa-CNN.py --seed_input=153 --data_folder=balanced_0.7 --train_test=train --batch=3 --epochs=10 --dataset=combined --generate_json=False
+Traceback (most recent call last):
+  File "/home/<ANONYMOUS>/VulBERTa/Finetuning+evaluation_VulBERTa-CNN.py", line 25, in <module>
+    import torchtext
+ModuleNotFoundError: No module named 'torchtext'
++ for val in ${StringArray[@]}
++ let i+=1
++ python Finetuning+evaluation_VulBERTa-CNN.py --seed_input=154 --data_folder=balanced_0.6 --train_test=train --batch=3 --epochs=10 --dataset=combined --generate_json=False
+Traceback (most recent call last):
+  File "/home/<ANONYMOUS>/VulBERTa/Finetuning+evaluation_VulBERTa-CNN.py", line 25, in <module>
+    import torchtext
+ModuleNotFoundError: No module named 'torchtext'
++ for val in ${StringArray[@]}
++ let i+=1
++ python Finetuning+evaluation_VulBERTa-CNN.py --seed_input=155 --data_folder=balanced_0.5 --train_test=train --batch=3 --epochs=10 --dataset=combined --generate_json=False
+Traceback (most recent call last):
+  File "/home/<ANONYMOUS>/VulBERTa/Finetuning+evaluation_VulBERTa-CNN.py", line 25, in <module>
+    import torchtext
+ModuleNotFoundError: No module named 'torchtext'
++ for val in ${StringArray[@]}
++ let i+=1
++ python Finetuning+evaluation_VulBERTa-CNN.py --seed_input=156 --data_folder=balanced_0.4 --train_test=train --batch=3 --epochs=10 --dataset=combined --generate_json=False
+Traceback (most recent call last):
+  File "/home/<ANONYMOUS>/VulBERTa/Finetuning+evaluation_VulBERTa-CNN.py", line 25, in <module>
+    import torchtext
+ModuleNotFoundError: No module named 'torchtext'
++ for val in ${StringArray[@]}
++ let i+=1
++ python Finetuning+evaluation_VulBERTa-CNN.py --seed_input=157 --data_folder=balanced_0.3 --train_test=train --batch=3 --epochs=10 --dataset=combined --generate_json=False
+Traceback (most recent call last):
+  File "/home/<ANONYMOUS>/VulBERTa/Finetuning+evaluation_VulBERTa-CNN.py", line 25, in <module>
+    import torchtext
+ModuleNotFoundError: No module named 'torchtext'
++ for val in ${StringArray[@]}
++ let i+=1
++ python Finetuning+evaluation_VulBERTa-CNN.py --seed_input=158 --data_folder=balanced_0.2 --train_test=train --batch=3 --epochs=10 --dataset=combined --generate_json=False
+Traceback (most recent call last):
+  File "/home/<ANONYMOUS>/VulBERTa/Finetuning+evaluation_VulBERTa-CNN.py", line 25, in <module>
+    import torchtext
+ModuleNotFoundError: No module named 'torchtext'
++ for val in ${StringArray[@]}
++ let i+=1
++ python Finetuning+evaluation_VulBERTa-CNN.py --seed_input=159 --data_folder=balanced_0.1 --train_test=train --batch=3 --epochs=10 --dataset=combined --generate_json=False
++ StringArray=('balanced_0.9' 'balanced_0.8' 'balanced_0.7' 'balanced_0.6' 'balanced_0.5' 'balanced_0.4' 'balanced_0.3' 'balanced_0.2' 'balanced_0.1' 'imbalanced_0.9' 'imbalanced_0.8' 'imbalanced_0.7' 'imbalanced_0.6' 'imbalanced_0.5' 'imbalanced_0.4' 'imbalanced_0.3' 'imbalanced_0.2' 'imbalanced_0.1')
++ declare -a StringArray
++ i=150
++ for val in ${StringArray[@]}
++ let i+=1
++ python Finetuning+evaluation_VulBERTa-CNN.py --seed_input=151 --data_folder=balanced_0.9 --train_test=train --batch=3 --epochs=10 --dataset=combined --generate_json=False
+Device:  cuda
+MultiGPU:  False
+data/finetune/combined/balanced_0.9/train.jsonl
+Traceback (most recent call last):
+  File "Finetuning+evaluation_VulBERTa-CNN.py", line 284, in <module>
+    m1 = pd.read_json('data/finetune/combined/' + args.data_folder + '/train.jsonl', lines=True)
+  File "/home/<ANONYMOUS>/anaconda3/envs/myenv/lib/python3.8/site-packages/pandas/util/_decorators.py", line 207, in wrapper
+    return func(*args, **kwargs)
+  File "/home/<ANONYMOUS>/anaconda3/envs/myenv/lib/python3.8/site-packages/pandas/util/_decorators.py", line 311, in wrapper
+    return func(*args, **kwargs)
+  File "/home/<ANONYMOUS>/anaconda3/envs/myenv/lib/python3.8/site-packages/pandas/io/json/_json.py", line 614, in read_json
+    return json_reader.read()
+  File "/home/<ANONYMOUS>/anaconda3/envs/myenv/lib/python3.8/site-packages/pandas/io/json/_json.py", line 746, in read
+    obj = self._get_object_parser(self._combine_lines(data_lines))
+  File "/home/<ANONYMOUS>/anaconda3/envs/myenv/lib/python3.8/site-packages/pandas/io/json/_json.py", line 770, in _get_object_parser
+    obj = FrameParser(json, **kwargs).parse()
+  File "/home/<ANONYMOUS>/anaconda3/envs/myenv/lib/python3.8/site-packages/pandas/io/json/_json.py", line 885, in parse
+    self._parse_no_numpy()
+  File "/home/<ANONYMOUS>/anaconda3/envs/myenv/lib/python3.8/site-packages/pandas/io/json/_json.py", line 1140, in _parse_no_numpy
+    loads(json, precise_float=self.precise_float), dtype=None
+ValueError: Expected object or value
++ for val in ${StringArray[@]}
++ let i+=1
++ python Finetuning+evaluation_VulBERTa-CNN.py --seed_input=152 --data_folder=balanced_0.8 --train_test=train --batch=3 --epochs=10 --dataset=combined --generate_json=False
+Device:  cuda
+MultiGPU:  False
+data/finetune/combined/balanced_0.8/train.jsonl
+Traceback (most recent call last):
+  File "Finetuning+evaluation_VulBERTa-CNN.py", line 284, in <module>
+    m1 = pd.read_json('data/finetune/combined/' + args.data_folder + '/train.jsonl', lines=True)
+  File "/home/<ANONYMOUS>/anaconda3/envs/myenv/lib/python3.8/site-packages/pandas/util/_decorators.py", line 207, in wrapper
+    return func(*args, **kwargs)
+  File "/home/<ANONYMOUS>/anaconda3/envs/myenv/lib/python3.8/site-packages/pandas/util/_decorators.py", line 311, in wrapper
+    return func(*args, **kwargs)
+  File "/home/<ANONYMOUS>/anaconda3/envs/myenv/lib/python3.8/site-packages/pandas/io/json/_json.py", line 614, in read_json
+    return json_reader.read()
+  File "/home/<ANONYMOUS>/anaconda3/envs/myenv/lib/python3.8/site-packages/pandas/io/json/_json.py", line 746, in read
+    obj = self._get_object_parser(self._combine_lines(data_lines))
+  File "/home/<ANONYMOUS>/anaconda3/envs/myenv/lib/python3.8/site-packages/pandas/io/json/_json.py", line 770, in _get_object_parser
+    obj = FrameParser(json, **kwargs).parse()
+  File "/home/<ANONYMOUS>/anaconda3/envs/myenv/lib/python3.8/site-packages/pandas/io/json/_json.py", line 885, in parse
+    self._parse_no_numpy()
+  File "/home/<ANONYMOUS>/anaconda3/envs/myenv/lib/python3.8/site-packages/pandas/io/json/_json.py", line 1140, in _parse_no_numpy
+    loads(json, precise_float=self.precise_float), dtype=None
+ValueError: Expected object or value
++ for val in ${StringArray[@]}
++ let i+=1
++ python Finetuning+evaluation_VulBERTa-CNN.py --seed_input=153 --data_folder=balanced_0.7 --train_test=train --batch=3 --epochs=10 --dataset=combined --generate_json=False
++ StringArray=('balanced_0.9' 'balanced_0.8' 'balanced_0.7' 'balanced_0.6' 'balanced_0.5' 'balanced_0.4' 'balanced_0.3' 'balanced_0.2' 'balanced_0.1' 'imbalanced_0.9' 'imbalanced_0.8' 'imbalanced_0.7' 'imbalanced_0.6' 'imbalanced_0.5' 'imbalanced_0.4' 'imbalanced_0.3' 'imbalanced_0.2' 'imbalanced_0.1')
++ declare -a StringArray
++ i=150
++ for val in ${StringArray[@]}
++ let i+=1
++ python Finetuning+evaluation_VulBERTa-CNN.py --seed_input=151 --data_folder=balanced_0.9 --train_test=train --batch=3 --epochs=10 --dataset=combined --generate_json=False
+double free or corruption (fasttop)
+malloc_consolidate(): invalid chunk size
+malloc_consolidate(): invalid chunk size
+tcache_thread_shutdown(): unaligned tcache chunk detected
+tcache_thread_shutdown(): unaligned tcache chunk detected
+trainCNN.sh: line 8: 14367 Aborted                 (core dumped) python Finetuning+evaluation_VulBERTa-CNN.py --seed_input=$i --data_folder=$val --train_test=train --batch=3 --epochs=10 --dataset=combined --generate_json=False
++ for val in ${StringArray[@]}
++ let i+=1
++ python Finetuning+evaluation_VulBERTa-CNN.py --seed_input=152 --data_folder=balanced_0.8 --train_test=train --batch=3 --epochs=10 --dataset=combined --generate_json=False
+Some weights of RobertaModel were not initialized from the model checkpoint at models/pre_trained/ and are newly initialized: ['roberta.pooler.dense.weight', 'roberta.pooler.dense.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Device:  cuda
+MultiGPU:  False
+data/finetune/combined/balanced_0.8/train.jsonl
+
+myCNN(
+  (embed): Embedding(50000, 768, padding_idx=1)
+  (conv1): Conv1d(768, 200, kernel_size=(3,), stride=(1,))
+  (conv2): Conv1d(768, 200, kernel_size=(4,), stride=(1,))
+  (conv3): Conv1d(768, 200, kernel_size=(5,), stride=(1,))
+  (dropout): Dropout(p=0.5, inplace=False)
+  (fc1): Linear(in_features=600, out_features=256, bias=True)
+  (fc2): Linear(in_features=256, out_features=128, bias=True)
+  (fc3): Linear(in_features=128, out_features=2, bias=True)
+)
+Num of trainable param:  2030810
+Training started.....
+Training completed!
+Testing started.......
+Confusion matrix: 
+ [[   0 1531]
+ [   0 2214]]
+
+TP: 2214
+FP: 1531
+TN: 0
+FN: 0
+
+Accuracy: 0.5911882510013351
+Precision: 0.5911882510013351
+F-measure: 0.7430776976002685
+Recall: 1.0
+Precision-Recall AUC: 0.7527177654619537
+AUC: 0.7021954287690058
+MCC: 0.0
+Confusion matrix: 
+ [[   16 18032]
+ [    0 14932]]
+
+TP: 14932
+FP: 18032
+TN: 16
+FN: 0
+
+Accuracy: 0.45324439053972104
+Precision: 0.4529790074020143
+F-measure: 0.6235176215132787
+Recall: 1.0
+Precision-Recall AUC: 0.696455661770092
+AUC: 0.7235618328502924
+MCC: 0.020039389567091205
+Confusion matrix: 
+ [[   0 1302]
+ [   0 1900]]
+
+TP: 1900
+FP: 1302
+TN: 0
+FN: 0
+
+Accuracy: 0.5933791380387258
+Precision: 0.5933791380387258
+F-measure: 0.7448059584476675
+Recall: 1.0
+Precision-Recall AUC: 0.7491668601006818
+AUC: 0.6834715821812596
+MCC: 0.0
++ for val in ${StringArray[@]}
++ let i+=1
++ python Finetuning+evaluation_VulBERTa-CNN.py --seed_input=153 --data_folder=balanced_0.7 --train_test=train --batch=3 --epochs=10 --dataset=combined --generate_json=False
+Some weights of RobertaModel were not initialized from the model checkpoint at models/pre_trained/ and are newly initialized: ['roberta.pooler.dense.weight', 'roberta.pooler.dense.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Device:  cuda
+MultiGPU:  False
+data/finetune/combined/balanced_0.7/train.jsonl
+
+myCNN(
+  (embed): Embedding(50000, 768, padding_idx=1)
+  (conv1): Conv1d(768, 200, kernel_size=(3,), stride=(1,))
+  (conv2): Conv1d(768, 200, kernel_size=(4,), stride=(1,))
+  (conv3): Conv1d(768, 200, kernel_size=(5,), stride=(1,))
+  (dropout): Dropout(p=0.5, inplace=False)
+  (fc1): Linear(in_features=600, out_features=256, bias=True)
+  (fc2): Linear(in_features=256, out_features=128, bias=True)
+  (fc3): Linear(in_features=128, out_features=2, bias=True)
+)
+Num of trainable param:  2030810
+Training started.....
+Training completed!
+Testing started.......
+Confusion matrix: 
+ [[  32 1499]
+ [   0 2214]]
+
+TP: 2214
+FP: 1499
+TN: 32
+FN: 0
+
+Accuracy: 0.5997329773030707
+Precision: 0.5962833288446
+F-measure: 0.7470895900118103
+Recall: 1.0
+Precision-Recall AUC: 0.7479981612414057
+AUC: 0.6957021023508733
+MCC: 0.11163843185202676
+Confusion matrix: 
+ [[  174 15592]
+ [    0 13146]]
+
+TP: 13146
+FP: 15592
+TN: 174
+FN: 0
+
+Accuracy: 0.4607083563918096
+Precision: 0.4574431066880089
+F-measure: 0.6277337408079458
+Recall: 1.0
+Precision-Recall AUC: 0.7181146291010022
+AUC: 0.74430373475737
+MCC: 0.07105299792943623
+Confusion matrix: 
+ [[  16 1125]
+ [   0 1633]]
+
+TP: 1633
+FP: 1125
+TN: 16
+FN: 0
+
+Accuracy: 0.594448449891853
+Precision: 0.5920957215373459
+F-measure: 0.7437941243452516
+Recall: 1.0
+Precision-Recall AUC: 0.7425915053217362
+AUC: 0.6831560179964825
+MCC: 0.09111987820368346
++ for val in ${StringArray[@]}
++ let i+=1
++ python Finetuning+evaluation_VulBERTa-CNN.py --seed_input=154 --data_folder=balanced_0.6 --train_test=train --batch=3 --epochs=10 --dataset=combined --generate_json=False
+Some weights of RobertaModel were not initialized from the model checkpoint at models/pre_trained/ and are newly initialized: ['roberta.pooler.dense.weight', 'roberta.pooler.dense.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Device:  cuda
+MultiGPU:  False
+data/finetune/combined/balanced_0.6/train.jsonl
+
+myCNN(
+  (embed): Embedding(50000, 768, padding_idx=1)
+  (conv1): Conv1d(768, 200, kernel_size=(3,), stride=(1,))
+  (conv2): Conv1d(768, 200, kernel_size=(4,), stride=(1,))
+  (conv3): Conv1d(768, 200, kernel_size=(5,), stride=(1,))
+  (dropout): Dropout(p=0.5, inplace=False)
+  (fc1): Linear(in_features=600, out_features=256, bias=True)
+  (fc2): Linear(in_features=256, out_features=128, bias=True)
+  (fc3): Linear(in_features=128, out_features=2, bias=True)
+)
+Num of trainable param:  2030810
+Training started.....
+Training completed!
+Testing started.......
+Confusion matrix: 
+ [[  13 1518]
+ [   0 2214]]
+
+TP: 2214
+FP: 1518
+TN: 13
+FN: 0
+
+Accuracy: 0.5946595460614152
+Precision: 0.5932475884244373
+F-measure: 0.7447023208879919
+Recall: 1.0
+Precision-Recall AUC: 0.7279507629381288
+AUC: 0.6690033496241777
+MCC: 0.07097445584923144
+Confusion matrix: 
+ [[   48 13457]
+ [    1 11267]]
+
+TP: 11267
+FP: 13457
+TN: 48
+FN: 1
+
+Accuracy: 0.4567472651677229
+Precision: 0.4557110499919107
+F-measure: 0.6260835741275839
+Recall: 0.9999112531061413
+Precision-Recall AUC: 0.6864037994347378
+AUC: 0.7178955269331215
+MCC: 0.038839912358654756
+Confusion matrix: 
+ [[   5  990]
+ [   0 1373]]
+
+TP: 1373
+FP: 990
+TN: 5
+FN: 0
+
+Accuracy: 0.5819256756756757
+Precision: 0.5810410495133305
+F-measure: 0.7350107066381156
+Recall: 1.0
+Precision-Recall AUC: 0.7063390116950874
+AUC: 0.6483455149015287
+MCC: 0.05403521323092201
++ for val in ${StringArray[@]}
++ let i+=1
++ python Finetuning+evaluation_VulBERTa-CNN.py --seed_input=155 --data_folder=balanced_0.5 --train_test=train --batch=3 --epochs=10 --dataset=combined --generate_json=False
+Some weights of RobertaModel were not initialized from the model checkpoint at models/pre_trained/ and are newly initialized: ['roberta.pooler.dense.weight', 'roberta.pooler.dense.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Device:  cuda
+MultiGPU:  False
+data/finetune/combined/balanced_0.5/train.jsonl
+
+myCNN(
+  (embed): Embedding(50000, 768, padding_idx=1)
+  (conv1): Conv1d(768, 200, kernel_size=(3,), stride=(1,))
+  (conv2): Conv1d(768, 200, kernel_size=(4,), stride=(1,))
+  (conv3): Conv1d(768, 200, kernel_size=(5,), stride=(1,))
+  (dropout): Dropout(p=0.5, inplace=False)
+  (fc1): Linear(in_features=600, out_features=256, bias=True)
+  (fc2): Linear(in_features=256, out_features=128, bias=True)
+  (fc3): Linear(in_features=128, out_features=2, bias=True)
+)
+Num of trainable param:  2030810
+Training started.....
+Training completed!
+Testing started.......
+Confusion matrix: 
+ [[  10 1521]
+ [   0 2214]]
+
+TP: 2214
+FP: 1521
+TN: 10
+FN: 0
+
+Accuracy: 0.5938584779706275
+Precision: 0.5927710843373494
+F-measure: 0.7443267776096822
+Recall: 1.0
+Precision-Recall AUC: 0.7350912330018102
+AUC: 0.6781258684565943
+MCC: 0.062223711162323087
+Confusion matrix: 
+ [[   53 11142]
+ [    0  9480]]
+
+TP: 9480
+FP: 11142
+TN: 53
+FN: 0
+
+Accuracy: 0.4610882708585248
+Precision: 0.4597032295606634
+F-measure: 0.6298584811640423
+Recall: 1.0
+Precision-Recall AUC: 0.7335795057116747
+AUC: 0.7563591717972347
+MCC: 0.046651398053060116
+Confusion matrix: 
+ [[   4  826]
+ [   0 1136]]
+
+TP: 1136
+FP: 826
+TN: 4
+FN: 0
+
+Accuracy: 0.5798575788402849
+Precision: 0.5790010193679919
+F-measure: 0.7333763718528082
+Recall: 1.0
+Precision-Recall AUC: 0.7231616645350312
+AUC: 0.6757577846597658
+MCC: 0.052823918430952854
++ for val in ${StringArray[@]}
++ let i+=1
++ python Finetuning+evaluation_VulBERTa-CNN.py --seed_input=156 --data_folder=balanced_0.4 --train_test=train --batch=3 --epochs=10 --dataset=combined --generate_json=False
+Some weights of RobertaModel were not initialized from the model checkpoint at models/pre_trained/ and are newly initialized: ['roberta.pooler.dense.weight', 'roberta.pooler.dense.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Device:  cuda
+MultiGPU:  False
+data/finetune/combined/balanced_0.4/train.jsonl
+
+myCNN(
+  (embed): Embedding(50000, 768, padding_idx=1)
+  (conv1): Conv1d(768, 200, kernel_size=(3,), stride=(1,))
+  (conv2): Conv1d(768, 200, kernel_size=(4,), stride=(1,))
+  (conv3): Conv1d(768, 200, kernel_size=(5,), stride=(1,))
+  (dropout): Dropout(p=0.5, inplace=False)
+  (fc1): Linear(in_features=600, out_features=256, bias=True)
+  (fc2): Linear(in_features=256, out_features=128, bias=True)
+  (fc3): Linear(in_features=128, out_features=2, bias=True)
+)
+Num of trainable param:  2030810
+Training started.....
+Training completed!
+Testing started.......
+Confusion matrix: 
+ [[  25 1506]
+ [   0 2214]]
+
+TP: 2214
+FP: 1506
+TN: 25
+FN: 0
+
+Accuracy: 0.597863818424566
+Precision: 0.5951612903225807
+F-measure: 0.7462082912032356
+Recall: 1.0
+Precision-Recall AUC: 0.7299280517979025
+AUC: 0.6802685776694475
+MCC: 0.09858248181338454
+Confusion matrix: 
+ [[ 121 8750]
+ [   0 7565]]
+
+TP: 7565
+FP: 8750
+TN: 121
+FN: 0
+
+Accuracy: 0.4676320272572402
+Precision: 0.4636837266319338
+F-measure: 0.6335845896147404
+Recall: 1.0
+Precision-Recall AUC: 0.7483792394086692
+AUC: 0.7751577263386651
+MCC: 0.07952749859407353
+Confusion matrix: 
+ [[ 10 682]
+ [  0 916]]
+
+TP: 916
+FP: 682
+TN: 10
+FN: 0
+
+Accuracy: 0.5758706467661692
+Precision: 0.5732165206508135
+F-measure: 0.7287191726332538
+Recall: 1.0
+Precision-Recall AUC: 0.7022468792855774
+AUC: 0.6615807292324002
+MCC: 0.09101360190624351
++ for val in ${StringArray[@]}
++ let i+=1
++ python Finetuning+evaluation_VulBERTa-CNN.py --seed_input=157 --data_folder=balanced_0.3 --train_test=train --batch=3 --epochs=10 --dataset=combined --generate_json=False
+Some weights of RobertaModel were not initialized from the model checkpoint at models/pre_trained/ and are newly initialized: ['roberta.pooler.dense.weight', 'roberta.pooler.dense.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Device:  cuda
+MultiGPU:  False
+data/finetune/combined/balanced_0.3/train.jsonl
+
+myCNN(
+  (embed): Embedding(50000, 768, padding_idx=1)
+  (conv1): Conv1d(768, 200, kernel_size=(3,), stride=(1,))
+  (conv2): Conv1d(768, 200, kernel_size=(4,), stride=(1,))
+  (conv3): Conv1d(768, 200, kernel_size=(5,), stride=(1,))
+  (dropout): Dropout(p=0.5, inplace=False)
+  (fc1): Linear(in_features=600, out_features=256, bias=True)
+  (fc2): Linear(in_features=256, out_features=128, bias=True)
+  (fc3): Linear(in_features=128, out_features=2, bias=True)
+)
+Num of trainable param:  2030810
+Training started.....
+Training completed!
+Testing started.......
+Confusion matrix: 
+ [[  41 1490]
+ [   1 2213]]
+
+TP: 2213
+FP: 1490
+TN: 41
+FN: 1
+
+Accuracy: 0.6018691588785047
+Precision: 0.5976235484742101
+F-measure: 0.7480141963833024
+Recall: 0.9995483288166215
+Precision-Recall AUC: 0.7767136977942204
+AUC: 0.7165987537297536
+MCC: 0.12291255776983188
+Confusion matrix: 
+ [[ 112 6512]
+ [   0 5674]]
+
+TP: 5674
+FP: 6512
+TN: 112
+FN: 0
+
+Accuracy: 0.47048300536672627
+Precision: 0.46561628097817165
+F-measure: 0.6353863381858902
+Recall: 1.0
+Precision-Recall AUC: 0.7736033405801508
+AUC: 0.8114277117294072
+MCC: 0.08872845682392747
+Confusion matrix: 
+ [[  7 503]
+ [  0 691]]
+
+TP: 691
+FP: 503
+TN: 7
+FN: 0
+
+Accuracy: 0.5811823480432973
+Precision: 0.5787269681742043
+F-measure: 0.73315649867374
+Recall: 1.0
+Precision-Recall AUC: 0.7364993035298739
+AUC: 0.6752873073976334
+MCC: 0.08912525639728189
++ for val in ${StringArray[@]}
++ let i+=1
++ python Finetuning+evaluation_VulBERTa-CNN.py --seed_input=158 --data_folder=balanced_0.2 --train_test=train --batch=3 --epochs=10 --dataset=combined --generate_json=False
+Some weights of RobertaModel were not initialized from the model checkpoint at models/pre_trained/ and are newly initialized: ['roberta.pooler.dense.weight', 'roberta.pooler.dense.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Device:  cuda
+MultiGPU:  False
+data/finetune/combined/balanced_0.2/train.jsonl
+
+myCNN(
+  (embed): Embedding(50000, 768, padding_idx=1)
+  (conv1): Conv1d(768, 200, kernel_size=(3,), stride=(1,))
+  (conv2): Conv1d(768, 200, kernel_size=(4,), stride=(1,))
+  (conv3): Conv1d(768, 200, kernel_size=(5,), stride=(1,))
+  (dropout): Dropout(p=0.5, inplace=False)
+  (fc1): Linear(in_features=600, out_features=256, bias=True)
+  (fc2): Linear(in_features=256, out_features=128, bias=True)
+  (fc3): Linear(in_features=128, out_features=2, bias=True)
+)
+Num of trainable param:  2030810
+Training started.....
+Training completed!
+Testing started.......
+Confusion matrix: 
+ [[   6 1525]
+ [   0 2214]]
+
+TP: 2214
+FP: 1525
+TN: 6
+FN: 0
+
+Accuracy: 0.5927903871829105
+Precision: 0.5921369350093608
+F-measure: 0.743826642029229
+Recall: 1.0
+Precision-Recall AUC: 0.7223389356119743
+AUC: 0.6590078751865246
+MCC: 0.04817249114084379
+Confusion matrix: 
+ [[  19 4440]
+ [   0 3840]]
+
+TP: 3840
+FP: 4440
+TN: 19
+FN: 0
+
+Accuracy: 0.4649957826244126
+Precision: 0.463768115942029
+F-measure: 0.6336633663366337
+Recall: 1.0
+Precision-Recall AUC: 0.7793066102461228
+AUC: 0.8116099169750318
+MCC: 0.044453760779901264
+Confusion matrix: 
+ [[  0 337]
+ [  0 480]]
+
+TP: 480
+FP: 337
+TN: 0
+FN: 0
+
+Accuracy: 0.587515299877601
+Precision: 0.587515299877601
+F-measure: 0.7401696222050886
+Recall: 1.0
+Precision-Recall AUC: 0.7161765480968181
+AUC: 0.6448194856577647
+MCC: 0.0
++ for val in ${StringArray[@]}
++ let i+=1
++ python Finetuning+evaluation_VulBERTa-CNN.py --seed_input=159 --data_folder=balanced_0.1 --train_test=train --batch=3 --epochs=10 --dataset=combined --generate_json=False
+Some weights of RobertaModel were not initialized from the model checkpoint at models/pre_trained/ and are newly initialized: ['roberta.pooler.dense.weight', 'roberta.pooler.dense.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Device:  cuda
+MultiGPU:  False
+data/finetune/combined/balanced_0.1/train.jsonl
+
+myCNN(
+  (embed): Embedding(50000, 768, padding_idx=1)
+  (conv1): Conv1d(768, 200, kernel_size=(3,), stride=(1,))
+  (conv2): Conv1d(768, 200, kernel_size=(4,), stride=(1,))
+  (conv3): Conv1d(768, 200, kernel_size=(5,), stride=(1,))
+  (dropout): Dropout(p=0.5, inplace=False)
+  (fc1): Linear(in_features=600, out_features=256, bias=True)
+  (fc2): Linear(in_features=256, out_features=128, bias=True)
+  (fc3): Linear(in_features=128, out_features=2, bias=True)
+)
+Num of trainable param:  2030810
+Training started.....
+Training completed!
+Testing started.......
+Confusion matrix: 
+ [[   6 1525]
+ [   1 2213]]
+
+TP: 2213
+FP: 1525
+TN: 6
+FN: 1
+
+Accuracy: 0.5925233644859813
+Precision: 0.592027822364901
+F-measure: 0.7436155913978494
+Recall: 0.9995483288166215
+Precision-Recall AUC: 0.7026669155806222
+AUC: 0.6469143866269927
+MCC: 0.039464232766659696
+Confusion matrix: 
+ [[  15 2212]
+ [   0 1939]]
+
+TP: 1939
+FP: 2212
+TN: 15
+FN: 0
+
+Accuracy: 0.46903504560729714
+Precision: 0.4671163575042159
+F-measure: 0.6367816091954023
+Recall: 1.0
+Precision-Recall AUC: 0.8063320913234093
+AUC: 0.8266717274723707
+MCC: 0.056091629773546016
+Confusion matrix: 
+ [[  0 158]
+ [  0 239]]
+
+TP: 239
+FP: 158
+TN: 0
+FN: 0
+
+Accuracy: 0.6020151133501259
+Precision: 0.6020151133501259
+F-measure: 0.7515723270440251
+Recall: 1.0
+Precision-Recall AUC: 0.7185349743418207
+AUC: 0.6221598432286426
+MCC: 0.0
++ for val in ${StringArray[@]}
++ let i+=1
++ python Finetuning+evaluation_VulBERTa-CNN.py --seed_input=160 --data_folder=imbalanced_0.9 --train_test=train --batch=3 --epochs=10 --dataset=combined --generate_json=False
+Some weights of RobertaModel were not initialized from the model checkpoint at models/pre_trained/ and are newly initialized: ['roberta.pooler.dense.weight', 'roberta.pooler.dense.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Device:  cuda
+MultiGPU:  False
+data/finetune/combined/imbalanced_0.9/train.jsonl
+
+myCNN(
+  (embed): Embedding(50000, 768, padding_idx=1)
+  (conv1): Conv1d(768, 200, kernel_size=(3,), stride=(1,))
+  (conv2): Conv1d(768, 200, kernel_size=(4,), stride=(1,))
+  (conv3): Conv1d(768, 200, kernel_size=(5,), stride=(1,))
+  (dropout): Dropout(p=0.5, inplace=False)
+  (fc1): Linear(in_features=600, out_features=256, bias=True)
+  (fc2): Linear(in_features=256, out_features=128, bias=True)
+  (fc3): Linear(in_features=128, out_features=2, bias=True)
+)
+Num of trainable param:  2030810
+Training started.....
+Training completed!
+Testing started.......
+Confusion matrix: 
+ [[    0 19373]
+ [    0  2214]]
+
+TP: 2214
+FP: 19373
+TN: 0
+FN: 0
+
+Accuracy: 0.10256172696530319
+Precision: 0.10256172696530319
+F-measure: 0.1860426032519642
+Recall: 1.0
+Precision-Recall AUC: 0.11741950094793677
+AUC: 0.5168251887271191
+MCC: 0.0
+Confusion matrix: 
+ [[     0 138642]
+ [     0  16839]]
+
+TP: 16839
+FP: 138642
+TN: 0
+FN: 0
+
+Accuracy: 0.1083026221853474
+Precision: 0.1083026221853474
+F-measure: 0.19543871866295265
+Recall: 1.0
+Precision-Recall AUC: 0.13283245036760646
+AUC: 0.5324984392416301
+MCC: 0.0
+Confusion matrix: 
+ [[    0 17234]
+ [    0  2141]]
+
+TP: 2141
+FP: 17234
+TN: 0
+FN: 0
+
+Accuracy: 0.11050322580645161
+Precision: 0.11050322580645161
+F-measure: 0.1990146867447481
+Recall: 1.0
+Precision-Recall AUC: 0.12281780527573001
+AUC: 0.5126948229218098
+MCC: 0.0
++ for val in ${StringArray[@]}
++ let i+=1
++ python Finetuning+evaluation_VulBERTa-CNN.py --seed_input=161 --data_folder=imbalanced_0.8 --train_test=train --batch=3 --epochs=10 --dataset=combined --generate_json=False
+Some weights of RobertaModel were not initialized from the model checkpoint at models/pre_trained/ and are newly initialized: ['roberta.pooler.dense.weight', 'roberta.pooler.dense.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Device:  cuda
+MultiGPU:  False
+data/finetune/combined/imbalanced_0.8/train.jsonl
+
+myCNN(
+  (embed): Embedding(50000, 768, padding_idx=1)
+  (conv1): Conv1d(768, 200, kernel_size=(3,), stride=(1,))
+  (conv2): Conv1d(768, 200, kernel_size=(4,), stride=(1,))
+  (conv3): Conv1d(768, 200, kernel_size=(5,), stride=(1,))
+  (dropout): Dropout(p=0.5, inplace=False)
+  (fc1): Linear(in_features=600, out_features=256, bias=True)
+  (fc2): Linear(in_features=256, out_features=128, bias=True)
+  (fc3): Linear(in_features=128, out_features=2, bias=True)
+)
+Num of trainable param:  2030810
+Training started.....
+Training completed!
+Testing started.......
+Confusion matrix: 
+ [[    0 19373]
+ [    0  2214]]
+
+TP: 2214
+FP: 19373
+TN: 0
+FN: 0
+
+Accuracy: 0.10256172696530319
+Precision: 0.10256172696530319
+F-measure: 0.1860426032519642
+Recall: 1.0
+Precision-Recall AUC: 0.16584545741711756
+AUC: 0.5715549341783616
+MCC: 0.0
+Confusion matrix: 
+ [[     0 123299]
+ [     0  14932]]
+
+TP: 14932
+FP: 123299
+TN: 0
+FN: 0
+
+Accuracy: 0.10802207898373013
+Precision: 0.10802207898373013
+F-measure: 0.19498181675731086
+Recall: 1.0
+Precision-Recall AUC: 0.20025237037690727
+AUC: 0.606681768364879
+MCC: 0.0
+Confusion matrix: 
+ [[    0 15297]
+ [    0  1900]]
+
+TP: 1900
+FP: 15297
+TN: 0
+FN: 0
+
+Accuracy: 0.11048438681165319
+Precision: 0.11048438681165319
+F-measure: 0.198984133633555
+Recall: 1.0
+Precision-Recall AUC: 0.18068308064007302
+AUC: 0.5746086091872159
+MCC: 0.0
++ for val in ${StringArray[@]}
++ let i+=1
++ python Finetuning+evaluation_VulBERTa-CNN.py --seed_input=162 --data_folder=imbalanced_0.7 --train_test=train --batch=3 --epochs=10 --dataset=combined --generate_json=False
+Some weights of RobertaModel were not initialized from the model checkpoint at models/pre_trained/ and are newly initialized: ['roberta.pooler.dense.weight', 'roberta.pooler.dense.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Device:  cuda
+MultiGPU:  False
+data/finetune/combined/imbalanced_0.7/train.jsonl
+
+myCNN(
+  (embed): Embedding(50000, 768, padding_idx=1)
+  (conv1): Conv1d(768, 200, kernel_size=(3,), stride=(1,))
+  (conv2): Conv1d(768, 200, kernel_size=(4,), stride=(1,))
+  (conv3): Conv1d(768, 200, kernel_size=(5,), stride=(1,))
+  (dropout): Dropout(p=0.5, inplace=False)
+  (fc1): Linear(in_features=600, out_features=256, bias=True)
+  (fc2): Linear(in_features=256, out_features=128, bias=True)
+  (fc3): Linear(in_features=128, out_features=2, bias=True)
+)
+Num of trainable param:  2030810
+Training started.....
+Training completed!
+Testing started.......
+Confusion matrix: 
+ [[    0 19373]
+ [    0  2214]]
+
+TP: 2214
+FP: 19373
+TN: 0
+FN: 0
+
+Accuracy: 0.10256172696530319
+Precision: 0.10256172696530319
+F-measure: 0.1860426032519642
+Recall: 1.0
+Precision-Recall AUC: 0.11953432196246394
+AUC: 0.5430854977436025
+MCC: 0.0
+Confusion matrix: 
+ [[     0 107883]
+ [     0  13146]]
+
+TP: 13146
+FP: 107883
+TN: 0
+FN: 0
+
+Accuracy: 0.10861859554321691
+Precision: 0.10861859554321691
+F-measure: 0.19595304639463387
+Recall: 1.0
+Precision-Recall AUC: 0.13508604243958103
+AUC: 0.5525800478847324
+MCC: 0.0
+Confusion matrix: 
+ [[    0 13337]
+ [    0  1633]]
+
+TP: 1633
+FP: 13337
+TN: 0
+FN: 0
+
+Accuracy: 0.10908483633934536
+Precision: 0.10908483633934536
+F-measure: 0.1967114376919834
+Recall: 1.0
+Precision-Recall AUC: 0.12534869217909772
+AUC: 0.5347455506073857
+MCC: 0.0
++ for val in ${StringArray[@]}
++ let i+=1
++ python Finetuning+evaluation_VulBERTa-CNN.py --seed_input=163 --data_folder=imbalanced_0.6 --train_test=train --batch=3 --epochs=10 --dataset=combined --generate_json=False
+Some weights of RobertaModel were not initialized from the model checkpoint at models/pre_trained/ and are newly initialized: ['roberta.pooler.dense.weight', 'roberta.pooler.dense.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Device:  cuda
+MultiGPU:  False
+data/finetune/combined/imbalanced_0.6/train.jsonl
+
+myCNN(
+  (embed): Embedding(50000, 768, padding_idx=1)
+  (conv1): Conv1d(768, 200, kernel_size=(3,), stride=(1,))
+  (conv2): Conv1d(768, 200, kernel_size=(4,), stride=(1,))
+  (conv3): Conv1d(768, 200, kernel_size=(5,), stride=(1,))
+  (dropout): Dropout(p=0.5, inplace=False)
+  (fc1): Linear(in_features=600, out_features=256, bias=True)
+  (fc2): Linear(in_features=256, out_features=128, bias=True)
+  (fc3): Linear(in_features=128, out_features=2, bias=True)
+)
+Num of trainable param:  2030810
+Training started.....
+Training completed!
+Testing started.......
+Confusion matrix: 
+ [[    0 19373]
+ [    0  2214]]
+
+TP: 2214
+FP: 19373
+TN: 0
+FN: 0
+
+Accuracy: 0.10256172696530319
+Precision: 0.10256172696530319
+F-measure: 0.1860426032519642
+Recall: 1.0
+Precision-Recall AUC: 0.17304629387635584
+AUC: 0.6132675828040134
+MCC: 0.0
+Confusion matrix: 
+ [[    0 92525]
+ [    0 11268]]
+
+TP: 11268
+FP: 92525
+TN: 0
+FN: 0
+
+Accuracy: 0.10856223444740974
+Precision: 0.10856223444740974
+F-measure: 0.19586132573156845
+Recall: 1.0
+Precision-Recall AUC: 0.23947224954677834
+AUC: 0.6616253620734189
+MCC: 0.0
+Confusion matrix: 
+ [[    0 11405]
+ [    0  1373]]
+
+TP: 1373
+FP: 11405
+TN: 0
+FN: 0
+
+Accuracy: 0.10745030521208326
+Precision: 0.10745030521208326
+F-measure: 0.1940498904671048
+Recall: 1.0
+Precision-Recall AUC: 0.18725187207369087
+AUC: 0.6107102180111008
+MCC: 0.0
++ for val in ${StringArray[@]}
++ let i+=1
++ python Finetuning+evaluation_VulBERTa-CNN.py --seed_input=164 --data_folder=imbalanced_0.5 --train_test=train --batch=3 --epochs=10 --dataset=combined --generate_json=False
+Some weights of RobertaModel were not initialized from the model checkpoint at models/pre_trained/ and are newly initialized: ['roberta.pooler.dense.weight', 'roberta.pooler.dense.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Device:  cuda
+MultiGPU:  False
+data/finetune/combined/imbalanced_0.5/train.jsonl
+
+myCNN(
+  (embed): Embedding(50000, 768, padding_idx=1)
+  (conv1): Conv1d(768, 200, kernel_size=(3,), stride=(1,))
+  (conv2): Conv1d(768, 200, kernel_size=(4,), stride=(1,))
+  (conv3): Conv1d(768, 200, kernel_size=(5,), stride=(1,))
+  (dropout): Dropout(p=0.5, inplace=False)
+  (fc1): Linear(in_features=600, out_features=256, bias=True)
+  (fc2): Linear(in_features=256, out_features=128, bias=True)
+  (fc3): Linear(in_features=128, out_features=2, bias=True)
+)
+Num of trainable param:  2030810
+Training started.....
+Training completed!
+Testing started.......
+Confusion matrix: 
+ [[    0 19373]
+ [    0  2214]]
+
+TP: 2214
+FP: 19373
+TN: 0
+FN: 0
+
+Accuracy: 0.10256172696530319
+Precision: 0.10256172696530319
+F-measure: 0.1860426032519642
+Recall: 1.0
+Precision-Recall AUC: 0.17081356203330988
+AUC: 0.613917834966302
+MCC: 0.0
+Confusion matrix: 
+ [[    0 76999]
+ [    0  9480]]
+
+TP: 9480
+FP: 76999
+TN: 0
+FN: 0
+
+Accuracy: 0.1096219891534361
+Precision: 0.1096219891534361
+F-measure: 0.1975843849977595
+Recall: 1.0
+Precision-Recall AUC: 0.22980296732859143
+AUC: 0.6607431706466899
+MCC: 0.0
+Confusion matrix: 
+ [[   0 9527]
+ [   0 1136]]
+
+TP: 1136
+FP: 9527
+TN: 0
+FN: 0
+
+Accuracy: 0.10653662196380005
+Precision: 0.10653662196380005
+F-measure: 0.19255869141452667
+Recall: 1.0
+Precision-Recall AUC: 0.183041254038344
+AUC: 0.6075519520502884
+MCC: 0.0
++ for val in ${StringArray[@]}
++ let i+=1
++ python Finetuning+evaluation_VulBERTa-CNN.py --seed_input=165 --data_folder=imbalanced_0.4 --train_test=train --batch=3 --epochs=10 --dataset=combined --generate_json=False
+Some weights of RobertaModel were not initialized from the model checkpoint at models/pre_trained/ and are newly initialized: ['roberta.pooler.dense.weight', 'roberta.pooler.dense.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Device:  cuda
+MultiGPU:  False
+data/finetune/combined/imbalanced_0.4/train.jsonl
+
+myCNN(
+  (embed): Embedding(50000, 768, padding_idx=1)
+  (conv1): Conv1d(768, 200, kernel_size=(3,), stride=(1,))
+  (conv2): Conv1d(768, 200, kernel_size=(4,), stride=(1,))
+  (conv3): Conv1d(768, 200, kernel_size=(5,), stride=(1,))
+  (dropout): Dropout(p=0.5, inplace=False)
+  (fc1): Linear(in_features=600, out_features=256, bias=True)
+  (fc2): Linear(in_features=256, out_features=128, bias=True)
+  (fc3): Linear(in_features=128, out_features=2, bias=True)
+)
+Num of trainable param:  2030810
+Training started.....
+Training completed!
+Testing started.......
+Confusion matrix: 
+ [[    0 19373]
+ [    0  2214]]
+
+TP: 2214
+FP: 19373
+TN: 0
+FN: 0
+
+Accuracy: 0.10256172696530319
+Precision: 0.10256172696530319
+F-measure: 0.1860426032519642
+Recall: 1.0
+Precision-Recall AUC: 0.15400229772170929
+AUC: 0.5706596353029723
+MCC: 0.0
+Confusion matrix: 
+ [[    0 61557]
+ [    0  7565]]
+
+TP: 7565
+FP: 61557
+TN: 0
+FN: 0
+
+Accuracy: 0.10944417117560255
+Precision: 0.10944417117560255
+F-measure: 0.19729549988915984
+Recall: 1.0
+Precision-Recall AUC: 0.16394111437593026
+AUC: 0.564467786861759
+MCC: 0.0
+Confusion matrix: 
+ [[   0 7676]
+ [   0  916]]
+
+TP: 916
+FP: 7676
+TN: 0
+FN: 0
+
+Accuracy: 0.10661080074487896
+Precision: 0.10661080074487896
+F-measure: 0.19267984854859066
+Recall: 1.0
+Precision-Recall AUC: 0.16346548516893233
+AUC: 0.5526916681268219
+MCC: 0.0
++ for val in ${StringArray[@]}
++ let i+=1
++ python Finetuning+evaluation_VulBERTa-CNN.py --seed_input=166 --data_folder=imbalanced_0.3 --train_test=train --batch=3 --epochs=10 --dataset=combined --generate_json=False
+Some weights of RobertaModel were not initialized from the model checkpoint at models/pre_trained/ and are newly initialized: ['roberta.pooler.dense.weight', 'roberta.pooler.dense.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.

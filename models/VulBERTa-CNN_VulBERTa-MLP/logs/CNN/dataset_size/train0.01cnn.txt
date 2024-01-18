@@ -1,0 +1,31 @@
++ python Finetuning_VulBERTa-CNN.py --seed_input=10102 --data_folder=balanced_0.01 --save_folder=balanced_0.01_cnn --train_test=train --batch=16 --epochs=10 --dataset=combined --generate_json=False
+Some weights of RobertaModel were not initialized from the model checkpoint at models/pre_trained/ and are newly initialized: ['roberta.pooler.dense.weight', 'roberta.pooler.dense.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Device:  cuda
+MultiGPU:  False
+data/finetune/combined/balanced_0.01/train.jsonl
+data/finetune/combined/balanced_0.01/valid.jsonl
+
+myCNN(
+  (embed): Embedding(50000, 768, padding_idx=1)
+  (conv1): Conv1d(768, 200, kernel_size=(3,), stride=(1,))
+  (conv2): Conv1d(768, 200, kernel_size=(4,), stride=(1,))
+  (conv3): Conv1d(768, 200, kernel_size=(5,), stride=(1,))
+  (dropout): Dropout(p=0.5, inplace=False)
+  (fc1): Linear(in_features=600, out_features=256, bias=True)
+  (fc2): Linear(in_features=256, out_features=128, bias=True)
+  (fc3): Linear(in_features=128, out_features=2, bias=True)
+)
+Num of trainable param:  2030810
+Training started.....
+Epoch 1 - Training acc: 0.3083 -Training loss: 0.7088 - Val acc: 0.1562 - Val loss: 0.7165 - Time: 0.4054s 
+Epoch 2 - Training acc: 0.3667 -Training loss: 0.6948 - Val acc: 0.6875 - Val loss: 0.6918 - Time: 0.3825s 
+Epoch 3 - Training acc: 0.4958 -Training loss: 0.6933 - Val acc: 0.8438 - Val loss: 0.6851 - Time: 0.3846s 
+Epoch 4 - Training acc: 0.4417 -Training loss: 0.6911 - Val acc: 0.5938 - Val loss: 0.6859 - Time: 0.3847s 
+Epoch 5 - Training acc: 0.5625 -Training loss: 0.6878 - Val acc: 0.5000 - Val loss: 0.6890 - Time: 0.3844s 
+Epoch 6 - Training acc: 0.7083 -Training loss: 0.6812 - Val acc: 0.5000 - Val loss: 0.6946 - Time: 0.3842s 
+Epoch 7 - Training acc: 0.6708 -Training loss: 0.6642 - Val acc: 0.5000 - Val loss: 0.6917 - Time: 0.3834s 
+Epoch 8 - Training acc: 0.7542 -Training loss: 0.6053 - Val acc: 0.4688 - Val loss: 0.6743 - Time: 0.3950s 
+Epoch 9 - Training acc: 0.7875 -Training loss: 0.5233 - Val acc: 0.6250 - Val loss: 0.6027 - Time: 0.3846s 
+Epoch 10 - Training acc: 0.8583 -Training loss: 0.3981 - Val acc: 0.6250 - Val loss: 0.5922 - Time: 0.3846s 
+Training completed!

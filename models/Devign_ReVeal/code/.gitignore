@@ -1,0 +1,191 @@
+data/*
+data_processing/.ipynb_checkpoints/*
+models/*
+outputs/
+data_collection/*.csv
+*.csv
+*.ods
+real_data_results/
+deccard/*
+Vuld_SySe/visuals/Vulnerable*/*.txt
+real_data_scripts/for-bert/
+Vuld_SySe/representation_learning/*.tsv
+Vuld_SySe/representation_learning/visuals/
+real_data_scripts/results/*
+real_data_scripts/Devign-visuals/
+real_data_scripts/backup-results/
+real_data_scripts/backup/
+real_data_scripts/results_backup/
+real_data_scripts/verum-features-Vuld.json
+Vuld_SySe/representation_learning/baseline_lr_balance/
+Vuld_SySe/representation_learning/baseline_mlp_balance/
+Vuld_SySe/representation_learning/baseline_mlp_same_balance/
+Vuld_SySe/representation_learning/baseline_rf_balance/
+Vuld_SySe/representation_learning/baseline_svm/
+Vuld_SySe/representation_learning/baseline_svm_balance/
+Vuld_SySe/representation_learning/results/
+Vuld_SySe/representation_learning/results_imbalanced/
+Vuld_SySe/representation_learning/results_layer_abl/
+Vuld_SySe/representation_learning/results_test/
+Vuld_SySe/representation_learning/tsnes/
+Vuld_SySe/representation_learning_inproved/
+.idea/
+Attn_Vul_Det/
+code-slicer/joern
+*.log
+*.png
+*.org
+*.html
+*~
+*.pstat
+*.tar.gz
+*.txt
+codes_all.zip
+hpc/*logs*/
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+.idea/*
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+#  Usually these files are written by a python script from a template
+#  before PyInstaller builds the exe, so as to inject date/other infos into it.
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Scrapy stuff:
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+.python-version
+
+# pipenv
+#   According to pypa/pipenv#598, it is recommended to include Pipfile.lock in version control.
+#   However, in case of collaboration, if having platform-specific dependencies or dependencies
+#   having no cross-platform support, pipenv may install dependencies that don't work, or not
+#   install all needed dependencies.
+#Pipfile.lock
+
+# PEP 582; used by e.g. github.com/David-OConnor/pyflow
+__pypackages__/
+
+# Celery stuff
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+data/
+models/
+outputs/
+results_test/
+hardsets*
+analysis/devign_msr/
+models_orig/
+data_export/
+*.zip
+mod_set_1.ipynb
+models_line_ggnn/
+models_line_ggnn_orig/
+models copy/
+*.dot
+*.dot.svg
+data_check.ipynb
+build_data.py

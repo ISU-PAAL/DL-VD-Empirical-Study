@@ -1,0 +1,343 @@
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+java.lang.StringIndexOutOfBoundsException
+	at java.lang.String.<init>(String.java:4346)
+	at org.antlr.v4.runtime.CodePointCharStream$CodePoint8BitCharStream.getText(CodePointCharStream.java:160)
+	at io.shiftleft.fuzzyc2cpg.parser.ModuleFunctionParserInterface.getCompoundStmtAsString(ModuleFunctionParserInterface.java:51)
+	at io.shiftleft.fuzzyc2cpg.parser.ModuleFunctionParserInterface.parseFunctionContents(ModuleFunctionParserInterface.java:24)
+	at io.shiftleft.fuzzyc2cpg.passes.astcreation.CModuleParserTreeListener.enterFunction_def(CModuleParserTreeListener.java:72)
+	at io.shiftleft.fuzzyc2cpg.ModuleParser$Function_defContext.enterRule(ModuleParser.java:533)
+	at org.antlr.v4.runtime.tree.ParseTreeWalker.enterRule(ParseTreeWalker.java:42)
+	at org.antlr.v4.runtime.tree.ParseTreeWalker.walk(ParseTreeWalker.java:25)
+	at org.antlr.v4.runtime.tree.ParseTreeWalker.walk(ParseTreeWalker.java:28)
+	at io.shiftleft.fuzzyc2cpg.passes.astcreation.AntlrParserDriver.walkTree(AntlrParserDriver.java:177)
+	at io.shiftleft.fuzzyc2cpg.passes.astcreation.AntlrParserDriver.parseAndWalkFile(AntlrParserDriver.java:78)
+	at io.shiftleft.fuzzyc2cpg.passes.AstCreationPass.tryToParse(AstCreationPass.scala:53)
+	at io.shiftleft.fuzzyc2cpg.passes.AstCreationPass.runOnPart(AstCreationPass.scala:37)
+	at io.shiftleft.fuzzyc2cpg.passes.AstCreationPass.runOnPart(AstCreationPass.scala:14)
+	at io.shiftleft.passes.ParallelCpgPass.$anonfun$enqueueInParallel$2(ParallelCpgPass.scala:58)
+	at io.shiftleft.passes.ParallelCpgPass.$anonfun$enqueueInParallel$2$adapted(ParallelCpgPass.scala:53)
+	at io.shiftleft.passes.ParallelCpgPass$$Lambda$70/0x00000000253a5b50.apply(Unknown Source)
+	at io.shiftleft.passes.ParallelIteratorExecutor.$anonfun$map$2(ParallelIteratorExecutor.scala:11)
+	at io.shiftleft.passes.ParallelIteratorExecutor$$Lambda$81/0x00000000253cc470.apply(Unknown Source)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:671)
+	at scala.concurrent.Future$$$Lambda$82/0x00000000253cc9e0.apply(Unknown Source)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:430)
+	at scala.concurrent.BatchingExecutor$AbstractBatch.runN(BatchingExecutor.scala:134)
+	at scala.concurrent.BatchingExecutor$AsyncBatch.apply(BatchingExecutor.scala:163)
+	at scala.concurrent.BatchingExecutor$AsyncBatch.apply(BatchingExecutor.scala:146)
+	at scala.concurrent.BlockContext$.usingBlockContext(BlockContext.scala:107)
+	at scala.concurrent.BatchingExecutor$AsyncBatch.run(BatchingExecutor.scala:154)
+	at java.util.concurrent.ForkJoinTask$RunnableExecuteAction.exec(ForkJoinTask.java:1413)
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:300)
+	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1078)
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1714)
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:183)
+JVMDUMP039I Processing dump event "systhrow", detail "java/lang/OutOfMemoryError" at 2022/08/18 14:45:20 - please wait.
+JVMDUMP039I Processing dump event "systhrow", detail "java/lang/OutOfMemoryError" at 2022/08/18 14:45:20 - please wait.
+JVMDUMP039I Processing dump event "systhrow", detail "java/lang/OutOfMemoryError" at 2022/08/18 14:45:20 - please wait.
+JVMDUMP039I Processing dump event "systhrow", detail "java/lang/OutOfMemoryError" at 2022/08/18 14:45:20 - please wait.
+JVMDUMP039I Processing dump event "systhrow", detail "java/lang/OutOfMemoryError" at 2022/08/18 14:45:20 - please wait.
+JVMDUMP039I Processing dump event "systhrow", detail "java/lang/OutOfMemoryError" at 2022/08/18 14:45:20 - please wait.
+JVMDUMP039I Processing dump event "systhrow", detail "java/lang/OutOfMemoryError" at 2022/08/18 14:45:20 - please wait.
+JVMDUMP039I Processing dump event "systhrow", detail "java/lang/OutOfMemoryError" at 2022/08/18 14:45:20 - please wait.
+JVMDUMP032I JVM requested System dump using '<ANONYMOUS>/<ANONYMOUS>/dx2021/astminer/core.20220818.144520.266327.0001.dmp' in response to an event
+JVMDUMP010I System dump written to <ANONYMOUS>/<ANONYMOUS>/dx2021/astminer/core.20220818.144520.266327.0001.dmp
+JVMDUMP032I JVM requested Heap dump using '<ANONYMOUS>/<ANONYMOUS>/dx2021/astminer/heapdump.20220818.144520.266327.0002.phd' in response to an event
+JVMDUMP010I Heap dump written to <ANONYMOUS>/<ANONYMOUS>/dx2021/astminer/heapdump.20220818.144520.266327.0002.phd
+JVMDUMP032I JVM requested Heap dump using '<ANONYMOUS>/<ANONYMOUS>/dx2021/astminer/heapdump.20220818.144520.266327.0003.phd' in response to an event
+JVMDUMP010I Heap dump written to <ANONYMOUS>/<ANONYMOUS>/dx2021/astminer/heapdump.20220818.144520.266327.0003.phd
+JVMDUMP032I JVM requested Snap dump using '<ANONYMOUS>/<ANONYMOUS>/dx2021/astminer/Snap.20220818.144520.266327.0010.trc' in response to an event
+JVMDUMP039I Processing dump event "systhrow", detail "java/lang/OutOfMemoryError" at 2022/08/18 14:46:52 - please wait.
+JVMDUMP010I Snap dump written to <ANONYMOUS>/<ANONYMOUS>/dx2021/astminer/Snap.20220818.144520.266327.0010.trc
+JVMDUMP013I Processed dump event "systhrow", detail "java/lang/OutOfMemoryError".
+JVMDUMP032I JVM requested Heap dump using '<ANONYMOUS>/<ANONYMOUS>/dx2021/astminer/heapdump.20220818.144520.266327.0005.phd' in response to an event
+JVMDUMP010I Heap dump written to <ANONYMOUS>/<ANONYMOUS>/dx2021/astminer/heapdump.20220818.144520.266327.0005.phd
+JVMDUMP032I JVM requested Java dump using '<ANONYMOUS>/<ANONYMOUS>/dx2021/astminer/javacore.20220818.144520.266327.0007.txt' in response to an event
+JVMDUMP010I Java dump written to <ANONYMOUS>/<ANONYMOUS>/dx2021/astminer/javacore.20220818.144520.266327.0007.txt
+JVMDUMP013I Processed dump event "systhrow", detail "java/lang/OutOfMemoryError".
+JVMDUMP032I JVM requested Java dump using '<ANONYMOUS>/<ANONYMOUS>/dx2021/astminer/javacore.20220818.144520.266327.0004.txt' in response to an event
+JVMDUMP010I Java dump written to <ANONYMOUS>/<ANONYMOUS>/dx2021/astminer/javacore.20220818.144520.266327.0004.txt
+JVMDUMP013I Processed dump event "systhrow", detail "java/lang/OutOfMemoryError".
+JVMDUMP032I JVM requested Heap dump using '<ANONYMOUS>/<ANONYMOUS>/dx2021/astminer/heapdump.20220818.144520.266327.0006.phd' in response to an event
+JVMDUMP010I Heap dump written to <ANONYMOUS>/<ANONYMOUS>/dx2021/astminer/heapdump.20220818.144520.266327.0006.phd
+JVMDUMP013I Processed dump event "systhrow", detail "java/lang/OutOfMemoryError".
+JVMDUMP032I JVM requested Java dump using '<ANONYMOUS>/<ANONYMOUS>/dx2021/astminer/javacore.20220818.144520.266327.0008.txt' in response to an event
+JVMDUMP010I Java dump written to <ANONYMOUS>/<ANONYMOUS>/dx2021/astminer/javacore.20220818.144520.266327.0008.txt
+JVMDUMP013I Processed dump event "systhrow", detail "java/lang/OutOfMemoryError".
+JVMDUMP032I JVM requested Java dump using '<ANONYMOUS>/<ANONYMOUS>/dx2021/astminer/javacore.20220818.144520.266327.0009.txt' in response to an event
+JVMDUMP010I Java dump written to <ANONYMOUS>/<ANONYMOUS>/dx2021/astminer/javacore.20220818.144520.266327.0009.txt
+JVMDUMP013I Processed dump event "systhrow", detail "java/lang/OutOfMemoryError".
+JVMDUMP032I JVM requested Snap dump using '<ANONYMOUS>/<ANONYMOUS>/dx2021/astminer/Snap.20220818.144520.266327.0011.trc' in response to an event
+JVMDUMP010I Snap dump written to {nothing to snap}
+JVMDUMP013I Processed dump event "systhrow", detail "java/lang/OutOfMemoryError".
+JVMDUMP032I JVM requested Snap dump using '<ANONYMOUS>/<ANONYMOUS>/dx2021/astminer/Snap.20220818.144520.266327.0013.trc' in response to an event
+JVMDUMP010I Snap dump written to {nothing to snap}
+JVMDUMP013I Processed dump event "systhrow", detail "java/lang/OutOfMemoryError".
+JVMDUMP032I JVM requested Snap dump using '<ANONYMOUS>/<ANONYMOUS>/dx2021/astminer/Snap.20220818.144652.266327.0012.trc' in response to an event
+JVMDUMP010I Snap dump written to {nothing to snap}
+JVMDUMP013I Processed dump event "systhrow", detail "java/lang/OutOfMemoryError".
+Exception in thread "MemoryMXBean notification dispatcher" java.lang.OutOfMemoryError: Java heap space
+	at javax.management.NotificationBroadcasterSupport.sendNotification(NotificationBroadcasterSupport.java:259)
+	at com.ibm.java.lang.management.internal.LazyDelegatingNotifier.sendNotification(LazyDelegatingNotifier.java:105)
+	at com.ibm.java.lang.management.internal.GarbageCollectorMXBeanImpl.sendNotification(GarbageCollectorMXBeanImpl.java:240)
+	at com.ibm.lang.management.internal.MemoryNotificationThread.dispatchGCNotificationHelper(MemoryNotificationThread.java:105)
+	at com.ibm.lang.management.internal.MemoryNotificationThread.processNotificationLoop(Native Method)
+	at com.ibm.lang.management.internal.MemoryNotificationThread.run(MemoryNotificationThread.java:183)
+	at java.lang.Thread.run(Thread.java:830)
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at java.util.regex.Pattern.matcher(Pattern.java:1104)
+	at kotlin.text.Regex.replace(Regex.kt:149)
+	at astminer.common.TreeUtilKt.normalizeToken(TreeUtil.kt:68)
+	at astminer.common.TreeUtilKt.splitToSubtokens(TreeUtil.kt:89)
+	at astminer.cli.UtilsKt.separateToken(utils.kt:40)
+	at astminer.cli.UtilsKt.separateToken$default(utils.kt:39)
+	at astminer.examples.Code2VecCMethodsKt$code2vecCMethods$1.invoke(Code2VecCMethods.kt:29)
+	at astminer.examples.Code2VecCMethodsKt$code2vecCMethods$1.invoke(Code2VecCMethods.kt)
+	at kotlin.io.TextStreamsKt.forEachLine(ReadWrite.kt:155)
+	at kotlin.io.FilesKt__FileReadWriteKt.forEachLine(FileReadWrite.kt:190)
+	at kotlin.io.FilesKt__FileReadWriteKt.forEachLine$default(FileReadWrite.kt:188)
+	at astminer.examples.Code2VecCMethodsKt.code2vecCMethods(Code2VecCMethods.kt:26)
+	at astminer.MainKt.main(Main.kt:7)
+2022-08-18 16:04:40.664824: I tensorflow/core/util/util.cc:169] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2022-08-18 16:05:07.135250: I tensorflow/core/util/util.cc:169] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2022-08-18 16:05:11.594344: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2022-08-18 16:05:14.273931: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1532] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 30987 MB memory:  -> device: 0, name: Tesla V100-PCIE-32GB, pci bus id: 0000:3b:00.0, compute capability: 7.0
+2022-08-18 16:05:16.417702: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:354] MLIR V1 optimization pass is not enabled
+WARNING:tensorflow:From <ANONYMOUS>/<ANONYMOUS>/code2vec_venv2/lib/python3.9/site-packages/tensorflow/python/training/saver.py:1066: remove_checkpoint (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to delete files with this prefix.
+2022-08-18 16:07:22.323679: I tensorflow/core/util/util.cc:169] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2022-08-18 16:07:26.743587: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2022-08-18 16:07:27.249597: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1532] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 30987 MB memory:  -> device: 0, name: Tesla V100-PCIE-32GB, pci bus id: 0000:3b:00.0, compute capability: 7.0
+2022-08-18 16:07:28.935646: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:354] MLIR V1 optimization pass is not enabled
+2022-08-18 16:07:32.830845: I tensorflow/core/util/util.cc:169] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2022-08-18 16:07:37.149642: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2022-08-18 16:07:37.646139: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1532] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 30987 MB memory:  -> device: 0, name: Tesla V100-PCIE-32GB, pci bus id: 0000:3b:00.0, compute capability: 7.0
+2022-08-18 16:07:39.343591: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:354] MLIR V1 optimization pass is not enabled
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+java.lang.StringIndexOutOfBoundsException
+	at java.lang.String.<init>(String.java:4346)
+	at org.antlr.v4.runtime.CodePointCharStream$CodePoint8BitCharStream.getText(CodePointCharStream.java:160)
+	at io.shiftleft.fuzzyc2cpg.parser.ModuleFunctionParserInterface.getCompoundStmtAsString(ModuleFunctionParserInterface.java:51)
+	at io.shiftleft.fuzzyc2cpg.parser.ModuleFunctionParserInterface.parseFunctionContents(ModuleFunctionParserInterface.java:24)
+	at io.shiftleft.fuzzyc2cpg.passes.astcreation.CModuleParserTreeListener.enterFunction_def(CModuleParserTreeListener.java:72)
+	at io.shiftleft.fuzzyc2cpg.ModuleParser$Function_defContext.enterRule(ModuleParser.java:533)
+	at org.antlr.v4.runtime.tree.ParseTreeWalker.enterRule(ParseTreeWalker.java:42)
+	at org.antlr.v4.runtime.tree.ParseTreeWalker.walk(ParseTreeWalker.java:25)
+	at org.antlr.v4.runtime.tree.ParseTreeWalker.walk(ParseTreeWalker.java:28)
+	at io.shiftleft.fuzzyc2cpg.passes.astcreation.AntlrParserDriver.walkTree(AntlrParserDriver.java:177)
+	at io.shiftleft.fuzzyc2cpg.passes.astcreation.AntlrParserDriver.parseAndWalkFile(AntlrParserDriver.java:78)
+	at io.shiftleft.fuzzyc2cpg.passes.AstCreationPass.tryToParse(AstCreationPass.scala:53)
+	at io.shiftleft.fuzzyc2cpg.passes.AstCreationPass.runOnPart(AstCreationPass.scala:37)
+	at io.shiftleft.fuzzyc2cpg.passes.AstCreationPass.runOnPart(AstCreationPass.scala:14)
+	at io.shiftleft.passes.ParallelCpgPass.$anonfun$enqueueInParallel$2(ParallelCpgPass.scala:58)
+	at io.shiftleft.passes.ParallelCpgPass.$anonfun$enqueueInParallel$2$adapted(ParallelCpgPass.scala:53)
+	at io.shiftleft.passes.ParallelCpgPass$$Lambda$70/0x00000000154c8e30.apply(Unknown Source)
+	at io.shiftleft.passes.ParallelIteratorExecutor.$anonfun$map$2(ParallelIteratorExecutor.scala:11)
+	at io.shiftleft.passes.ParallelIteratorExecutor$$Lambda$81/0x00000000154ef9e0.apply(Unknown Source)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:671)
+	at scala.concurrent.Future$$$Lambda$82/0x00000000154eff50.apply(Unknown Source)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:430)
+	at scala.concurrent.BatchingExecutor$AbstractBatch.runN(BatchingExecutor.scala:134)
+	at scala.concurrent.BatchingExecutor$AsyncBatch.apply(BatchingExecutor.scala:163)
+	at scala.concurrent.BatchingExecutor$AsyncBatch.apply(BatchingExecutor.scala:146)
+	at scala.concurrent.BlockContext$.usingBlockContext(BlockContext.scala:107)
+	at scala.concurrent.BatchingExecutor$AsyncBatch.run(BatchingExecutor.scala:154)
+	at java.util.concurrent.ForkJoinTask$RunnableExecuteAction.exec(ForkJoinTask.java:1413)
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:300)
+	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1078)
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1714)
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:183)
+java.lang.StringIndexOutOfBoundsException
+	at java.lang.String.<init>(String.java:4346)
+	at org.antlr.v4.runtime.CodePointCharStream$CodePoint8BitCharStream.getText(CodePointCharStream.java:160)
+	at io.shiftleft.fuzzyc2cpg.parser.ModuleFunctionParserInterface.getCompoundStmtAsString(ModuleFunctionParserInterface.java:51)
+	at io.shiftleft.fuzzyc2cpg.parser.ModuleFunctionParserInterface.parseFunctionContents(ModuleFunctionParserInterface.java:24)
+	at io.shiftleft.fuzzyc2cpg.passes.astcreation.CModuleParserTreeListener.enterFunction_def(CModuleParserTreeListener.java:72)
+	at io.shiftleft.fuzzyc2cpg.ModuleParser$Function_defContext.enterRule(ModuleParser.java:533)
+	at org.antlr.v4.runtime.tree.ParseTreeWalker.enterRule(ParseTreeWalker.java:42)
+	at org.antlr.v4.runtime.tree.ParseTreeWalker.walk(ParseTreeWalker.java:25)
+	at org.antlr.v4.runtime.tree.ParseTreeWalker.walk(ParseTreeWalker.java:28)
+	at io.shiftleft.fuzzyc2cpg.passes.astcreation.AntlrParserDriver.walkTree(AntlrParserDriver.java:177)
+	at io.shiftleft.fuzzyc2cpg.passes.astcreation.AntlrParserDriver.parseAndWalkFile(AntlrParserDriver.java:78)
+	at io.shiftleft.fuzzyc2cpg.passes.AstCreationPass.tryToParse(AstCreationPass.scala:53)
+	at io.shiftleft.fuzzyc2cpg.passes.AstCreationPass.runOnPart(AstCreationPass.scala:37)
+	at io.shiftleft.fuzzyc2cpg.passes.AstCreationPass.runOnPart(AstCreationPass.scala:14)
+	at io.shiftleft.passes.ParallelCpgPass.$anonfun$enqueueInParallel$2(ParallelCpgPass.scala:58)
+	at io.shiftleft.passes.ParallelCpgPass.$anonfun$enqueueInParallel$2$adapted(ParallelCpgPass.scala:53)
+	at io.shiftleft.passes.ParallelCpgPass$$Lambda$70/0x00000000154c8e30.apply(Unknown Source)
+	at io.shiftleft.passes.ParallelIteratorExecutor.$anonfun$map$2(ParallelIteratorExecutor.scala:11)
+	at io.shiftleft.passes.ParallelIteratorExecutor$$Lambda$81/0x00000000154ef9e0.apply(Unknown Source)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:671)
+	at scala.concurrent.Future$$$Lambda$82/0x00000000154eff50.apply(Unknown Source)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:430)
+	at scala.concurrent.BatchingExecutor$AbstractBatch.runN(BatchingExecutor.scala:134)
+	at scala.concurrent.BatchingExecutor$AsyncBatch.apply(BatchingExecutor.scala:163)
+	at scala.concurrent.BatchingExecutor$AsyncBatch.apply(BatchingExecutor.scala:146)
+	at scala.concurrent.BlockContext$.usingBlockContext(BlockContext.scala:107)
+	at scala.concurrent.BatchingExecutor$AsyncBatch.run(BatchingExecutor.scala:154)
+	at java.util.concurrent.ForkJoinTask$RunnableExecuteAction.exec(ForkJoinTask.java:1413)
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:300)
+	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1078)
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1714)
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:183)
+JVMDUMP039I Processing dump event "systhrow", detail "java/lang/OutOfMemoryError" at 2022/08/18 16:32:01 - please wait.
+JVMDUMP039I Processing dump event "systhrow", detail "java/lang/OutOfMemoryError" at 2022/08/18 16:32:08 - please wait.
+JVMDUMP039I Processing dump event "systhrow", detail "java/lang/OutOfMemoryError" at 2022/08/18 16:32:08 - please wait.
+JVMDUMP039I Processing dump event "systhrow", detail "java/lang/OutOfMemoryError" at 2022/08/18 16:32:08 - please wait.
+JVMDUMP039I Processing dump event "systhrow", detail "java/lang/OutOfMemoryError" at 2022/08/18 16:32:08 - please wait.
+JVMDUMP039I Processing dump event "systhrow", detail "java/lang/OutOfMemoryError" at 2022/08/18 16:32:08 - please wait.
+JVMDUMP039I Processing dump event "systhrow", detail "java/lang/OutOfMemoryError" at 2022/08/18 16:32:08 - please wait.
+JVMDUMP039I Processing dump event "systhrow", detail "java/lang/OutOfMemoryError" at 2022/08/18 16:32:08 - please wait.
+JVMDUMP039I Processing dump event "systhrow", detail "java/lang/OutOfMemoryError" at 2022/08/18 16:32:08 - please wait.
+JVMDUMP039I Processing dump event "systhrow", detail "java/lang/OutOfMemoryError" at 2022/08/18 16:32:08 - please wait.
+JVMDUMP032I JVM requested Snap dump using '<ANONYMOUS>/<ANONYMOUS>/dx2021/astminer/Snap.20220818.163208.46468.0010.trc' in response to an event
+JVMDUMP010I Snap dump written to <ANONYMOUS>/<ANONYMOUS>/dx2021/astminer/Snap.20220818.163208.46468.0010.trc
+JVMDUMP013I Processed dump event "systhrow", detail "java/lang/OutOfMemoryError".
+JVMDUMP032I JVM requested Heap dump using '<ANONYMOUS>/<ANONYMOUS>/dx2021/astminer/heapdump.20220818.163208.46468.0002.phd' in response to an event
+JVMDUMP010I Heap dump written to <ANONYMOUS>/<ANONYMOUS>/dx2021/astminer/heapdump.20220818.163208.46468.0002.phd
+JVMDUMP032I JVM requested Heap dump using '<ANONYMOUS>/<ANONYMOUS>/dx2021/astminer/heapdump.20220818.163208.46468.0003.phd' in response to an event
+JVMDUMP010I Heap dump written to <ANONYMOUS>/<ANONYMOUS>/dx2021/astminer/heapdump.20220818.163208.46468.0003.phd
+JVMDUMP032I JVM requested Heap dump using '<ANONYMOUS>/<ANONYMOUS>/dx2021/astminer/heapdump.20220818.163208.46468.0004.phd' in response to an event
+JVMDUMP010I Heap dump written to <ANONYMOUS>/<ANONYMOUS>/dx2021/astminer/heapdump.20220818.163208.46468.0004.phd
+JVMDUMP032I JVM requested Heap dump using '<ANONYMOUS>/<ANONYMOUS>/dx2021/astminer/heapdump.20220818.163208.46468.0005.phd' in response to an event
+JVMDUMP010I Heap dump written to <ANONYMOUS>/<ANONYMOUS>/dx2021/astminer/heapdump.20220818.163208.46468.0005.phd
+JVMDUMP013I Processed dump event "systhrow", detail "java/lang/OutOfMemoryError".
+JVMDUMP032I JVM requested System dump using '<ANONYMOUS>/<ANONYMOUS>/dx2021/astminer/core.20220818.163201.46468.0001.dmp' in response to an event
+JVMDUMP010I System dump written to <ANONYMOUS>/<ANONYMOUS>/dx2021/astminer/core.20220818.163201.46468.0001.dmp
+JVMDUMP013I Processed dump event "systhrow", detail "java/lang/OutOfMemoryError".
+JVMDUMP032I JVM requested Java dump using '<ANONYMOUS>/<ANONYMOUS>/dx2021/astminer/javacore.20220818.163208.46468.0006.txt' in response to an event
+JVMDUMP010I Java dump written to <ANONYMOUS>/<ANONYMOUS>/dx2021/astminer/javacore.20220818.163208.46468.0006.txt
+JVMDUMP013I Processed dump event "systhrow", detail "java/lang/OutOfMemoryError".
+JVMDUMP032I JVM requested Java dump using '<ANONYMOUS>/<ANONYMOUS>/dx2021/astminer/javacore.20220818.163208.46468.0007.txt' in response to an event
+JVMDUMP010I Java dump written to <ANONYMOUS>/<ANONYMOUS>/dx2021/astminer/javacore.20220818.163208.46468.0007.txt
+JVMDUMP013I Processed dump event "systhrow", detail "java/lang/OutOfMemoryError".
+JVMDUMP032I JVM requested Java dump using '<ANONYMOUS>/<ANONYMOUS>/dx2021/astminer/javacore.20220818.163208.46468.0008.txt' in response to an event
+JVMDUMP010I Java dump written to <ANONYMOUS>/<ANONYMOUS>/dx2021/astminer/javacore.20220818.163208.46468.0008.txt
+JVMDUMP013I Processed dump event "systhrow", detail "java/lang/OutOfMemoryError".
+JVMDUMP032I JVM requested Java dump using '<ANONYMOUS>/<ANONYMOUS>/dx2021/astminer/javacore.20220818.163208.46468.0009.txt' in response to an event
+JVMDUMP010I Java dump written to <ANONYMOUS>/<ANONYMOUS>/dx2021/astminer/javacore.20220818.163208.46468.0009.txt
+JVMDUMP013I Processed dump event "systhrow", detail "java/lang/OutOfMemoryError".
+JVMDUMP032I JVM requested Snap dump using '<ANONYMOUS>/<ANONYMOUS>/dx2021/astminer/Snap.20220818.163208.46468.0011.trc' in response to an event
+JVMDUMP010I Snap dump written to {nothing to snap}
+JVMDUMP013I Processed dump event "systhrow", detail "java/lang/OutOfMemoryError".
+JVMDUMP032I JVM requested Snap dump using '<ANONYMOUS>/<ANONYMOUS>/dx2021/astminer/Snap.20220818.163208.46468.0012.trc' in response to an event
+JVMDUMP010I Snap dump written to {nothing to snap}
+JVMDUMP013I Processed dump event "systhrow", detail "java/lang/OutOfMemoryError".
+JVMDUMP032I JVM requested Snap dump using '<ANONYMOUS>/<ANONYMOUS>/dx2021/astminer/Snap.20220818.163208.46468.0013.trc' in response to an event
+JVMDUMP010I Snap dump written to {nothing to snap}
+JVMDUMP013I Processed dump event "systhrow", detail "java/lang/OutOfMemoryError".
+Exception in thread "MemoryMXBean notification dispatcher" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "overflowdb-reference-manager" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "overflowdb-reference-manager" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "overflowdb-reference-manager" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "overflowdb-reference-manager" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "overflowdb-reference-manager" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Attach API wait loop" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "overflowdb-reference-manager" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "overflowdb-reference-manager" java.lang.OutOfMemoryError: Java heap space
+java/lang/OutOfMemoryError: Java heap space
+	at java/lang/ThreadGroup.uncaughtException (ThreadGroup.java:867)
+	at java/lang/Thread.uncaughtException (Thread.java:1348)
+Exception in thread "overflowdb-reference-manager" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "overflowdb-reference-manager" java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space
+Exception in thread "overflowdb-reference-manager" Exception in thread "overflowdb-reference-manager" java/lang/OutOfMemoryError: Java heap space
+	at java/lang/ThreadGroup.uncaughtException (ThreadGroup.java:867)
+	at java/lang/Thread.uncaughtException (Thread.java:1348)
+java/lang/OutOfMemoryError: Java heap space
+	at java/lang/ThreadGroup.uncaughtException (ThreadGroup.java:867)
+	at java/lang/Thread.uncaughtException (Thread.java:1348)
+java/lang/OutOfMemoryError: Java heap space
+	at java/lang/ThreadGroup.uncaughtException (ThreadGroup.java:867)
+	at java/lang/Thread.uncaughtException (Thread.java:1348)
+Exception in thread "overflowdb-reference-manager" java.lang.OutOfMemoryError: Java heap space
+java/lang/OutOfMemoryError: Java heap space
+	at java/lang/Throwable.printStackTrace (Throwable.java:577)
+	at java/lang/Throwable.printStackTraceHelper (Throwable.java:338)
+	at java/lang/Throwable.printStackTrace (Throwable.java:307)
+	at java/lang/Throwable.printStackTrace (Throwable.java:250)
+java/lang/OutOfMemoryError: Java heap space
+	at java/lang/Throwable.printStackTrace (Throwable.java:577)
+	at java/lang/Throwable.printStackTraceHelper (Throwable.java:338)
+	at java/lang/Throwable.printStackTrace (Throwable.java:307)
+	at java/lang/Throwable.printStackTrace (Throwable.java:250)
+java/lang/OutOfMemoryError: Java heap space
+	at java/lang/Throwable.printStackTrace (Throwable.java:577)
+	at java/lang/Throwable.printStackTraceHelper (Throwable.java:338)
+	at java/lang/Throwable.printStackTrace (Throwable.java:307)
+	at java/lang/Throwable.printStackTrace (Throwable.java:250)
+java/lang/OutOfMemoryError: Java heap space
+	at java/lang/J9VMInternals.getStackTrace (NativeMethod:4294967295)
+	at java/lang/Throwable.getInternalStackTrace (Throwable.java:292)
+	at java/lang/Throwable.printStackTrace (Throwable.java:572)
+	at java/lang/Throwable.printStackTraceHelper (Throwable.java:338)
+	at java/lang/Throwable.printStackTrace (Throwable.java:307)
+	at java/lang/Throwable.printStackTrace (Throwable.java:250)
+java/lang/OutOfMemoryError: Java heap space
+	at java/lang/Throwable.printStackTrace (Throwable.java:577)
+	at java/lang/Throwable.printStackTraceHelper (Throwable.java:338)
+	at java/lang/Throwable.printStackTrace (Throwable.java:307)
+	at java/lang/Throwable.printStackTrace (Throwable.java:250)
+Exception in thread "overflowdb-reference-manager" java.lang.OutOfMemoryError: Java heap space
+java/lang/OutOfMemoryError: Java heap space
+	at java/lang/Throwable.printStackTrace (Throwable.java:577)
+	at java/lang/Throwable.printStackTraceHelper (Throwable.java:338)
+	at java/lang/Throwable.printStackTrace (Throwable.java:307)
+	at java/lang/Throwable.printStackTrace (Throwable.java:250)
+java/lang/OutOfMemoryError: Java heap space
+	at java/lang/Throwable.printStackTrace (Throwable.java:577)
+	at java/lang/Throwable.printStackTraceHelper (Throwable.java:338)
+	at java/lang/Throwable.printStackTrace (Throwable.java:307)
+	at java/lang/Throwable.printStackTrace (Throwable.java:250)
+java/lang/OutOfMemoryError: Java heap space
+	at java/lang/Throwable.printStackTrace (Throwable.java:577)
+	at java/lang/Throwable.printStackTraceHelper (Throwable.java:338)
+	at java/lang/Throwable.printStackTrace (Throwable.java:307)
+	at java/lang/Throwable.printStackTrace (Throwable.java:250)
+java/lang/OutOfMemoryError: Java heap space
+	at java/lang/Throwable.printStackTrace (Throwable.java:577)
+	at java/lang/Throwable.printStackTraceHelper (Throwable.java:338)
+	at java/lang/Throwable.printStackTrace (Throwable.java:307)
+	at java/lang/Throwable.printStackTrace (Throwable.java:250)
+Exception in thread "scala-execution-context-global-281" java/lang/OutOfMemoryError: Java heap space
+	at java/lang/Throwable.printStackTrace (Throwable.java:577)
+	at java/lang/Throwable.printStackTraceHelper (Throwable.java:338)
+	at java/lang/Throwable.printStackTrace (Throwable.java:307)
+	at java/lang/Throwable.printStackTrace (Throwable.java:250)
+	at scala/concurrent/ExecutionContext$.$anonfun$defaultReporter$1 (ExecutionContext.scala:225)
+	at scala/concurrent/ExecutionContext$.$anonfun$defaultReporter$1$adapted (ExecutionContext.scala:225)
+	at scala/concurrent/ExecutionContext$$$Lambda$78/0x00000000154ed2d0.apply (Unknown Source:4294967295)
+	at scala/concurrent/impl/ExecutionContextImpl$.$anonfun$createDefaultExecutorService$1 (ExecutionContextImpl.scala:99)
+	at scala/concurrent/impl/ExecutionContextImpl$$$Lambda$79/0x00000000154edaf0.uncaughtException (Unknown Source:4294967295)
+	at java/lang/Thread.uncaughtException (Thread.java:1348)
+java/lang/OutOfMemoryError: Java heap space
+	at java/lang/Throwable.printStackTrace (Throwable.java:577)
+	at java/lang/Throwable.printStackTraceHelper (Throwable.java:338)
+	at java/lang/Throwable.printStackTrace (Throwable.java:307)
+	at java/lang/Throwable.printStackTrace (Throwable.java:250)
+java/lang/OutOfMemoryError: Java heap space
+	at java/lang/Throwable.printStackTrace (Throwable.java:577)
+	at java/lang/Throwable.printStackTraceHelper (Throwable.java:338)
+	at java/lang/Throwable.printStackTrace (Throwable.java:307)
+	at java/lang/Throwable.printStackTrace (Throwable.java:250)
+slurmstepd: error: *** JOB 762390 ON matrix CANCELLED AT 2022-08-19T08:19:38 ***

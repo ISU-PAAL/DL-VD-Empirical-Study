@@ -1,0 +1,178 @@
+08/19/2022 01:06:32 - WARNING - __main__ -   Process rank: -1, device: cpu, n_gpu: 0, distributed training: False, 16-bits training: False
+Some weights of the model checkpoint at microsoft/codebert-base were not used when initializing RobertaForSequenceClassification: ['pooler.dense.weight', 'pooler.dense.bias']
+- This IS expected if you are initializing RobertaForSequenceClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaForSequenceClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaForSequenceClassification were not initialized from the model checkpoint at microsoft/codebert-base and are newly initialized: ['classifier.dense.weight', 'classifier.out_proj.bias', 'classifier.dense.bias', 'classifier.out_proj.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+08/19/2022 01:06:36 - INFO - __main__ -   Training/evaluation parameters <__main__.Args object at 0x2b1ce573de10>
+08/19/2022 01:07:02 - INFO - __main__ -   *** Total Sample ***
+08/19/2022 01:07:02 - INFO - __main__ -   	Total: 27000	selected: 27000	percent: 1.0	
+08/19/2022 01:07:02 - INFO - __main__ -   *** Sample ***
+08/19/2022 01:07:02 - INFO - __main__ -   Total sample
+08/19/2022 01:07:02 - INFO - __main__ -   idx: 0
+08/19/2022 01:07:02 - INFO - __main__ -   label: 0
+08/19/2022 01:07:02 - INFO - __main__ -   input_tokens: ['<s>', 'add', '_', 'm', 'range', '(', 'f', 'z', '_', 'context', '_*', 'ctx', ',', '_pdf', '_', 'c', 'map', '_*', 'c', 'map', ',', '_unsigned', '_int', '_low', ',', '_int', '_*', 'out', ',', '_int', '_len', ')', '_{', '_int', '_out', '_', 'pos', ';', '_if', '_(', 'c', 'map', '->', 'd', 'len', '_+', '_len', '_+', '_1', '_>', '_c', 'map', '->', 'd', 'cap', ')', '_{', '_int', '_new', '_', 'cap', '_=', '_c', 'map', '->', 'd', 'cap', '_?', '_c', 'map', '->', 'd', 'cap', '_*', '_2', '_:', '_256', ';', '_c', 'map', '->', 'dict', '_=', '_f', 'z', '_', 'res', 'ize', '_', 'array', '(', 'ctx', ',', '_c', 'map', '->', 'dict', ',', '_new', '_', 'cap', ',', '_sizeof', '_*', 'c', 'map', '->', 'dict', ');', '_c', 'map', '->', 'd', 'cap', '_=', '_new', '_', 'cap', ';', '_}', '_out', '_', 'pos', '_=', '_c', 'map', '->', 'd', 'len', ';', '_c', 'map', '->', 'dict', '[', 'out', '_', 'pos', ']', '_=', '_len', ';', '_mem', 'c', 'py', '(&', 'c', 'map', '->', 'dict', '[', 'out', '_', 'pos', '+', '1', '],', '_out', ',', '_sizeof', '(', 'int', ')*', 'len', ');', '_c', 'map', '->', 'd', 'len', '_+=', '_len', '_+', '_1', ';', '_add', '_', 'range', '(', 'ctx', ',', '_c', 'map', ',', '_low', ',', '_low', ',', '_out', '_', 'pos', ',', '_1', ',', '_1', ');', '_}', '</s>']
+08/19/2022 01:07:02 - INFO - __main__ -   input_ids: 0 4917 1215 119 9435 1640 506 329 1215 46796 1009 49575 6 46559 1215 438 32557 1009 438 32557 6 39023 6979 614 6 6979 1009 995 6 6979 25528 43 25522 6979 66 1215 11474 131 114 36 438 32557 46613 417 8476 2055 25528 2055 112 8061 740 32557 46613 417 10906 43 25522 6979 92 1215 10906 5457 740 32557 46613 417 10906 17487 740 32557 46613 417 10906 1009 132 4832 22078 131 740 32557 46613 25867 5457 856 329 1215 1535 2072 1215 30766 1640 49575 6 740 32557 46613 25867 6 92 1215 10906 6 49907 1009 438 32557 46613 25867 4397 740 32557 46613 417 10906 5457 92 1215 10906 131 35524 66 1215 11474 5457 740 32557 46613 417 8476 131 740 32557 46613 25867 10975 995 1215 11474 742 5457 25528 131 26012 438 17163 49763 438 32557 46613 25867 10975 995 1215 11474 2744 134 7479 66 6 49907 1640 2544 44418 8476 4397 740 32557 46613 417 8476 49371 25528 2055 112 131 1606 1215 9435 1640 49575 6 740 32557 6 614 6 614 6 66 1215 11474 6 112 6 112 4397 35524 2 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+08/19/2022 01:07:02 - INFO - __main__ -   *** Sample ***
+08/19/2022 01:07:02 - INFO - __main__ -   Total sample
+08/19/2022 01:07:02 - INFO - __main__ -   idx: 1
+08/19/2022 01:07:02 - INFO - __main__ -   label: 0
+08/19/2022 01:07:02 - INFO - __main__ -   input_tokens: ['<s>', 'check', '_', 's', 'play', '(', 'c', 'map', '_', 's', 'play', '_*', 'tree', ',', '_unsigned', '_int', '_node', ',', '_int', '_depth', ')', '_{', '_if', '_(', 'node', '_==', '_EMP', 'TY', ')', '_return', ';', '_assert', '(', 'tree', '[', 'node', '].', 'parent', '_==', '_EMP', 'TY', ');', '_walk', '_', 's', 'play', '(', 'tree', ',', '_node', ',', '_do', '_', 'check', ',', '_tree', ');', '_}', '</s>']
+08/19/2022 01:07:02 - INFO - __main__ -   input_ids: 0 15954 1215 29 5785 1640 438 32557 1215 29 5785 1009 21512 6 39023 6979 37908 6 6979 5581 43 25522 114 36 46840 45994 42384 6175 43 671 131 18088 1640 21512 10975 46840 8174 20985 45994 42384 6175 4397 1656 1215 29 5785 1640 21512 6 37908 6 109 1215 15954 6 3907 4397 35524 2 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+08/19/2022 01:07:02 - INFO - __main__ -   *** Sample ***
+08/19/2022 01:07:02 - INFO - __main__ -   Total sample
+08/19/2022 01:07:02 - INFO - __main__ -   idx: 2
+08/19/2022 01:07:02 - INFO - __main__ -   label: 0
+08/19/2022 01:07:02 - INFO - __main__ -   input_tokens: ['<s>', 'copy', '_', 'node', '_', 'types', '(', 'c', 'map', '_', 's', 'play', '_*', 'node', ',', '_void', '_*', 'arg', ')', '_{', '_pdf', '_', 'c', 'map', '_*', 'c', 'map', '_=', '_(', 'pdf', '_', 'c', 'map', '_*)', 'arg', ';', '_if', '_(', 'node', '->', 'many', ')', '_{', '_assert', '(', 'node', '->', 'low', '_==', '_node', '->', 'high', ');', '_c', 'map', '->', 'mr', 'anges', '[', 'c', 'map', '->', 'ml', 'en', '].', 'low', '_=', '_node', '->', 'low', ';', '_c', 'map', '->', 'mr', 'anges', '[', 'c', 'map', '->', 'ml', 'en', '].', 'out', '_=', '_node', '->', 'out', ';', '_c', 'map', '->', 'ml', 'en', '++;', '_}', '_else', '_if', '_(', 'node', '->', 'low', '_<=', '_0', 'x', 'ffff', '_&&', '_node', '->', 'high', '_<=', '_0', 'x', 'FFFF', '_&&', '_node', '->', 'out', '_<=', '_0', 'x', 'FFFF', ')', '_{', '_c', 'map', '->', 'r', 'anges', '[', 'c', 'map', '->', 'r', 'len', '].', 'low', '_=', '_node', '->', 'low', ';', '_c', 'map', '->', 'r', 'anges', '[', 'c', 'map', '->', 'r', 'len', '].', 'high', '_=', '_node', '->', 'high', ';', '_c', 'map', '->', 'r', 'anges', '[', 'c', 'map', '->', 'r', 'len', '].', 'out', '_=', '_node', '->', 'out', ';', '_c', 'map', '->', 'r', 'len', '++;', '_}', '_else', '_{', '_c', 'map', '->', 'x', 'r', 'anges', '[', 'c', 'map', '->', 'x', 'len', '].', 'low', '_=', '_node', '->', 'low', ';', '_c', 'map', '->', 'x', 'r', 'anges', '[', 'c', 'map', '->', 'x', 'len', '].', 'high', '_=', '_node', '->', 'high', ';', '_c', 'map', '->', 'x', 'r', 'anges', '[', 'c', 'map', '->', 'x', 'len', '].', 'out', '_=', '_node', '->', 'out', ';', '_c', 'map', '->', 'x', 'len', '++;', '_}', '_}', '</s>']
+08/19/2022 01:07:02 - INFO - __main__ -   input_ids: 0 44273 1215 46840 1215 41817 1640 438 32557 1215 29 5785 1009 46840 6 13842 1009 5384 43 25522 46559 1215 438 32557 1009 438 32557 5457 36 31494 1215 438 32557 49521 5384 131 114 36 46840 46613 19827 43 25522 18088 1640 46840 46613 5481 45994 37908 46613 3530 4397 740 32557 46613 35685 33094 10975 438 32557 46613 18517 225 8174 5481 5457 37908 46613 5481 131 740 32557 46613 35685 33094 10975 438 32557 46613 18517 225 8174 995 5457 37908 46613 995 131 740 32557 46613 18517 225 49789 35524 1493 114 36 46840 46613 5481 49230 321 1178 48748 48200 37908 46613 3530 49230 321 1178 48979 48200 37908 46613 995 49230 321 1178 48979 43 25522 740 32557 46613 338 33094 10975 438 32557 46613 338 8476 8174 5481 5457 37908 46613 5481 131 740 32557 46613 338 33094 10975 438 32557 46613 338 8476 8174 3530 5457 37908 46613 3530 131 740 32557 46613 338 33094 10975 438 32557 46613 338 8476 8174 995 5457 37908 46613 995 131 740 32557 46613 338 8476 49789 35524 1493 25522 740 32557 46613 1178 338 33094 10975 438 32557 46613 1178 8476 8174 5481 5457 37908 46613 5481 131 740 32557 46613 1178 338 33094 10975 438 32557 46613 1178 8476 8174 3530 5457 37908 46613 3530 131 740 32557 46613 1178 338 33094 10975 438 32557 46613 1178 8476 8174 995 5457 37908 46613 995 131 740 32557 46613 1178 8476 49789 35524 35524 2 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+08/19/2022 01:07:02 - INFO - __main__ -   ***** Running training *****
+08/19/2022 01:07:02 - INFO - __main__ -     Num examples = 27000
+08/19/2022 01:07:02 - INFO - __main__ -     Num Epochs = 20
+08/19/2022 01:07:02 - INFO - __main__ -     Instantaneous batch size per GPU = 512
+08/19/2022 01:07:02 - INFO - __main__ -     Total train batch size (w. parallel, distributed & accumulation) = 512
+08/19/2022 01:07:02 - INFO - __main__ -     Gradient Accumulation steps = 1
+08/19/2022 01:07:02 - INFO - __main__ -     Total optimization steps = 1060
+08/19/2022 01:09:40 - INFO - __main__ -   ***** Running evaluation *****
+08/19/2022 01:09:40 - INFO - __main__ -     Num examples = 3374
+08/19/2022 01:09:40 - INFO - __main__ -     Batch size = 512
+08/19/2022 01:09:57 - INFO - __main__ -     eval_loss = 0.2954
+08/19/2022 01:09:57 - INFO - __main__ -     eval_acc = 0.9496
+08/19/2022 01:09:57 - INFO - __main__ -     ********************
+08/19/2022 01:09:57 - INFO - __main__ -     Best acc:0.9496
+08/19/2022 01:09:57 - INFO - __main__ -     ********************
+08/19/2022 01:09:57 - INFO - __main__ -   Saving model checkpoint to <ANONYMOUS>/<ANONYMOUS>/saved_models/regvd/RQA2/resource/checkpoint-best-acc/model.bin
+08/19/2022 01:09:57 - INFO - __main__ -   epoch 0 loss 0.43923
+08/19/2022 01:12:36 - INFO - __main__ -   ***** Running evaluation *****
+08/19/2022 01:12:36 - INFO - __main__ -     Num examples = 3374
+08/19/2022 01:12:36 - INFO - __main__ -     Batch size = 512
+08/19/2022 01:12:52 - INFO - __main__ -     eval_loss = 0.2731
+08/19/2022 01:12:52 - INFO - __main__ -     eval_acc = 0.9496
+08/19/2022 01:12:52 - INFO - __main__ -   epoch 1 loss 0.18104
+08/19/2022 01:15:30 - INFO - __main__ -   ***** Running evaluation *****
+08/19/2022 01:15:30 - INFO - __main__ -     Num examples = 3374
+08/19/2022 01:15:30 - INFO - __main__ -     Batch size = 512
+08/19/2022 01:15:46 - INFO - __main__ -     eval_loss = 0.2681
+08/19/2022 01:15:46 - INFO - __main__ -     eval_acc = 0.9496
+08/19/2022 01:15:46 - INFO - __main__ -   epoch 2 loss 0.17752
+08/19/2022 01:18:23 - INFO - __main__ -   ***** Running evaluation *****
+08/19/2022 01:18:23 - INFO - __main__ -     Num examples = 3374
+08/19/2022 01:18:23 - INFO - __main__ -     Batch size = 512
+08/19/2022 01:18:39 - INFO - __main__ -     eval_loss = 0.27
+08/19/2022 01:18:39 - INFO - __main__ -     eval_acc = 0.9496
+08/19/2022 01:18:39 - INFO - __main__ -   epoch 3 loss 0.17211
+08/19/2022 01:21:17 - INFO - __main__ -   ***** Running evaluation *****
+08/19/2022 01:21:17 - INFO - __main__ -     Num examples = 3374
+08/19/2022 01:21:17 - INFO - __main__ -     Batch size = 512
+08/19/2022 01:21:33 - INFO - __main__ -     eval_loss = 0.2775
+08/19/2022 01:21:33 - INFO - __main__ -     eval_acc = 0.9496
+08/19/2022 01:21:33 - INFO - __main__ -   epoch 4 loss 0.167
+08/19/2022 01:24:12 - INFO - __main__ -   ***** Running evaluation *****
+08/19/2022 01:24:12 - INFO - __main__ -     Num examples = 3374
+08/19/2022 01:24:12 - INFO - __main__ -     Batch size = 512
+08/19/2022 01:24:28 - INFO - __main__ -     eval_loss = 0.2567
+08/19/2022 01:24:28 - INFO - __main__ -     eval_acc = 0.9496
+08/19/2022 01:24:28 - INFO - __main__ -   epoch 5 loss 0.16302
+08/19/2022 01:27:07 - INFO - __main__ -   ***** Running evaluation *****
+08/19/2022 01:27:07 - INFO - __main__ -     Num examples = 3374
+08/19/2022 01:27:07 - INFO - __main__ -     Batch size = 512
+08/19/2022 01:27:23 - INFO - __main__ -     eval_loss = 0.2475
+08/19/2022 01:27:23 - INFO - __main__ -     eval_acc = 0.9496
+08/19/2022 01:27:23 - INFO - __main__ -   epoch 6 loss 0.15948
+08/19/2022 01:30:01 - INFO - __main__ -   ***** Running evaluation *****
+08/19/2022 01:30:01 - INFO - __main__ -     Num examples = 3374
+08/19/2022 01:30:01 - INFO - __main__ -     Batch size = 512
+08/19/2022 01:30:17 - INFO - __main__ -     eval_loss = 0.2474
+08/19/2022 01:30:17 - INFO - __main__ -     eval_acc = 0.9496
+08/19/2022 01:30:17 - INFO - __main__ -   epoch 7 loss 0.15476
+08/19/2022 01:32:55 - INFO - __main__ -   ***** Running evaluation *****
+08/19/2022 01:32:55 - INFO - __main__ -     Num examples = 3374
+08/19/2022 01:32:55 - INFO - __main__ -     Batch size = 512
+08/19/2022 01:33:11 - INFO - __main__ -     eval_loss = 0.2349
+08/19/2022 01:33:11 - INFO - __main__ -     eval_acc = 0.9496
+08/19/2022 01:33:11 - INFO - __main__ -   epoch 8 loss 0.15197
+08/19/2022 01:35:50 - INFO - __main__ -   ***** Running evaluation *****
+08/19/2022 01:35:50 - INFO - __main__ -     Num examples = 3374
+08/19/2022 01:35:50 - INFO - __main__ -     Batch size = 512
+08/19/2022 01:36:06 - INFO - __main__ -     eval_loss = 0.2443
+08/19/2022 01:36:06 - INFO - __main__ -     eval_acc = 0.9496
+08/19/2022 01:36:06 - INFO - __main__ -   epoch 9 loss 0.14866
+08/19/2022 01:38:45 - INFO - __main__ -   ***** Running evaluation *****
+08/19/2022 01:38:45 - INFO - __main__ -     Num examples = 3374
+08/19/2022 01:38:45 - INFO - __main__ -     Batch size = 512
+08/19/2022 01:39:00 - INFO - __main__ -     eval_loss = 0.2335
+08/19/2022 01:39:00 - INFO - __main__ -     eval_acc = 0.9502
+08/19/2022 01:39:00 - INFO - __main__ -     ********************
+08/19/2022 01:39:00 - INFO - __main__ -     Best acc:0.9502
+08/19/2022 01:39:00 - INFO - __main__ -     ********************
+08/19/2022 01:39:01 - INFO - __main__ -   Saving model checkpoint to <ANONYMOUS>/<ANONYMOUS>/saved_models/regvd/RQA2/resource/checkpoint-best-acc/model.bin
+08/19/2022 01:39:01 - INFO - __main__ -   epoch 10 loss 0.14449
+08/19/2022 01:41:38 - INFO - __main__ -   ***** Running evaluation *****
+08/19/2022 01:41:38 - INFO - __main__ -     Num examples = 3374
+08/19/2022 01:41:38 - INFO - __main__ -     Batch size = 512
+08/19/2022 01:41:54 - INFO - __main__ -     eval_loss = 0.2387
+08/19/2022 01:41:54 - INFO - __main__ -     eval_acc = 0.9511
+08/19/2022 01:41:54 - INFO - __main__ -     ********************
+08/19/2022 01:41:54 - INFO - __main__ -     Best acc:0.9511
+08/19/2022 01:41:54 - INFO - __main__ -     ********************
+08/19/2022 01:41:55 - INFO - __main__ -   Saving model checkpoint to <ANONYMOUS>/<ANONYMOUS>/saved_models/regvd/RQA2/resource/checkpoint-best-acc/model.bin
+08/19/2022 01:41:55 - INFO - __main__ -   epoch 11 loss 0.14243
+08/19/2022 01:44:34 - INFO - __main__ -   ***** Running evaluation *****
+08/19/2022 01:44:34 - INFO - __main__ -     Num examples = 3374
+08/19/2022 01:44:34 - INFO - __main__ -     Batch size = 512
+08/19/2022 01:44:49 - INFO - __main__ -     eval_loss = 0.2782
+08/19/2022 01:44:49 - INFO - __main__ -     eval_acc = 0.9505
+08/19/2022 01:44:50 - INFO - __main__ -   epoch 12 loss 0.13852
+08/19/2022 01:47:27 - INFO - __main__ -   ***** Running evaluation *****
+08/19/2022 01:47:27 - INFO - __main__ -     Num examples = 3374
+08/19/2022 01:47:27 - INFO - __main__ -     Batch size = 512
+08/19/2022 01:47:43 - INFO - __main__ -     eval_loss = 0.2616
+08/19/2022 01:47:43 - INFO - __main__ -     eval_acc = 0.9523
+08/19/2022 01:47:43 - INFO - __main__ -     ********************
+08/19/2022 01:47:43 - INFO - __main__ -     Best acc:0.9523
+08/19/2022 01:47:43 - INFO - __main__ -     ********************
+08/19/2022 01:47:44 - INFO - __main__ -   Saving model checkpoint to <ANONYMOUS>/<ANONYMOUS>/saved_models/regvd/RQA2/resource/checkpoint-best-acc/model.bin
+08/19/2022 01:47:44 - INFO - __main__ -   epoch 13 loss 0.13729
+08/19/2022 01:50:22 - INFO - __main__ -   ***** Running evaluation *****
+08/19/2022 01:50:22 - INFO - __main__ -     Num examples = 3374
+08/19/2022 01:50:22 - INFO - __main__ -     Batch size = 512
+08/19/2022 01:50:37 - INFO - __main__ -     eval_loss = 0.2419
+08/19/2022 01:50:37 - INFO - __main__ -     eval_acc = 0.952
+08/19/2022 01:50:37 - INFO - __main__ -   epoch 14 loss 0.13485
+08/19/2022 01:53:15 - INFO - __main__ -   ***** Running evaluation *****
+08/19/2022 01:53:15 - INFO - __main__ -     Num examples = 3374
+08/19/2022 01:53:15 - INFO - __main__ -     Batch size = 512
+08/19/2022 01:53:31 - INFO - __main__ -     eval_loss = 0.2362
+08/19/2022 01:53:31 - INFO - __main__ -     eval_acc = 0.9502
+08/19/2022 01:53:31 - INFO - __main__ -   epoch 15 loss 0.12932
+08/19/2022 01:56:09 - INFO - __main__ -   ***** Running evaluation *****
+08/19/2022 01:56:09 - INFO - __main__ -     Num examples = 3374
+08/19/2022 01:56:09 - INFO - __main__ -     Batch size = 512
+08/19/2022 01:56:25 - INFO - __main__ -     eval_loss = 0.2241
+08/19/2022 01:56:25 - INFO - __main__ -     eval_acc = 0.9484
+08/19/2022 01:56:25 - INFO - __main__ -   epoch 16 loss 0.12977
+08/19/2022 01:59:03 - INFO - __main__ -   ***** Running evaluation *****
+08/19/2022 01:59:03 - INFO - __main__ -     Num examples = 3374
+08/19/2022 01:59:03 - INFO - __main__ -     Batch size = 512
+08/19/2022 01:59:19 - INFO - __main__ -     eval_loss = 0.241
+08/19/2022 01:59:19 - INFO - __main__ -     eval_acc = 0.9502
+08/19/2022 01:59:19 - INFO - __main__ -   epoch 17 loss 0.12464
+08/19/2022 02:01:57 - INFO - __main__ -   ***** Running evaluation *****
+08/19/2022 02:01:57 - INFO - __main__ -     Num examples = 3374
+08/19/2022 02:01:57 - INFO - __main__ -     Batch size = 512
+08/19/2022 02:02:13 - INFO - __main__ -     eval_loss = 0.2325
+08/19/2022 02:02:13 - INFO - __main__ -     eval_acc = 0.9502
+08/19/2022 02:02:13 - INFO - __main__ -   epoch 18 loss 0.12456
+08/19/2022 02:04:52 - INFO - __main__ -   ***** Running evaluation *****
+08/19/2022 02:04:52 - INFO - __main__ -     Num examples = 3374
+08/19/2022 02:04:52 - INFO - __main__ -     Batch size = 512
+08/19/2022 02:05:07 - INFO - __main__ -     eval_loss = 0.2312
+08/19/2022 02:05:07 - INFO - __main__ -     eval_acc = 0.9499
+08/19/2022 02:05:08 - INFO - __main__ -   epoch 19 loss 0.1222
+08/19/2022 02:05:11 - INFO - __main__ -   ***** Running Test *****
+08/19/2022 02:05:11 - INFO - __main__ -     Num examples = 3374
+08/19/2022 02:05:11 - INFO - __main__ -     Batch size = 512
+08/19/2022 02:05:26 - INFO - __main__ -   ***** Test results *****
+08/19/2022 02:05:26 - INFO - __main__ -     accuracy = 94.9022
+08/19/2022 02:05:26 - INFO - __main__ -     f1_score = 4.4444
+08/19/2022 02:05:26 - INFO - __main__ -     precision = 100.0
+08/19/2022 02:05:26 - INFO - __main__ -     recall = 2.2727

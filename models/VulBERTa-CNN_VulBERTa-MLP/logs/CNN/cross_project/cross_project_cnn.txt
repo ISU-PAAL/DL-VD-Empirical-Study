@@ -1,0 +1,6 @@
++ StringArray=('fold_0_' 'fold_1_' 'fold_2_' 'fold_3_' 'fold_4_')
++ declare -a StringArray
++ i=350
++ for val in ${StringArray[@]}
++ let i+=1
++ python Finetuning+evaluation_VulBERTa-CNN_cross_project.py --seed_input=351 --data_folder=fold_0_ --train_test=train --batch=3 --epochs=10 --dataset=combined --generate_json=False

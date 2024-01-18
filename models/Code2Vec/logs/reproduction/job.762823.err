@@ -1,0 +1,45 @@
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+cat: balanced_0.9.train.raw.txt: No such file or directory
+cat: balanced_0.9.train.raw.txt: No such file or directory
+cat: balanced_0.9.train.raw.txt: No such file or directory
+Traceback (most recent call last):
+  File "<ANONYMOUS>/<ANONYMOUS>/dx2021/code2vec/preprocess.py", line 133, in <module>
+    num_examples = process_file(file_path=data_file_path, data_file_role=data_role, dataset_name=args.output_name,
+  File "<ANONYMOUS>/<ANONYMOUS>/dx2021/code2vec/preprocess.py", line 31, in process_file
+    with open(file_path, 'r') as file:
+FileNotFoundError: [Errno 2] No such file or directory: 'balanced_0.9.test.raw.txt'
+2022-08-19 10:09:39.598137: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2022-08-19 10:09:41.108118: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1532] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 14637 MB memory:  -> device: 0, name: Tesla V100-PCIE-16GB, pci bus id: 0000:25:00.0, compute capability: 7.0
+Traceback (most recent call last):
+  File "<ANONYMOUS>/<ANONYMOUS>/dx2021/code2vec/code2vec.py", line 23, in <module>
+    model = load_model_dynamically(config)
+  File "<ANONYMOUS>/<ANONYMOUS>/dx2021/code2vec/code2vec.py", line 13, in load_model_dynamically
+    return Code2VecModel(config)
+  File "<ANONYMOUS>/<ANONYMOUS>/dx2021/code2vec/tensorflow_model.py", line 38, in __init__
+    super(Code2VecModel, self).__init__(config)
+  File "<ANONYMOUS>/<ANONYMOUS>/dx2021/code2vec/model_base.py", line 77, in __init__
+    self._init_num_of_examples()
+  File "<ANONYMOUS>/<ANONYMOUS>/dx2021/code2vec/model_base.py", line 108, in _init_num_of_examples
+    self.config.NUM_TRAIN_EXAMPLES = self._get_num_of_examples_for_dataset(self.config.train_data_path)
+  File "<ANONYMOUS>/<ANONYMOUS>/dx2021/code2vec/model_base.py", line 122, in _get_num_of_examples_for_dataset
+    num_examples_in_dataset = common.count_lines_in_file(dataset_path)
+  File "<ANONYMOUS>/<ANONYMOUS>/dx2021/code2vec/common.py", line 165, in count_lines_in_file
+    with open(file_path, 'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'data/balanced_0.9/balanced_0.9.train.c2v'
+2022-08-19 10:09:46.641328: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2022-08-19 10:09:47.172766: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1532] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 14637 MB memory:  -> device: 0, name: Tesla V100-PCIE-16GB, pci bus id: 0000:25:00.0, compute capability: 7.0
+2022-08-19 10:09:49.034549: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:354] MLIR V1 optimization pass is not enabled
+2022-08-19 10:09:59.845414: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2022-08-19 10:10:00.389359: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1532] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 14637 MB memory:  -> device: 0, name: Tesla V100-PCIE-16GB, pci bus id: 0000:25:00.0, compute capability: 7.0
+2022-08-19 10:10:02.103036: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:354] MLIR V1 optimization pass is not enabled

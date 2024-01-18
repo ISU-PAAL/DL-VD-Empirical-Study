@@ -1,0 +1,239 @@
++ StringArray=('fold_0_' 'fold_1_' 'fold_2_' 'fold_3_' 'fold_4_')
++ declare -a StringArray
++ i=350
++ for val in ${StringArray[@]}
++ let i+=1
++ python Finetuning+evaluation_VulBERTa-CNN_cross_project.py --seed_input=351 --data_folder=fold_0_ --train_test=train --batch=3 --epochs=10 --dataset=combined --generate_json=False
++ StringArray=('fold_0_' 'fold_1_' 'fold_2_' 'fold_3_' 'fold_4_')
++ declare -a StringArray
++ i=350
++ for val in ${StringArray[@]}
++ let i+=1
++ python Finetuning+evaluation_VulBERTa-CNN_cross_project.py --seed_input=351 --data_folder=fold_0_ --train_test=train --batch=3 --epochs=10 --dataset=combined --generate_json=False
+Some weights of RobertaModel were not initialized from the model checkpoint at models/pre_trained/ and are newly initialized: ['roberta.pooler.dense.weight', 'roberta.pooler.dense.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Device:  cuda
+MultiGPU:  False
+data/finetune/combined/fold_0_/train.jsonl
+
+myCNN(
+  (embed): Embedding(50000, 768, padding_idx=1)
+  (conv1): Conv1d(768, 200, kernel_size=(3,), stride=(1,))
+  (conv2): Conv1d(768, 200, kernel_size=(4,), stride=(1,))
+  (conv3): Conv1d(768, 200, kernel_size=(5,), stride=(1,))
+  (dropout): Dropout(p=0.5, inplace=False)
+  (fc1): Linear(in_features=600, out_features=256, bias=True)
+  (fc2): Linear(in_features=256, out_features=128, bias=True)
+  (fc3): Linear(in_features=128, out_features=2, bias=True)
+)
+Num of trainable param:  2030810
+Training started.....
+Epoch 1 - Training acc: 0.9998 -Training loss: 0.0021 - Val acc: 0.0588 - Val loss: 31.4286 - Time: 407.5263s 
+Epoch 2 - Training acc: 0.9993 -Training loss: 0.0210 - Val acc: 0.0588 - Val loss: 30.4752 - Time: 422.0872s 
+Epoch 3 - Training acc: 0.9992 -Training loss: 0.0172 - Val acc: 0.0588 - Val loss: 35.6847 - Time: 413.2107s 
+Epoch 4 - Training acc: 0.9992 -Training loss: 0.0169 - Val acc: 0.0588 - Val loss: 33.5105 - Time: 412.8843s 
+Epoch 5 - Training acc: 0.9994 -Training loss: 0.0115 - Val acc: 0.0588 - Val loss: 37.9143 - Time: 410.7299s 
+Epoch 6 - Training acc: 0.9993 -Training loss: 0.0167 - Val acc: 0.0588 - Val loss: 45.0224 - Time: 412.9869s 
+Epoch 7 - Training acc: 0.9994 -Training loss: 0.0137 - Val acc: 0.0588 - Val loss: 42.8218 - Time: 445.5345s 
+Epoch 8 - Training acc: 0.9994 -Training loss: 0.0152 - Val acc: 0.0588 - Val loss: 38.5680 - Time: 492.7775s 
+Epoch 9 - Training acc: 0.9995 -Training loss: 0.0136 - Val acc: 0.0589 - Val loss: 41.4431 - Time: 424.8120s 
+Epoch 10 - Training acc: 0.9996 -Training loss: 0.0106 - Val acc: 0.0588 - Val loss: 37.7214 - Time: 445.9394s 
+Epoch 11 - Training acc: 0.9996 -Training loss: 0.0091 - Val acc: 0.0588 - Val loss: 47.4734 - Time: 456.7138s 
+Epoch 12 - Training acc: 0.9995 -Training loss: 0.0088 - Val acc: 0.0588 - Val loss: 41.9133 - Time: 456.9764s 
+Epoch 13 - Training acc: 0.9995 -Training loss: 0.0087 - Val acc: 0.0588 - Val loss: 45.4242 - Time: 456.2366s 
+Epoch 14 - Training acc: 0.9996 -Training loss: 0.0080 - Val acc: 0.0588 - Val loss: 47.1381 - Time: 455.4131s 
+Epoch 15 - Training acc: 0.9997 -Training loss: 0.0061 - Val acc: 0.0588 - Val loss: 44.2737 - Time: 443.3467s 
+Epoch 16 - Training acc: 0.9997 -Training loss: 0.0049 - Val acc: 0.0588 - Val loss: 41.1454 - Time: 424.0880s 
+Epoch 17 - Training acc: 0.9997 -Training loss: 0.0050 - Val acc: 0.0588 - Val loss: 49.3340 - Time: 452.6057s 
+Epoch 18 - Training acc: 0.9997 -Training loss: 0.0048 - Val acc: 0.0588 - Val loss: 48.6429 - Time: 448.3947s 
+Epoch 19 - Training acc: 0.9997 -Training loss: 0.0054 - Val acc: 0.0588 - Val loss: 61.0098 - Time: 426.1006s 
+Epoch 20 - Training acc: 0.9998 -Training loss: 0.0052 - Val acc: 0.0588 - Val loss: 56.0061 - Time: 444.4764s 
+Training completed!
+Testing started.......
+Confusion matrix: 
+ [[   0 9434]
+ [   0  597]]
+
+TP: 597
+FP: 9434
+TN: 0
+FN: 0
+
+Accuracy: 0.05951550194397368
+Precision: 0.05951550194397368
+F-measure: 0.11234474971772676
+Recall: 1.0
+Precision-Recall AUC: 0.1424152162444958
+AUC: 0.6941486991170962
+MCC: 0.0
+Confusion matrix: 
+ [[   0 9584]
+ [   0  447]]
+
+TP: 447
+FP: 9584
+TN: 0
+FN: 0
+
+Accuracy: 0.04456185823945768
+Precision: 0.04456185823945768
+F-measure: 0.0853216262645543
+Recall: 1.0
+Precision-Recall AUC: 0.1328629541090999
+AUC: 0.7132920779599108
+MCC: 0.0
++ for val in ${StringArray[@]}
++ let i+=1
++ python Finetuning+evaluation_VulBERTa-CNN_cross_project.py --seed_input=352 --data_folder=fold_1_ --train_test=train --batch=3 --epochs=10 --dataset=combined --generate_json=False
+Some weights of RobertaModel were not initialized from the model checkpoint at models/pre_trained/ and are newly initialized: ['roberta.pooler.dense.weight', 'roberta.pooler.dense.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Device:  cuda
+MultiGPU:  False
+data/finetune/combined/fold_1_/train.jsonl
+
+myCNN(
+  (embed): Embedding(50000, 768, padding_idx=1)
+  (conv1): Conv1d(768, 200, kernel_size=(3,), stride=(1,))
+  (conv2): Conv1d(768, 200, kernel_size=(4,), stride=(1,))
+  (conv3): Conv1d(768, 200, kernel_size=(5,), stride=(1,))
+  (dropout): Dropout(p=0.5, inplace=False)
+  (fc1): Linear(in_features=600, out_features=256, bias=True)
+  (fc2): Linear(in_features=256, out_features=128, bias=True)
+  (fc3): Linear(in_features=128, out_features=2, bias=True)
+)
+Num of trainable param:  2030810
+Training started.....
+Epoch 1 - Training acc: 0.9998 -Training loss: 0.0022 - Val acc: 0.0571 - Val loss: 28.2034 - Time: 425.5106s 
+Epoch 2 - Training acc: 0.9994 -Training loss: 0.0163 - Val acc: 0.0571 - Val loss: 24.8433 - Time: 405.7613s 
+Epoch 3 - Training acc: 0.9991 -Training loss: 0.0164 - Val acc: 0.0571 - Val loss: 32.4794 - Time: 405.9102s 
+Epoch 4 - Training acc: 0.9990 -Training loss: 0.0159 - Val acc: 0.0571 - Val loss: 40.0885 - Time: 403.6001s 
+Epoch 5 - Training acc: 0.9991 -Training loss: 0.0155 - Val acc: 0.0571 - Val loss: 40.2942 - Time: 405.9971s 
+Epoch 6 - Training acc: 0.9992 -Training loss: 0.0174 - Val acc: 0.0571 - Val loss: 46.6906 - Time: 405.1403s 
+Epoch 7 - Training acc: 0.9992 -Training loss: 0.0176 - Val acc: 0.0571 - Val loss: 39.4678 - Time: 400.7257s 
+Epoch 8 - Training acc: 0.9993 -Training loss: 0.0145 - Val acc: 0.0571 - Val loss: 49.9418 - Time: 405.0778s 
+Epoch 9 - Training acc: 0.9995 -Training loss: 0.0109 - Val acc: 0.0572 - Val loss: 46.9264 - Time: 405.7286s 
+Epoch 10 - Training acc: 0.9996 -Training loss: 0.0077 - Val acc: 0.0572 - Val loss: 51.7547 - Time: 406.0699s 
+Epoch 11 - Training acc: 0.9997 -Training loss: 0.0074 - Val acc: 0.0572 - Val loss: 54.8793 - Time: 407.2817s 
+Epoch 12 - Training acc: 0.9997 -Training loss: 0.0068 - Val acc: 0.0572 - Val loss: 52.8990 - Time: 395.0116s 
+Epoch 13 - Training acc: 0.9997 -Training loss: 0.0066 - Val acc: 0.0571 - Val loss: 88.8047 - Time: 392.0110s 
+Epoch 14 - Training acc: 0.9996 -Training loss: 0.0100 - Val acc: 0.0572 - Val loss: 63.5019 - Time: 392.2509s 
+Epoch 15 - Training acc: 0.9997 -Training loss: 0.0058 - Val acc: 0.0572 - Val loss: 53.1098 - Time: 391.9866s 
+Epoch 16 - Training acc: 0.9998 -Training loss: 0.0062 - Val acc: 0.0572 - Val loss: 67.5463 - Time: 392.1485s 
+Epoch 17 - Training acc: 0.9998 -Training loss: 0.0056 - Val acc: 0.0572 - Val loss: 62.7206 - Time: 391.8407s 
+Epoch 18 - Training acc: 0.9998 -Training loss: 0.0049 - Val acc: 0.0572 - Val loss: 58.6749 - Time: 391.8493s 
+Epoch 19 - Training acc: 0.9997 -Training loss: 0.0045 - Val acc: 0.0571 - Val loss: 73.5054 - Time: 392.1036s 
+Epoch 20 - Training acc: 0.9997 -Training loss: 0.0079 - Val acc: 0.0572 - Val loss: 53.2112 - Time: 392.1228s 
+Training completed!
+Testing started.......
+Confusion matrix: 
+ [[   1 9432]
+ [   0  581]]
+
+TP: 581
+FP: 9432
+TN: 1
+FN: 0
+
+Accuracy: 0.05811863391252247
+Precision: 0.058024568061520024
+F-measure: 0.10968472720407776
+Recall: 1.0
+Precision-Recall AUC: 0.1065434672769185
+AUC: 0.6526602236663939
+MCC: 0.0024801676637171964
+Confusion matrix: 
+ [[   0 9246]
+ [   0  768]]
+
+TP: 768
+FP: 9246
+TN: 0
+FN: 0
+
+Accuracy: 0.07669263031755542
+Precision: 0.07669263031755542
+F-measure: 0.1424596549805231
+Recall: 1.0
+Precision-Recall AUC: 0.14397167085537743
+AUC: 0.6868370584802437
+MCC: 0.0
++ for val in ${StringArray[@]}
++ let i+=1
++ python Finetuning+evaluation_VulBERTa-CNN_cross_project.py --seed_input=353 --data_folder=fold_2_ --train_test=train --batch=3 --epochs=10 --dataset=combined --generate_json=False
+Some weights of RobertaModel were not initialized from the model checkpoint at models/pre_trained/ and are newly initialized: ['roberta.pooler.dense.weight', 'roberta.pooler.dense.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Device:  cuda
+MultiGPU:  False
+data/finetune/combined/fold_2_/train.jsonl
+
+myCNN(
+  (embed): Embedding(50000, 768, padding_idx=1)
+  (conv1): Conv1d(768, 200, kernel_size=(3,), stride=(1,))
+  (conv2): Conv1d(768, 200, kernel_size=(4,), stride=(1,))
+  (conv3): Conv1d(768, 200, kernel_size=(5,), stride=(1,))
+  (dropout): Dropout(p=0.5, inplace=False)
+  (fc1): Linear(in_features=600, out_features=256, bias=True)
+  (fc2): Linear(in_features=256, out_features=128, bias=True)
+  (fc3): Linear(in_features=128, out_features=2, bias=True)
+)
+Num of trainable param:  2030810
+Training started.....
+Epoch 1 - Training acc: 0.9998 -Training loss: 0.0025 - Val acc: 0.0581 - Val loss: 30.3410 - Time: 375.6953s 
+Epoch 2 - Training acc: 0.9993 -Training loss: 0.0176 - Val acc: 0.0581 - Val loss: 30.4484 - Time: 375.7064s 
+Epoch 3 - Training acc: 0.9991 -Training loss: 0.0210 - Val acc: 0.0581 - Val loss: 35.2919 - Time: 375.9690s 
+Epoch 4 - Training acc: 0.9991 -Training loss: 0.0187 - Val acc: 0.0581 - Val loss: 34.1984 - Time: 383.6072s 
+Epoch 5 - Training acc: 0.9991 -Training loss: 0.0181 - Val acc: 0.0581 - Val loss: 36.6622 - Time: 382.5711s 
+Epoch 6 - Training acc: 0.9992 -Training loss: 0.0174 - Val acc: 0.0581 - Val loss: 41.9846 - Time: 381.4270s 
+Epoch 7 - Training acc: 0.9991 -Training loss: 0.0163 - Val acc: 0.0581 - Val loss: 36.1000 - Time: 383.3345s 
+Epoch 8 - Training acc: 0.9992 -Training loss: 0.0146 - Val acc: 0.0581 - Val loss: 31.0714 - Time: 383.3004s 
+Epoch 9 - Training acc: 0.9994 -Training loss: 0.0114 - Val acc: 0.0581 - Val loss: 42.4966 - Time: 382.6395s 
+Epoch 10 - Training acc: 0.9994 -Training loss: 0.0152 - Val acc: 0.0581 - Val loss: 39.8879 - Time: 383.1671s 
+Epoch 11 - Training acc: 0.9993 -Training loss: 0.0134 - Val acc: 0.0581 - Val loss: 35.3110 - Time: 382.5720s 
+Epoch 12 - Training acc: 0.9993 -Training loss: 0.0128 - Val acc: 0.0581 - Val loss: 34.3563 - Time: 385.4247s 
+Epoch 13 - Training acc: 0.9994 -Training loss: 0.0111 - Val acc: 0.0581 - Val loss: 31.8294 - Time: 378.6788s 
+Epoch 14 - Training acc: 0.9995 -Training loss: 0.0090 - Val acc: 0.0581 - Val loss: 51.4064 - Time: 377.1283s 
+Epoch 15 - Training acc: 0.9995 -Training loss: 0.0114 - Val acc: 0.0581 - Val loss: 33.6617 - Time: 376.9366s 
+Epoch 16 - Training acc: 0.9995 -Training loss: 0.0091 - Val acc: 0.0581 - Val loss: 32.5875 - Time: 378.0810s 
+Epoch 17 - Training acc: 0.9996 -Training loss: 0.0096 - Val acc: 0.0581 - Val loss: 32.3237 - Time: 382.4609s 
+Epoch 18 - Training acc: 0.9997 -Training loss: 0.0069 - Val acc: 0.0581 - Val loss: 41.5848 - Time: 381.0884s 
+Epoch 19 - Training acc: 0.9996 -Training loss: 0.0072 - Val acc: 0.0581 - Val loss: 46.3313 - Time: 379.4236s 
+Epoch 20 - Training acc: 0.9997 -Training loss: 0.0063 - Val acc: 0.0581 - Val loss: 48.3321 - Time: 380.2561s 
+Training completed!
+Testing started.......
+Confusion matrix: 
+ [[    2 12673]
+ [    0   716]]
+
+TP: 716
+FP: 12673
+TN: 2
+FN: 0
+
+Accuracy: 0.053618101710103803
+Precision: 0.05347673463290761
+F-measure: 0.10152428216944345
+Recall: 1.0
+Precision-Recall AUC: 0.13991384292607736
+AUC: 0.699082674952894
+MCC: 0.002904848280344387
+Confusion matrix: 
+ [[    0 11839]
+ [    0  1552]]
+
+TP: 1552
+FP: 11839
+TN: 0
+FN: 0
+
+Accuracy: 0.11589873795833022
+Precision: 0.11589873795833022
+F-measure: 0.2077226795154922
+Recall: 1.0
+Precision-Recall AUC: 0.19055849711343345
+AUC: 0.6130755429590998
+MCC: 0.0
++ for val in ${StringArray[@]}
++ let i+=1
++ python Finetuning+evaluation_VulBERTa-CNN_cross_project.py --seed_input=354 --data_folder=fold_3_ --train_test=train --batch=3 --epochs=10 --dataset=combined --generate_json=False
+Some weights of RobertaModel were not initialized from the model checkpoint at models/pre_trained/ and are newly initialized: ['roberta.pooler.dense.weight', 'roberta.pooler.dense.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.

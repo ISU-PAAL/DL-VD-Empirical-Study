@@ -1,0 +1,15 @@
+08/19/2022 11:30:25 - WARNING - __main__ -   Process rank: -1, device: cpu, n_gpu: 0, distributed training: False, 16-bits training: False
+Some weights of the model checkpoint at microsoft/codebert-base were not used when initializing RobertaForSequenceClassification: ['pooler.dense.weight', 'pooler.dense.bias']
+- This IS expected if you are initializing RobertaForSequenceClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaForSequenceClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaForSequenceClassification were not initialized from the model checkpoint at microsoft/codebert-base and are newly initialized: ['classifier.out_proj.bias', 'classifier.out_proj.weight', 'classifier.dense.bias', 'classifier.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+08/19/2022 11:30:29 - INFO - __main__ -   Training/evaluation parameters <__main__.Args object at 0x2ae84450acd0>
+08/19/2022 11:30:50 - INFO - __main__ -   ***** Running Test *****
+08/19/2022 11:30:50 - INFO - __main__ -     Num examples = 10014
+08/19/2022 11:30:50 - INFO - __main__ -     Batch size = 512
+08/19/2022 11:31:53 - INFO - __main__ -   ***** Test results *****
+08/19/2022 11:31:53 - INFO - __main__ -     accuracy = 91.8214
+08/19/2022 11:31:53 - INFO - __main__ -     f1_score = 14.7763
+08/19/2022 11:31:53 - INFO - __main__ -     precision = 36.7876
+08/19/2022 11:31:53 - INFO - __main__ -     recall = 9.2448

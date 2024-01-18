@@ -1,0 +1,38 @@
++ python evaluation_VulBERTa-CNN.py --seed_input=10102 --data_folder=balanced_0.05 --model_folder=balanced_0.05_cnn --train_test=train --batch=16 --epochs=10 --dataset=combined --generate_json=False
+Some weights of RobertaModel were not initialized from the model checkpoint at models/pre_trained/ and are newly initialized: ['roberta.pooler.dense.weight', 'roberta.pooler.dense.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Device:  cuda
+MultiGPU:  False
+data/finetune/combined/balanced_0.05/test.jsonl
+
+myCNN(
+  (embed): Embedding(50000, 768, padding_idx=1)
+  (conv1): Conv1d(768, 200, kernel_size=(3,), stride=(1,))
+  (conv2): Conv1d(768, 200, kernel_size=(4,), stride=(1,))
+  (conv3): Conv1d(768, 200, kernel_size=(5,), stride=(1,))
+  (dropout): Dropout(p=0.5, inplace=False)
+  (fc1): Linear(in_features=600, out_features=256, bias=True)
+  (fc2): Linear(in_features=256, out_features=128, bias=True)
+  (fc3): Linear(in_features=128, out_features=2, bias=True)
+)
+Num of trainable param:  2030810
+Training started.....
+Training completed!
+Testing started.......
+models/VB-CNN_combinedbalanced_0.05_cnn_10102/model_ep_10.tar
+Confusion matrix: 
+ [[   0 1531]
+ [   0 2214]]
+
+TP: 2214
+FP: 1531
+TN: 0
+FN: 0
+
+Accuracy: 0.5911882510013351
+Precision: 0.5911882510013351
+F-measure: 0.7430776976002685
+Recall: 1.0
+Precision-Recall AUC: 0.5805343757289174
+AUC: 0.47970297088122194
+MCC: 0.0

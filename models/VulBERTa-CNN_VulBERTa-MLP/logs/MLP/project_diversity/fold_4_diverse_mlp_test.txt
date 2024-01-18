@@ -1,0 +1,25 @@
++ python Evaluation_VulBERTa-MLP.py --seed_input=666 --data_folder=fold_4_holdout --save_folder=fold_4_diverse_mlp --train_test=train --batch=8 --epochs=2 --dataset=combined
+/home/<ANONYMOUS>/anaconda3/envs/myenv/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/<ANONYMOUS>/anaconda3/envs/myenv/lib/python3.8/site-packages/sklearn/metrics/_classification.py:846: RuntimeWarning: invalid value encountered in double_scalars
+  mcc = cov_ytyp / np.sqrt(cov_ytyt * cov_ypyp)
+cuda
+['checkpoint-22391', 'checkpoint-44782']
+models/fold_4_diverse_mlp/checkpoint-44782
+124836866
+Confusion matrix: 
+ [[9259    0]
+ [ 757    0]]
+
+TP: 0
+FP: 0
+TN: 9259
+FN: 757
+
+Accuracy: 0.9244209265175719
+Precision: 0.0
+F-measure: 0.0
+Recall: 0.0
+Precision-Recall AUC: 0.08252343360914347
+AUC: 0.5411974467913899
+MCC: 0.0

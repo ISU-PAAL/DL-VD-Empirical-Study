@@ -1,0 +1,7 @@
+// commit message qemu@e1833e1f96 (target=0, prob=0.006365422, correct=True): Rework PowerPC exceptions model to make it more versatile: * don't use exception vectors as the exception number.   Use vectors numbers as defined in the PowerPC embedded specification instead   and extend this model to cover all emulated PowerPC variants exceptions. * add some missing exceptions definitions, from PowerPC 2.04 specification   and actual PowerPC implementations. * add code provision for hypervisor exceptions handling. * define exception vectors and prefix in CPUPPCState to emulate BookE exception   vectors without any hacks. * define per CPU model valid exception vectors. * handle all known exceptions in user-mode only emulations. * fix hardware interrupts priorities in most cases. * change RET_EXCP macros name into GEN_EXCP as they don't return. * do not stop translation on most instructions that are not defined as   context-synchronizing in PowerPC specification. * fix PowerPC 64 jump targets and link register update when in 32 bits mode. * Fix PowerPC 464 and 464F definitions.
+/*0  */ static void spr_write_601_ubatu (void *opaque, int sprn)  // (1) 0.2469
+/*2  */ {                                                         // (4) 0.01235
+/*4  */     DisasContext *ctx = opaque;                           // (2) 0.1358
+/*8  */     gen_op_store_601_batu((sprn - SPR_IBAT0U) / 2);       // (0) 0.3333
+/*10 */     RET_STOP(ctx);                                        // (3) 0.1235
+/*12 */ }                                                         // (5) 0.01235

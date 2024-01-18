@@ -1,0 +1,149 @@
++ module load ml-gpu/20220603
+testMLP.sh: line 17: module: command not found
++ ml-gpu <ANONYMOUS>/<ANONYMOUS>/vulberta_venv_work/bin/python Evaluation_VulBERTa-MLP.py --seed_input=666 --data_folder=fold_0_diverse --save_folder=fold_0_diverse_mlp --train_test=train --batch=8 --epochs=2 --dataset=combined
+testMLP.sh: line 20: ml-gpu: command not found
++ python Evaluation_VulBERTa-MLP.py --seed_input=666 --data_folder=fold_0_diverse --save_folder=fold_0_diverse_mlp --train_test=train --batch=8 --epochs=2 --dataset=combined
+cuda
+Traceback (most recent call last):
+  File "Evaluation_VulBERTa-MLP.py", line 163, in <module>
+    vocab, merges = BPE.read_file(vocab="./tokenizer/drapgh-vocab.json", merges="./tokenizer/drapgh-merges.txt")
+TypeError: PyBPE.read_file() missing required positional argument: vocab_filename
++ python Evaluation_VulBERTa-MLP.py --seed_input=666 --data_folder=fold_0_diverse --save_folder=fold_0_diverse_mlp --train_test=train --batch=8 --epochs=2 --dataset=combined
+cuda
+Traceback (most recent call last):
+  File "Evaluation_VulBERTa-MLP.py", line 268, in <module>
+    test_encodings = my_tokenizer.encode_batch(m3.func)
+  File "/home/<ANONYMOUS>/anaconda3/envs/myenv/lib/python3.8/site-packages/pandas/core/generic.py", line 5487, in __getattr__
+    return object.__getattribute__(self, name)
+AttributeError: 'DataFrame' object has no attribute 'func'
++ python Evaluation_VulBERTa-MLP.py --seed_input=666 --data_folder=fold_0_holdout --save_folder=fold_0_diverse_mlp --train_test=train --batch=8 --epochs=2 --dataset=combined
+file models/fold_0_diverse_mlp/hide/config.json not found
+cuda
+['checkpoint-44782', 'hide']
+models/fold_0_diverse_mlp/hide
+Traceback (most recent call last):
+  File "/home/<ANONYMOUS>/anaconda3/envs/myenv/lib/python3.8/site-packages/transformers/configuration_utils.py", line 399, in get_config_dict
+    resolved_config_file = cached_path(
+  File "/home/<ANONYMOUS>/anaconda3/envs/myenv/lib/python3.8/site-packages/transformers/file_utils.py", line 1092, in cached_path
+    raise EnvironmentError("file {} not found".format(url_or_filename))
+OSError: file models/fold_0_diverse_mlp/hide/config.json not found
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "Evaluation_VulBERTa-MLP.py", line 305, in <module>
+    model = RobertaForSequenceClassification.from_pretrained("models/"  + args.save_folder + '/' +  tmp[len(tmp)-1])
+  File "/home/<ANONYMOUS>/anaconda3/envs/myenv/lib/python3.8/site-packages/transformers/modeling_utils.py", line 948, in from_pretrained
+    config, model_kwargs = cls.config_class.from_pretrained(
+  File "/home/<ANONYMOUS>/anaconda3/envs/myenv/lib/python3.8/site-packages/transformers/configuration_utils.py", line 360, in from_pretrained
+    config_dict, kwargs = cls.get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/<ANONYMOUS>/anaconda3/envs/myenv/lib/python3.8/site-packages/transformers/configuration_utils.py", line 418, in get_config_dict
+    raise EnvironmentError(msg)
+OSError: Can't load config for 'models/fold_0_diverse_mlp/hide'. Make sure that:
+
+- 'models/fold_0_diverse_mlp/hide' is a correct model identifier listed on 'https://huggingface.co/models'
+
+- or 'models/fold_0_diverse_mlp/hide' is the correct path to a directory containing a config.json file
+
+
++ python Evaluation_VulBERTa-MLP.py --seed_input=666 --data_folder=fold_0_holdout --save_folder=fold_0_diverse_mlp --train_test=train --batch=8 --epochs=2 --dataset=combined
+cuda
+['ahide', 'checkpoint-44782']
+models/fold_0_diverse_mlp/checkpoint-44782
+124836866
+Traceback (most recent call last):
+  File "Evaluation_VulBERTa-MLP.py", line 400, in <module>
+    train_loader = DataLoader(train_dataset, batch_size=args.batch)
+NameError: name 'train_dataset' is not defined
++ python Evaluation_VulBERTa-MLP.py --seed_input=666 --data_folder=fold_0_holdout --save_folder=fold_0_diverse_mlp --train_test=train --batch=8 --epochs=2 --dataset=combined
+cuda
+['ahide', 'checkpoint-44782']
+models/fold_0_diverse_mlp/checkpoint-44782
+124836866
+Traceback (most recent call last):
+  File "Evaluation_VulBERTa-MLP.py", line 414, in <module>
+    output_test = model(input_ids, attention_mask=attention_mask, labels=labels)
+  File "/home/<ANONYMOUS>/anaconda3/envs/myenv/lib/python3.8/site-packages/torch/nn/modules/module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/<ANONYMOUS>/anaconda3/envs/myenv/lib/python3.8/site-packages/transformers/models/roberta/modeling_roberta.py", line 1020, in forward
+    outputs = self.roberta(
+  File "/home/<ANONYMOUS>/anaconda3/envs/myenv/lib/python3.8/site-packages/torch/nn/modules/module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/<ANONYMOUS>/anaconda3/envs/myenv/lib/python3.8/site-packages/transformers/models/roberta/modeling_roberta.py", line 706, in forward
+    embedding_output = self.embeddings(
+  File "/home/<ANONYMOUS>/anaconda3/envs/myenv/lib/python3.8/site-packages/torch/nn/modules/module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/<ANONYMOUS>/anaconda3/envs/myenv/lib/python3.8/site-packages/transformers/models/roberta/modeling_roberta.py", line 117, in forward
+    inputs_embeds = self.word_embeddings(input_ids)
+  File "/home/<ANONYMOUS>/anaconda3/envs/myenv/lib/python3.8/site-packages/torch/nn/modules/module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/<ANONYMOUS>/anaconda3/envs/myenv/lib/python3.8/site-packages/torch/nn/modules/sparse.py", line 124, in forward
+    return F.embedding(
+  File "/home/<ANONYMOUS>/anaconda3/envs/myenv/lib/python3.8/site-packages/torch/nn/functional.py", line 1852, in embedding
+    return torch.embedding(weight, input, padding_idx, scale_grad_by_freq, sparse)
+RuntimeError: CUDA out of memory. Tried to allocate 24.00 MiB (GPU 0; 10.91 GiB total capacity; 476.51 MiB already allocated; 41.75 MiB free; 530.00 MiB reserved in total by PyTorch)
++ python Evaluation_VulBERTa-MLP.py --seed_input=666 --data_folder=fold_0_holdout --save_folder=fold_0_diverse_mlp --train_test=train --batch=4 --epochs=2 --dataset=combined
+cuda
+['ahide', 'checkpoint-44782']
+models/fold_0_diverse_mlp/checkpoint-44782
+124836866
+Traceback (most recent call last):
+  File "Evaluation_VulBERTa-MLP.py", line 414, in <module>
+    output_test = model(input_ids, attention_mask=attention_mask, labels=labels)
+  File "/home/<ANONYMOUS>/anaconda3/envs/myenv/lib/python3.8/site-packages/torch/nn/modules/module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/<ANONYMOUS>/anaconda3/envs/myenv/lib/python3.8/site-packages/transformers/models/roberta/modeling_roberta.py", line 1020, in forward
+    outputs = self.roberta(
+  File "/home/<ANONYMOUS>/anaconda3/envs/myenv/lib/python3.8/site-packages/torch/nn/modules/module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/<ANONYMOUS>/anaconda3/envs/myenv/lib/python3.8/site-packages/transformers/models/roberta/modeling_roberta.py", line 706, in forward
+    embedding_output = self.embeddings(
+  File "/home/<ANONYMOUS>/anaconda3/envs/myenv/lib/python3.8/site-packages/torch/nn/modules/module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/<ANONYMOUS>/anaconda3/envs/myenv/lib/python3.8/site-packages/transformers/models/roberta/modeling_roberta.py", line 117, in forward
+    inputs_embeds = self.word_embeddings(input_ids)
+  File "/home/<ANONYMOUS>/anaconda3/envs/myenv/lib/python3.8/site-packages/torch/nn/modules/module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/<ANONYMOUS>/anaconda3/envs/myenv/lib/python3.8/site-packages/torch/nn/modules/sparse.py", line 124, in forward
+    return F.embedding(
+  File "/home/<ANONYMOUS>/anaconda3/envs/myenv/lib/python3.8/site-packages/torch/nn/functional.py", line 1852, in embedding
+    return torch.embedding(weight, input, padding_idx, scale_grad_by_freq, sparse)
+RuntimeError: CUDA out of memory. Tried to allocate 12.00 MiB (GPU 0; 10.91 GiB total capacity; 476.36 MiB already allocated; 41.62 MiB free; 530.00 MiB reserved in total by PyTorch)
++ python Evaluation_VulBERTa-MLP.py --seed_input=666 --data_folder=fold_0_holdout --save_folder=fold_0_diverse_mlp --train_test=train --batch=8 --epochs=2 --dataset=combined
++ python Evaluation_VulBERTa-MLP.py --seed_input=666 --data_folder=fold_0_holdout --save_folder=fold_0_diverse_mlp --train_test=train --batch=8 --epochs=2 --dataset=combined
+double free or corruption (fasttop)
+malloc_consolidate(): unaligned fastbin chunk detected
+libclang: crash detected during parsing: {
+  'source_filename' : 'tmp.c'
+  'command_line_args' : ['clang', ''],
+  'unsaved_files' : [('tmp.c', '...', 284)],
+  'options' : 0,
+}
+tcache_thread_shutdown(): unaligned tcache chunk detected
+testMLP.sh: line 10:  7405 Aborted                 (core dumped) python Evaluation_VulBERTa-MLP.py --seed_input=666 --data_folder="$1" --save_folder="$2" --train_test=train --batch=8 --epochs=2 --dataset=combined
++ python Evaluation_VulBERTa-MLP.py --seed_input=666 --data_folder=fold_0_holdout --save_folder=fold_0_diverse_mlp --train_test=train --batch=8 --epochs=2 --dataset=combined
+/home/<ANONYMOUS>/anaconda3/envs/myenv/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/<ANONYMOUS>/anaconda3/envs/myenv/lib/python3.8/site-packages/sklearn/metrics/_classification.py:846: RuntimeWarning: invalid value encountered in double_scalars
+  mcc = cov_ytyp / np.sqrt(cov_ytyt * cov_ypyp)
+cuda
+['ahide', 'checkpoint-44782']
+models/fold_0_diverse_mlp/checkpoint-44782
+124836866
+Confusion matrix: 
+ [[9584    0]
+ [ 447    0]]
+
+TP: 0
+FP: 0
+TN: 9584
+FN: 447
+
+Accuracy: 0.9554381417605423
+Precision: 0.0
+F-measure: 0.0
+Recall: 0.0
+Precision-Recall AUC: 0.05870407733118424
+AUC: 0.5963710023790583
+MCC: 0.0
++ python Evaluation_VulBERTa-MLP.py --seed_input=666 --data_folder=fold_1_holdout --save_folder=fold_1_diverse_mlp --train_test=train --batch=8 --epochs=2 --dataset=combined

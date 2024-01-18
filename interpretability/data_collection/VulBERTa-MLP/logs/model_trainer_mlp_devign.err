@@ -1,0 +1,3 @@
+read file: 0it [00:00, ?it/s]read file: 1884it [00:00, 18838.81it/s]read file: 2732it [00:00, 22147.31it/s]
+<ANONYMOUS>/<ANONYMOUS>/VulBERTa/vulberta_mlp_explainer.py:146: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  encoded_input[tensor] = torch.tensor(encoded_input[tensor]).to(self.arg.device)
