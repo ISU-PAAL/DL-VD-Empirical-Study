@@ -1,5 +1,7 @@
 # Data package for "An Empirical Study of Deep Learning Models for Vulnerability Detection"
 
+See original data package release at https://doi.org/10.6084/m9.figshare.20791240.
+
 ## Organization
 
 Below is an annotated map of the package's organization.
