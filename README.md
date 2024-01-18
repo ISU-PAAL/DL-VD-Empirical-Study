@@ -1,5 +1,7 @@
 # Data package for "An Empirical Study of Deep Learning Models for Vulnerability Detection"
 
+This repository contains the logs and scripts we used to perform the empirical study.
+See details in [the paper](./paper.pdf).
 See original data package release at https://doi.org/10.6084/m9.figshare.20791240.
 
 # Citation
