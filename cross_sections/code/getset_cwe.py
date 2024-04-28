@@ -32,6 +32,8 @@ from lxml import etree
 import networkx as nx
 
 # G = nx.DiGraph()
+# This is the XML file of CWE Research Concepts, downloaded from this page: https://cwe.mitre.org/data/downloads.html
+# Here is the direct link to download the file: https://cwe.mitre.org/data/xml/views/1000.xml.zip
 tree = etree.parse("/home/<ANONYMOUS>/code/linevd/storage/external/1000.xml")
 
 # i = 0
