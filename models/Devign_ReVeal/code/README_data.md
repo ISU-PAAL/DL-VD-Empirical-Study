@@ -6,8 +6,6 @@
 
 `devign_Word2Vec_weights.zip` holds the checkpoints of the Word2Vec model used to generate the node features.
 
-Run `data_export/hpc/train_devign.sh` to train on devign dataset.
+Run `hpc/train_devign.sh` to train on devign dataset.
 
-Run `data_export/hpc/train_devign_MSR.sh` to train on MSR dataset.
-
-Please use this version of the project because it takes the dataset format which I am sending you and fixes some bugs in performance reporting and dataset processing: https://git.las.iastate.edu/<ANONYMOUS>/ReVeal
+Run `hpc/train_devign_MSR.sh` to train on MSR dataset.
